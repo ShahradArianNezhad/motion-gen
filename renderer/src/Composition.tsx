@@ -1,15 +1,306 @@
-import React from 'react';import{AbsoluteFill,interpolate,spring,useCurrentFrame,useVideoConfig}from'remotion';import type{ProjectSpec,Scene,MotionElement}from'../../src/types';
-const clamp={extrapolateLeft:'clamp' as const,extrapolateRight:'clamp' as const};
-function SceneElement({element,sceneFrame,sceneDuration,rtl}:{element:MotionElement;sceneFrame:number;sceneDuration:number;rtl:boolean}){const{fps}=useVideoConfig();const start=Math.max(0,element.delay*fps);const appear=Math.max(1,Math.min(.9*fps,sceneDuration-start));const p=interpolate(sceneFrame,[start,start+appear],[0,1],clamp);const springP=spring({frame:Math.max(0,sceneFrame-start),fps,config:{damping:18,stiffness:95,mass:.7}});let y=0,x=0,scale=1;if(element.animation==='rise')y=interpolate(springP,[0,1],[38,0]);if(element.animation==='drift')x=interpolate(p,[0,1],[-42,0]);if(element.animation==='scale')scale=interpolate(springP,[0,1],[.7,1]);if(element.animation==='pulse')scale=1+Math.sin(sceneFrame/fps*2)*.028;const textStyle:React.CSSProperties={position:'absolute',left:`${element.x}%`,top:`${element.y}%`,width:`${element.width}%`,transform:`translate(-50%,-50%) translate(${x}px,${y}px) scale(${scale})`,opacity:element.animation==='none'?1:p,color:element.color,fontSize:element.font_size,fontWeight:element.weight,lineHeight:element.kind==='body'?1.55:1.13,textAlign:'center',letterSpacing:element.kind==='label'?'.14em':element.kind==='metric'?'.08em':'-.035em',fontFamily:rtl?'Vazirmatn, Arial, sans-serif':'Manrope, Arial, sans-serif',whiteSpace:'pre-wrap',overflowWrap:'anywhere',direction:rtl?'rtl':'ltr',zIndex:3};
-if(element.kind==='icon')return <div style={{...textStyle,fontSize:element.font_size*1.3,color:element.accent||element.color,textShadow:`0 0 40px ${element.accent||element.color}88`}}>{element.asset_data?<img src={element.asset_data} style={{width:element.font_size*1.3,height:element.font_size*1.3,objectFit:'contain'}}/>:element.text}</div>;
-if(element.kind==='shape')return <div style={textStyle}><div style={{margin:'auto',width:70,height:70,border:`2px solid ${element.color}`,borderRadius:18,transform:`rotate(${sceneFrame*.12}deg)`,boxShadow:`0 0 35px ${element.color}44`}}/></div>;
-return <div style={textStyle}>{element.text}</div>}
-function SceneLayer({scene,frame,frames,index,spec}:{scene:Scene;frame:number;frames:number;index:number;spec:ProjectSpec}){const{fps}=useVideoConfig();const transition=Math.min(Math.floor(fps*.55),Math.floor(frames*.24));const enter=interpolate(frame,[0,transition],[0,1],clamp);const direction=scene.transition==='wipe'?interpolate(frame,[0,transition],[36,0],clamp):scene.transition==='zoom'?interpolate(frame,[0,transition],[.965,1],clamp):1;const rtl=spec.language==='fa'||spec.language==='fa-IR';return <AbsoluteFill style={{background:scene.background,overflow:'hidden',opacity:scene.transition==='cut'?1:enter}}>
-<AbsoluteFill style={{background:`radial-gradient(ellipse at 50% 45%, ${scene.background} 15%, #05070d 125%)`}}/>{scene.background_data&&<AbsoluteFill style={{backgroundImage:`url(${scene.background_data})`,backgroundSize:'cover',opacity:.24}}/>}<AbsoluteFill style={{opacity:.25,backgroundImage:'linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px)',backgroundSize:'120px 120px',maskImage:'linear-gradient(135deg,black,transparent 75%)'}}/>
-<div style={{position:'absolute',width:'35%',aspectRatio:'1',borderRadius:'50%',left:'13%',top:'19%',background:spec.palette[1],filter:'blur(100px)',opacity:.16,transform:`translateY(${Math.sin(frame/fps*.6)*18}px)`}}/><div style={{position:'absolute',width:'28%',aspectRatio:'1',borderRadius:'50%',right:'13%',bottom:'4%',background:spec.palette[2]||spec.palette[1],filter:'blur(105px)',opacity:.13,transform:`translateY(${Math.cos(frame/fps*.5)*16}px)`}}/>
-<div style={{position:'absolute',left:'5%',top:'7%',fontFamily:'DM Sans, sans-serif',fontSize:13,letterSpacing:'.18em',color:'#e1e8f477',display:'flex',alignItems:'center',gap:12}}><span>MOTION STUDY</span><span style={{display:'inline-block',width:26,height:1,background:'#b8a7ff77'}}/><span>{String(index+1).padStart(2,'0')}</span></div>
-<div style={{position:'absolute',inset:0,transform:`scale(${direction})`,transformOrigin:'center'}}>{scene.elements.map(el=><SceneElement key={el.id} element={el} sceneFrame={frame} sceneDuration={frames} rtl={rtl}/>)}</div>
-<div style={{position:'absolute',right:'5%',bottom:'5%',fontSize:10,letterSpacing:'.15em',color:'#e2e5ee6b',display:'flex',alignItems:'center',gap:8}}><span style={{width:5,height:5,borderRadius:10,background:spec.palette[1]}}/>STUDIO PREVIEW</div>
-</AbsoluteFill>}
-export function StudioComposition({spec}:{spec:ProjectSpec}){const frame=useCurrentFrame();const{fps}=useVideoConfig();let offset=0;let active=spec.scenes[spec.scenes.length-1];let index=0;let sceneStart=0;for(let i=0;i<spec.scenes.length;i++){const scene=spec.scenes[i];const frames=Math.round(scene.duration*fps);if(frame<offset+frames){active=scene;index=i;sceneStart=offset;break}offset+=frames}const sceneFrame=frame-sceneStart;return <AbsoluteFill style={{background:'#080b12',fontFamily:'Manrope, Vazirmatn, sans-serif'}}><SceneLayer key={active.id} scene={active} frame={sceneFrame} frames={Math.round(active.duration*fps)} index={index} spec={spec}/></AbsoluteFill>}
-export const remotionDefaultSpec:ProjectSpec={title:'Motion story',prompt:'',language:'en',aspect_ratio:'16:9',fps:30,width:1920,height:1080,palette:['#0B1020','#7C5CFC','#21D4A7'],scenes:[{id:'scene-1',title:'Opening',duration:5,description:'',narration:'',transition:'fade',background:'#0B1020',elements:[]},{id:'scene-2',title:'Ending',duration:5,description:'',narration:'',transition:'fade',background:'#0B1020',elements:[]}]};
+// Version-2 composition: timeline + layers + keyframes.
+import React from 'react';
+import { AbsoluteFill, useCurrentFrame, useVideoConfig } from 'remotion';
+import type { ProjectSpec, Scene, Layer } from '../../src/types';
+import { execPreset, stageProgress, clamp01 } from './animations';
+import { getPalette, getStyle } from './styles';
+import { execTransition, pickTransition, NO_TRANSITION } from './transitions';
+
+const pct = (v: number) => `${Math.round(v * 100)}%`;
+const palette = (spec: ProjectSpec): string[] => getPalette(spec);
+
+// ---------------------------------------------------------------------------
+// Scene background — animated gradients / grid / particles
+// ---------------------------------------------------------------------------
+function AnimatedGradient({ scene, spec, frame }: { scene: Scene; spec: ProjectSpec; frame: number }) {
+  const colors = (scene.background.colors as string[]) || palette(spec).slice(0, 3);
+  const t = frame / 4;
+  const mix = (a: string, b: string, x: number) => {
+    const ha = parseInt(a.slice(1), 16), hb = parseInt(b.slice(1), 16);
+    const c = (x: number) => Math.round(255 * (ha >> (x * 8 & 24) & 0xff) * (1 - x) + hb * x);
+    const r = ((ha >> 16) & 255), g = ((ha >> 8) & 255), bl = (ha & 255);
+    const r2 = ((hb >> 16) & 255), g2 = ((hb >> 8) & 255), b2 = (hb & 255);
+    const ch = (v1: number, v2: number) => `${Math.round(v1 + (v2 - v1) * x).toString(16).padStart(2, '0')}`;
+    return `#${ch(r, r2)}${ch(g, g2)}${ch(bl, b2)}`;
+  };
+  const stops = [0, 0.5, 1].map((x) => `${mix(colors[0], colors[1] || colors[0], x)} ${((x + Math.sin(t + x * Math.PI) * 0.18) * 100).toFixed(1)}%`);
+  return (
+    <AbsoluteFill
+      style={{
+        backgroundImage: `linear-gradient(135deg, ${stops.join(', ')})`,
+        opacity: scene.background.opacity != null ? scene.background.opacity as number : 0.9,
+      }}
+    />
+  );
+}
+
+function BackgroundGrid({ scene, spec, frame }: { scene: Scene; spec: ProjectSpec; frame: number }) {
+  const color = (scene.background.gridColor as string) || palette(spec)[1] || '#7C5CFC';
+  const t = frame / fpsSafe(spec);
+  const lines = Array.from({ length: 8 }, (_, i) => {
+    const s = Math.sin(i * 0.9 + t * 0.6) * 50;
+    return i === 0 || i === 7;
+  });
+  return (
+    <AbsoluteFill style={{ pointerEvents: 'none' }}>
+      <div
+        style={{
+          position: 'absolute', inset: 0,
+          backgroundSize: '30% 30%',
+          opacity: 0.35,
+          backgroundImage: `linear-gradient(90deg, ${color}30 1px, transparent 1px), linear-gradient(${color}30 1px, transparent 1px)`,
+          backgroundPosition: `${Math.sin(t) * 10}px ${Math.cos(t * 0.7) * 8}px`,
+        }}
+      />
+    </AbsoluteFill>
+  );
+}
+function fpsSafe(spec: ProjectSpec) { return spec.meta?.fps || 30; }
+
+// ---------------------------------------------------------------------------
+// Layers — in_ / loop / out
+// ---------------------------------------------------------------------------
+interface LayerProps { layer: Layer; frame: number; fps: number; spec: ProjectSpec; exitProg?: number }
+
+function KineticText({ layer, frame, fps, spec, exitProg }: LayerProps) {
+  const { in_, loop, out } = layer.animation;
+  const inProg = stageProgress({ frame, fps, delay: in_?.delay ?? 0, duration: in_?.duration ?? 0.5 });
+  const inResult = execPreset(in_?.preset ?? 'pop-bounce', { progress: inProg, ctx: { fps, frame } });
+  const loopResult = loop
+    ? execPreset(loop.preset ?? 'float', { progress: 1, params: { amplitude: loop.amplitude ?? 8 }, ctx: { fps, frame } })
+    : { opacity: 1, dx: 0, dy: 0, scale: 1, rotate: 0, extra: {} };
+  const text = layer.content ?? '';
+  const base: React.CSSProperties = {
+    position: 'absolute',
+    left: pct(layer.position.x),
+    top: pct(layer.position.y),
+    transform: `translate(-50%, -50%) translate(${inResult.dx}px, ${inResult.dy}px) scale(${inResult.scale}) rotate(${inResult.rotate}deg)`,
+    opacity: clamp01((exitProg ?? 1) * inResult.opacity * (loopResult.opacity ?? 1)),
+    color: (layer.style?.color as string) || '#F8FAFC',
+    fontSize: (layer.style?.fontSize as number) || 40,
+    fontWeight: (layer.style?.fontWeight as number) || 700,
+    fontFamily: (layer.style?.fontFamily as string) || 'Manrope, sans-serif',
+    letterSpacing: (layer.style?.letterSpacing as string) || '-0.02em',
+    whiteSpace: 'pre-wrap',
+    overflowWrap: 'anywhere',
+    userSelect: 'none',
+  };
+
+  // Typewriter + mask-reveal + stagger (character by character)
+  const chars = text.split('');
+  const reveal = clamp01(inResult.extra['reveal'] ?? 1);
+  const showChars = (i: number): number => {
+    if (i >= chars.length * reveal) return 0;
+    return i + 1;
+  };
+  if (chars.length && (typeof inResult.extra['charCount'] === 'number' || in_?.preset === 'mask-reveal' || layer.animation.stagger)) {
+    return (
+      <div style={base}>
+        {chars.map((ch, i) => (
+          <span
+            key={i}
+            style={{
+              opacity: clamp01(showChars(i)),
+              transition: 'opacity .06s ease-out',
+            }}
+          >
+            {ch}
+          </span>
+        ))}
+      </div>
+    );
+  }
+
+  return <div style={base}>{text}</div>;
+}
+
+function IconLayer({ layer, frame, fps, spec, exitProg }: LayerProps) {
+  const { in_ } = layer.animation;
+  const inProg = stageProgress({ frame, fps, delay: in_?.delay ?? 0, duration: in_?.duration ?? 0.4 });
+  const r = execPreset(in_?.preset ?? 'elastic-drop', { progress: inProg, ctx: { fps, frame } });
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        left: pct(layer.position.x), top: pct(layer.position.y),
+        transform: `translate(-50%, -50%) translate(${r.dx}px, ${r.dy}px) scale(${r.scale}) rotate(${r.rotate}deg)`,
+        opacity: (exitProg ?? 1) * r.opacity,
+        color: (layer.style?.color as string) || (palette(spec)[1] as string),
+        fontSize: (layer.style?.fontSize as number) || 60,
+        textShadow: `0 0 30px ${((layer.style?.color as string) || '#fff')}60`,
+      }}
+    >
+      {layer.content || '✦'}
+    </div>
+  );
+}
+
+function ShapeLayer({ layer, frame, fps, spec, exitProg }: LayerProps) {
+  const { in_ } = layer.animation;
+  const inProg = stageProgress({ frame, fps, delay: in_?.delay ?? 0, duration: in_?.duration ?? 0.4 });
+  const r = execPreset(in_?.preset ?? 'pop-bounce', { progress: inProg, ctx: { fps, frame } });
+  const color = (layer.style?.color as string) || palette(spec)[2] || '#7C5CFC';
+  return (
+    <div style={{ position: 'absolute', left: pct(layer.position.x), top: pct(layer.position.y), transform: `translate(-50%, -50%) scale(${r.scale}) rotate(${r.rotate}deg)`, opacity: (exitProg ?? 1) * r.opacity }}>
+      <div style={{ width: (layer.style?.width as number) || 90, height: (layer.style?.width as number) || 90, border: `2px solid ${color}`, borderRadius: (layer.style?.borderRadius as number) ?? 20, boxShadow: `0 0 30px ${color}40`, transform: `rotate(${Math.sin(frame / fps * 2) * 8}deg)` }} />
+    </div>
+  );
+}
+
+function LayerRenderer({ layer, frame, fps, spec, exitProg }: LayerProps) {
+  switch (layer.type) {
+    case 'text':
+    case 'caption': return <KineticText layer={layer} frame={frame} fps={fps} spec={spec} exitProg={exitProg} />;
+    case 'icon': return <IconLayer layer={layer} frame={frame} fps={fps} spec={spec} exitProg={exitProg} />;
+    case 'shape': return <ShapeLayer layer={layer} frame={frame} fps={fps} spec={spec} exitProg={exitProg} />;
+    default:
+      return (
+        <div style={{ position: 'absolute', left: pct(layer.position.x), top: pct(layer.position.y), opacity: exitProg ?? 1 }}>
+          <div style={{ width: 120, height: 70, borderRadius: 12, background: palette(spec)[1], border: `1px solid ${palette(spec)[2] || palette(spec)[1]}` }} />
+        </div>
+      );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Scene — background + camera + layers
+// ---------------------------------------------------------------------------
+function Particles({ frame, fps, spec, n = 6 }: { frame: number; fps: number; spec: ProjectSpec; n?: number }) {
+  const p = palette(spec).slice(1);
+  return (
+    <AbsoluteFill style={{ pointerEvents: 'none' }}>
+      {Array.from({ length: n }, (_, i) => {
+        const t = (frame + i * 17) / fps;
+        const x = ((Math.sin(t * 0.7 + i) + 1) / 2) * 100;
+        const y = ((Math.cos(t * 0.5 + i * 2.3) + 1) / 2) * 100;
+        const size = 40 + 60 * Math.abs(Math.sin((frame + i * 13) / fps * 0.8));
+        return <div key={i} style={{ position: 'absolute', left: `${x}%`, top: `${y}%`, width: size, height: size, borderRadius: '50%', background: p[i % p.length], filter: 'blur(22px)', opacity: 0.35 }} />;
+      })}
+    </AbsoluteFill>
+  );
+}
+
+function GrainOverlay({ frame }: { frame: number }) {
+  return (
+    <AbsoluteFill style={{ pointerEvents: 'none', opacity: 0.05 }}>
+      <div style={{ position: 'absolute', inset: 0, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23000'/%3E%3C/svg%3E")` }} />
+      <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 30% 20%, rgba(120,80,255,.2), transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(33,212,167,.15), transparent 55%)` }} />
+    </AbsoluteFill>
+  );
+}
+
+function SceneBackground({ scene, frame, fps, spec }: { scene: Scene; frame: number; fps: number; spec: ProjectSpec }) {
+  const type = (scene.background?.type as string) || 'color';
+  switch (type) {
+    case 'animated-gradient':
+      return <AnimatedGradient scene={scene} spec={spec} frame={frame} />;
+    case 'grid':
+      return <BackgroundGrid scene={scene} spec={spec} frame={frame} />;
+    case 'particles':
+      return <Particles frame={frame} fps={fps} spec={spec} />;
+    case 'image-kenburns':
+      return (
+        <AbsoluteFill style={{ overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', inset: 0, background: palette(spec)[0], transform: `scale(${1.15 + frame / (fps * 12)})`, transformOrigin: 'center', filter: 'blur(30px)' }} />
+          <div style={{ position: 'absolute', inset: '-8%', background: palette(spec)[0], transform: `scale(${1 + frame / (fps * 20)})` }} />
+        </AbsoluteFill>
+      );
+    default:
+      return <AnimatedGradient scene={scene} spec={spec} frame={frame} />;
+  }
+}
+
+function SceneRenderer({ scene, frame, fps, spec, enter, exit }: {
+  scene: Scene; frame: number; fps: number; spec: ProjectSpec; enter: number; exit: number;
+}) {
+  const durFrames = Math.max(1, Math.round(scene.duration * fps));
+  const f = clamp01(Math.min(frame, durFrames));
+  const cam = scene.camera || { move: 'static', intensity: 0 };
+  let camera: string = 'none';
+  if (cam.move === 'push-in') camera = `scale(${1 + cam.intensity * (f / (fps * 8))})`;
+  else if (cam.move === 'orbit') camera = `rotate(${Math.sin(f / fps * 0.25) * cam.intensity * 3}deg)`;
+  else if (cam.move === 'pan-left') camera = `translateX(${Math.sin((f / fps) * 0.5) * cam.intensity}px)`;
+  else if (cam.move === 'shake') camera = `translate(${Math.sin(f * 0.09) * cam.intensity}px, ${Math.cos(f * 0.07) * cam.intensity}px)`;
+
+  const layers = scene.layers.filter((l) => f >= l.start * fps && f <= l.end * fps);
+  return (
+    <AbsoluteFill style={{ background: (scene.background as any).color || palette(spec)[0], overflow: 'hidden', opacity: enter * exit }}>
+      <SceneBackground scene={scene} frame={f} fps={fps} spec={spec} />
+      <GrainOverlay frame={f} />
+      <div style={{ position: 'absolute', inset: 0, transform: camera, transformOrigin: 'center' }}>
+        {layers.map((l) => <LayerRenderer key={l.id} layer={l} frame={f} fps={fps} spec={spec} />)}
+      </div>
+    </AbsoluteFill>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Top level
+// ---------------------------------------------------------------------------
+export function StudioComposition({ spec }: { spec: ProjectSpec }) {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  let index = 0;
+  let sceneFrame = 0;
+  let sceneStart = 0;
+  let prev: Scene | null = null;
+  let prevStart = 0;
+  let prevFrame = 0;
+  let prevExit = 0;
+  let curEnter = 1;
+
+  for (let i = 0; i < spec.scenes.length; i++) {
+    const s = spec.scenes[i];
+    const dur = Math.round(s.duration * fps);
+    const sStart = sceneStart;
+    sceneStart += dur;
+    if (frame < sStart + dur) {
+      index = i;
+      sceneFrame = frame - sStart;
+      const tDur = Math.round((s.transition_out?.duration ?? 0.3) * fps);
+      curEnter = clamp01(sceneFrame / Math.max(1, tDur));
+      if (i > 0) {
+        prev = spec.scenes[i - 1];
+        prevStart = sStart - Math.round(prev.duration * fps);
+        prevFrame = frame - prevStart;
+        prevExit = clamp01((frame - (prevStart + Math.round(prev.duration * fps))) / Math.max(1, tDur));
+      }
+      break;
+    }
+  }
+  const scene = spec.scenes[index] || spec.scenes[0];
+  const style = getStyle(spec);
+  const W = spec.meta?.width || 1920, H = spec.meta?.height || 1080;
+  const tDur = Math.max(1, Math.round((scene.transition_out?.duration ?? 0.3) * fps));
+  const curTrans = scene.transition_out?.type || pickTransition({ styleTransitions: style.transitions, prev: prev?.transition_out?.type, seed: index });
+  const curEffect = execTransition(curTrans, curEnter, { width: W, height: H, frame, fps });
+  const prevTrans = prev?.transition_out?.type;
+  const prevEffect = prev ? execTransition(prevTrans || pickTransition({ styleTransitions: style.transitions, prev: curTrans, seed: index + 7 }), prevExit, { width: W, height: H, frame, fps }) : NO_TRANSITION;
+  const wrap = (fx: ReturnType<typeof execTransition>, child: React.ReactNode) => (
+    <div style={{ position: 'absolute', inset: 0, opacity: fx.opacity, filter: fx.blur ? `blur(${fx.blur}px)` : undefined, transform: fx.rgbSplit ? `translateX(${fx.rgbSplit}px)` : undefined }}>
+      {child}
+    </div>
+  );
+  return (
+    <AbsoluteFill style={{ background: '#080b12', overflow: 'hidden' }}>
+      {wrap(curEffect, <SceneRenderer scene={scene} frame={sceneFrame} fps={fps} spec={spec} enter={curEnter} exit={1} />)}
+      {prev && wrap(prevEffect, <SceneRenderer scene={prev} frame={prevFrame} fps={fps} spec={spec} enter={1} exit={prevExit} />)}
+    </AbsoluteFill>
+  );
+}
+
+export const remotionDefaultSpec: ProjectSpec = {
+  version: 2,
+  title: 'Motion story',
+  prompt: '',
+  language: 'en',
+  meta: { fps: 30, width: 1920, height: 1080, duration: 8, style: 'bold-kinetic' },
+  audio: {},
+  scenes: [
+    { id: 'scene-1', start: 0, duration: 4, background: { type: 'animated-gradient', colors: ['#0B1020', '#7C5CFC', '#21D4A7'] }, camera: { move: 'push-in', intensity: 0.6 },
+      layers: [
+        { id: 'l1', type: 'text', content: 'Hello world', start: 0.1, end: 3, position: { x: 0.5, y: 0.4 }, animation: { in_: { preset: 'pop-bounce', duration: 0.5 }, loop: { preset: 'float', amplitude: 8 }, out: { preset: 'slide-out', duration: 0.3 } }, style: { color: '#F8FAFC', fontSize: 80 } },
+        { id: 'l2', type: 'text', content: 'Your next step', start: 0.8, end: 3, position: { x: 0.5, y: 0.7 }, animation: { in_: { preset: 'fade-up', duration: 0.4 } }, style: { color: '#21D4A7', fontSize: 40 } },
+      ], transition_out: { type: 'whip-pan', duration: 0.4 } },
+  ],
+};

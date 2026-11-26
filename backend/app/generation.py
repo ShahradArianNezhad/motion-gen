@@ -1,194 +1,312 @@
+"""Generation pipeline v2 — timeline plans (scenes + layers + keyframes).
+
+Stages:
+  1. _llm_brief   — interpret the creative brief (fast).
+  2. _llm_plan    — draft a full version-2 plan; validated by _validate_v2 with
+                    automatic retries feeding validator problems back to the LLM.
+  3. _local_spec_v2 — deterministic fallback (no API key), emits v2 plans too.
+
+Validator problems from _lint_spec_v2 are surfaced to the LLM so it can self-correct
+(rejected scene layouts, unsafe zones, missing in-animations, repeated layouts).
+"""
 from __future__ import annotations
 import copy, json, math, os, re
 from typing import Any
 import httpx
-from .models import ProjectSpec, GenerateRequest
-from .asset_registry import search_assets, list_categories
+from .models import ProjectSpec, GenerateRequest, AnimStage
+from .styles import STYLE_IDS, STYLES, ALLOWED_PRESETS, TRANSITION_TYPES
 
-PALETTES = {
-    "violet": ["#0B1020", "#7C5CFC", "#B7A6FF", "#29D3A5"],
-    "ocean": ["#071A2D", "#168AAD", "#41EAD4", "#EAF8FF"],
-    "warm": ["#201310", "#FF784F", "#FFCA72", "#FFF1D2"],
-    "green": ["#0A1C18", "#23B889", "#B5F36D", "#F3F8EF"],
-}
+ASPECT_SIZES = {"16:9": (1920, 1080), "9:16": (1080, 1920), "1:1": (1080, 1080)}
+MAX_SCENE_SECONDS = 5.0  # pace: never longer without an internal visual event
 
-def _is_farsi(text: str) -> bool:
-    return bool(re.search(r"[\u0600-\u06FF]", text)) or any(x in text.lower() for x in ("persian", "farsi", "iranian"))
-
-def _choose_palette(text: str) -> list[str]:
-    t = text.lower()
-    if any(k in t for k in ("ocean", "blue", "finance", "inventory", "saas", "technology")): return PALETTES["ocean"]
-    if any(k in t for k in ("nature", "green", "eco", "health")): return PALETTES["green"]
-    if any(k in t for k in ("warm", "food", "coffee", "orange")): return PALETTES["warm"]
-    return PALETTES["violet"]
-
-def _local_spec(req: GenerateRequest) -> dict[str, Any]:
-    prompt = req.prompt.strip()
-    palette = _choose_palette(prompt)
-    fa = _is_farsi(prompt)
-    is_inventory = any(k in prompt.lower() for k in ("inventory", "stock", "warehouse", "انبار", "موجودی"))
-    subject = ("مدیریت موجودی، بدون پیچیدگی" if fa and is_inventory else
-               "موجودی؛ همیشه تحت کنترل" if is_inventory else
-               "یک ایده. تأثیری بزرگ." if fa else
-               "Make your next move." if any(k in prompt.lower() for k in ("launch", "campaign", "brand")) else
-               "Clarity for what comes next.")
-    if is_inventory:
-        headlines = [subject, "همه‌چیز در یک نگاه" if fa else "Every item. In sync.", "تصمیم‌های بهتر، سریع‌تر" if fa else "Smarter moves, made simple.", "از همین امروز شروع کنید" if fa else "Ready when you are."]
-        details = ["سامان‌دهی هوشمند کالاها" if fa else "Inventory, finally in your hands.", "موجودی لحظه‌ای، همیشه دقیق" if fa else "Live stock, always accurate.", "هشدارهای به‌موقع • گزارش‌های روشن" if fa else "Fewer surprises. Better decisions.", "کنترل کامل کسب‌وکار شما" if fa else "One calm place to run your stock."]
-    else:
-        headlines = [subject, "Built around your ambition." if not fa else "برای قدم بعدی شما", "Less friction. More momentum." if not fa else "ساده‌تر، سریع‌تر، بهتر", "Start with a clearer view." if not fa else "مسیر روشن از همین‌جا"]
-        details = ["A fresh way to move your work forward." if not fa else "راهی تازه برای پیشرفت کار شما", "See the details that matter." if not fa else "جزئیات مهم را همان لحظه ببینید", "A thoughtful experience, from day one." if not fa else "تجربه‌ای سنجیده از روز نخست", "Make room for what matters." if not fa else "برای آنچه مهم است، وقت بسازید"]
-    labels = ["INTRODUCTION", "THE BIG PICTURE", "MADE FOR MOMENTUM", "YOUR NEXT CHAPTER"]
-    visual = ["✦", "↗", "◈", "→"]
-    durations = [round(req.duration * w / sum([.19,.30,.29,.22]), 2) for w in [.19,.30,.29,.22]]
-    scenes = []
-    for i in range(4):
-        scene_text = headlines[i]; body = details[i]; accent = palette[1] if i in (0,2) else palette[2]
-        elements = [
-            {"id":f"eyebrow-{i}","kind":"label","text":labels[i],"x":50,"y":26,"width":70,"color":palette[2],"font_size":15,"weight":700,"animation":"reveal","delay":0.08},
-            {"id":f"title-{i}","kind":"headline","text":scene_text,"x":50,"y":43 if req.aspect_ratio != "9:16" else 39,"width":84,"color":"#F8FAFC","font_size":72 if req.aspect_ratio == "16:9" else 60,"weight":750,"animation":"rise","delay":0.18,"accent":accent},
-            {"id":f"body-{i}","kind":"body","text":body,"x":50,"y":59 if req.aspect_ratio != "9:16" else 51,"width":72,"color":"#B8C3D6","font_size":25,"weight":450,"animation":"reveal","delay":0.38},
-            {"id":f"symbol-{i}","kind":"icon","text":visual[i],"asset_id":["icon-sparkles","icon-arrow-up-right","icon-chart-no-axes-column-increasing","icon-circle-check"][i],"x":50,"y":77 if req.aspect_ratio != "9:16" else 69,"width":18,"color":accent,"font_size":50,"weight":600,"animation":"scale","delay":0.44},
-            {"id":f"metric-{i}","kind":"metric","text":["01 / 04","LIVE · 24/7","−38%","LET'S GO"][i],"x":50,"y":90 if req.aspect_ratio != "9:16" else 87,"width":45,"color":"#E8EDF7","font_size":14,"weight":650,"animation":"reveal","delay":0.58},
-        ]
-        scenes.append({"id":f"scene-{i+1}","title":labels[i].title(),"duration":max(1.5,durations[i]),
-          "description":["A confident opening creates a clear visual promise.","The product benefit arrives as a focused, kinetic statement.","A strong proof point lands with breathing room.","The story resolves into a crisp invitation to act."][i],
-          "narration":body,"transition":["fade","wipe","zoom","fade"][i],"background":palette[0],"background_asset":["background-mesh-violet","background-grid-fine","background-aurora-mist","background-radial-rays"][i],"elements":elements})
-    scenes[-1]["duration"] = round(req.duration - sum(s["duration"] for s in scenes[:-1]), 2)
-    lang = "fa" if fa else "en"
-    title = "Inventory motion story" if is_inventory else "Studio motion story"
-    return {"title":title,"prompt":prompt,"language":lang,"aspect_ratio":req.aspect_ratio,"fps":30,"palette":palette,"scenes":scenes}
-
+# ---------------------------------------------------------------------------
+# Shared coercion helpers
+# ---------------------------------------------------------------------------
 def _bounded(value: Any, low: float, high: float, default: float) -> float:
-    try: number=float(value)
-    except (TypeError,ValueError): return default
+    try: number = float(value)
+    except (TypeError, ValueError): return default
     if not math.isfinite(number): return default
-    return max(low,min(high,number))
+    return max(low, min(high, number))
 
-def _repair_spec(raw: dict[str, Any]) -> dict[str, Any]:
-    """One deterministic preflight repair pass; never executes generated code."""
-    candidate=copy.deepcopy(raw)
-    palette=candidate.get("palette") if isinstance(candidate.get("palette"),list) else []
-    palette=[c for c in palette if isinstance(c,str) and re.fullmatch(r"#[0-9a-fA-F]{6}",c)]
-    palette=(palette+PALETTES["violet"])[:4]
-    candidate["palette"]=palette
-    if candidate.get("aspect_ratio") not in ("16:9","9:16","1:1"): candidate["aspect_ratio"]="16:9"
-    candidate["fps"]=int(_bounded(candidate.get("fps"),24,60,30))
-    scenes=candidate.get("scenes")
-    if not isinstance(scenes,list): candidate["scenes"]=[];return candidate
-    candidate["scenes"]=scenes[:12]
-    total=0.0
-    for index,scene in enumerate(candidate["scenes"]):
-        if not isinstance(scene,dict): candidate["scenes"][index]={};scene=candidate["scenes"][index]
-        scene["id"]=str(scene.get("id") or f"scene-{index+1}")
-        scene["title"]=str(scene.get("title") or f"Scene {index+1}")[:100]
-        scene["duration"]=_bounded(scene.get("duration"),1,60,5)
-        total+=scene["duration"]
-        if scene.get("transition") not in ("fade","wipe","zoom","cut"): scene["transition"]="fade"
-        if not isinstance(scene.get("background"),str) or not re.fullmatch(r"#[0-9a-fA-F]{6}",scene["background"]): scene["background"]=palette[0]
-        elements=scene.get("elements") if isinstance(scene.get("elements"),list) else []
-        elements=elements[:12]
-        for el_index,el in enumerate(elements):
-            if not isinstance(el,dict): elements[el_index]={};el=elements[el_index]
-            el["id"]=str(el.get("id") or f"scene-{index+1}-element-{el_index+1}")
-            if el.get("kind") not in ("headline","body","metric","icon","shape","label"): el["kind"]="body"
-            el["text"]=str(el.get("text") or "")[:500]
-            el["width"]=_bounded(el.get("width"),1,100,50)
-            el["x"]=_bounded(el.get("x"),el["width"]/2,100-el["width"]/2,50)
-            el["y"]=_bounded(el.get("y"),0,100,50)
-            if not isinstance(el.get("color"),str) or not re.fullmatch(r"#[0-9a-fA-F]{6}",el["color"]): el["color"]=palette[(el_index+1)%len(palette)]
-            accent=el.get("accent")
-            if accent is not None and (not isinstance(accent,str) or not re.fullmatch(r"#[0-9a-fA-F]{6}",accent)): el["accent"]=None
-            el["font_size"]=int(_bounded(el.get("font_size"),10,160,28))
-            el["weight"]=int(_bounded(el.get("weight"),300,900,500))
-            if el.get("animation") not in ("rise","scale","drift","pulse","reveal","none"): el["animation"]="reveal"
-            el["delay"]=_bounded(el.get("delay"),0,max(0,scene["duration"]-.1),0)
-        scene["elements"]=elements
-        scene["description"]=str(scene.get("description") or "A focused visual beat advances the story.")[:240]
-        scene["narration"]=str(scene.get("narration") or "")[:500]
-    if total>120 and candidate["scenes"]:
-        scale=120/total
-        for scene in candidate["scenes"]: scene["duration"]=max(1,round(scene["duration"]*scale,2))
-        candidate["scenes"][-1]["duration"]=round(120-sum(s["duration"] for s in candidate["scenes"][:-1]),2)
+def _hex(value: Any) -> str:
+    return value if isinstance(value, str) and re.fullmatch(r"#[0-9a-fA-F]{6}", value) else "#0B1020"
+
+# ---------------------------------------------------------------------------
+# Stage 1 — brief interpretation
+# ---------------------------------------------------------------------------
+BRIEF_PROMPT = """Stage 1 — interpret a motion-graphics creative brief. Return JSON only:
+{"working_title": string, "video_purpose": string, "target_audience": string,
+ "visual_style": string, "duration_seconds": number, "aspect_ratio": "16:9"|"9:16"|"1:1",
+ "palette": [3-4 hex strings], "language": BCP47 tag ("fa" for Persian),
+ "narration_style": string, "typography_direction": string, "transition_mood": string,
+ "scene_count": number (3-6), "hook_emphasis": string}
+Extract what the user actually asked for; do not write a storyboard yet. Preserve
+Persian/mixed-language requirements. Be concise and numeric-safe (duration 5–60)."""
+
+# ---------------------------------------------------------------------------
+# Stage 2 — v2 plan drafting (with full preset vocabulary injected)
+# ---------------------------------------------------------------------------
+def plan_prompt() -> str:
+    return (f"Stage 2 — write a full version-2 animation plan as JSON only, using ONLY these animation presets (never invent others): {json.dumps(ALLOWED_PRESETS)}.\n"
+            'Schema: {"meta": {"fps": int, "width": int, "height": int, "duration": float, "style": one of ['
+            + ", ".join(f'"{s}"' for s in STYLE_IDS) + ']}, "audio": {"voiceover": str, "music": str, "sfx": [{"t": num, "type": "whoosh"|"pop"|"click"|"ding"|"impact"}...]},\n'
+            '"scenes": [{"id", "start", "duration" (0.5–' + str(MAX_SCENE_SECONDS) + '), "background": {"type": "animated-gradient"|"color"|"grid"|"particles"|"image-kenburns", "colors": [hex...]}, "camera": {"move": "static"|"push-in"|"pan-left"|"shake"|"orbit", "intensity": 0–1},\n'
+            '"layers": [{"id", "type": "text"|"image"|"shape"|"icon"|"lottie"|"video"|"chart"|"caption", "content", "start", "end",\n'
+            '"position": {"x": 0-1, "y": 0-1}, "animation": {"in": {"preset", "duration", "delay"}, "loop": {"preset", "amplitude"?, "speed"?}, "out": {"preset", "duration"}},\n'
+            '"style": {color, fontSize, fontWeight, ...}}...], "transition_out": {"type": one of ' + ", ".join(f'"{t}"' for t in TRANSITION_TYPES) + ', "duration": 0.2-0.5}}]}\n\n'
+            "Rules (enforce strictly):\n"
+            "1) Every layer MUST have animation.in with a preset. Loop on the main text/icon, exit on everything.\n"
+            "2) Every scene MUST have an animated-gradient or particles/grid background + a non-static camera (push-in/shake) — never plain color.\n"
+            "3) Pacing: scenes 0.5–5s; a visual event every 0.5–1.5s; layers staggered (stagger: true for text).\n"
+            "4) Safe zones: 9:16 → keep text y ≥ 0.4 and x ≥ 0.1; 16:9 → y ≥ 0.15.\n"
+            "5) Vary: never repeat the same transition twice in a row, vary layout between scenes, vary entrance presets.\n"
+            "6) Hook: first layer in scene 0 must animate in at frame 0 with a punchy preset.\n"
+            "7) Write short punchy text (≤7 words per line), for the ear.\n"
+            "8) Give each scene visual_purpose (it has NO elements key — visuals come from layers).\n")
+
+# ---------------------------------------------------------------------------
+# Auto-repair pass (deterministic preflight)
+# ---------------------------------------------------------------------------
+def _repair_v2(raw: dict[str, Any]) -> dict[str, Any]:
+    candidate = copy.deepcopy(raw)
+    meta = candidate.get("meta") if isinstance(candidate.get("meta"), dict) else {}
+    style = meta.get("style") if isinstance(meta.get("style"), str) else "bold-kinetic"
+    meta.setdefault("fps", 30); meta["fps"] = int(_bounded(meta.get("fps"), 24, 60, 30))
+    meta.setdefault("duration", 0.0); meta["duration"] = _bounded(meta.get("duration"), 0, 600, 0.0)
+    w, h = ASPECT_SIZES.get(str(meta.get("aspect_ratio") or "16:9"), (1920, 1080))
+    meta["width"] = meta.get("width") or w; meta["height"] = meta.get("height") or h
+    meta["style"] = style if style in STYLE_IDS else "bold-kinetic"
+    candidate["meta"] = meta
+    scenes = candidate.get("scenes") if isinstance(candidate.get("scenes"), list) else []
+    candidate["scenes"] = scenes[:20]
+    start = 0.0
+    for i, scene in enumerate(candidate["scenes"]):
+        if not isinstance(scene, dict): scene = {}; candidate["scenes"][i] = scene
+        scene["id"] = str(scene.get("id") or f"scene-{i+1}")
+        scene["duration"] = _bounded(scene.get("duration"), 0.5, MAX_SCENE_SECONDS, 3)
+        scene["start"] = start; start += scene["duration"]
+        bg = scene.get("background") if isinstance(scene.get("background"), dict) else {}
+        scene["background"] = {"type": str(bg.get("type") or "animated-gradient"),
+                               "colors": [c for c in (bg.get("colors") or []) if isinstance(c, str)][:3]}
+        cam = scene.get("camera") if isinstance(scene.get("camera"), dict) else {}
+        scene["camera"] = {"move": str(cam.get("move") or "push-in"), "intensity": _bounded(cam.get("intensity"), 0, 1, 0.6)}
+        layers = scene.get("layers") if isinstance(scene.get("layers"), list) else []
+        scene["layers"] = layers[:40]
+        for li, layer in enumerate(scene["layers"]):
+            if not isinstance(layer, dict): layer = {}; scene["layers"][li] = layer
+            layer["id"] = str(layer.get("id") or f"{scene['id']}-layer-{li+1}")
+            layer["type"] = str(layer.get("type") or "text")
+            layer["content"] = str(layer.get("content") or "")[:200]
+            layer["start"] = _bounded(layer.get("start", 0), 0, scene["duration"], 0.0)
+            layer["end"] = _bounded(layer.get("end", scene["duration"]), layer["start"], scene["duration"], scene["duration"])
+            pos = layer.get("position") if isinstance(layer.get("position"), dict) else {}
+            layer["position"] = {"x": _bounded(pos.get("x", 0.5), 0, 1, 0.5), "y": _bounded(pos.get("y", 0.5), 0, 1, 0.5)}
+            anim = layer.get("animation") if isinstance(layer.get("animation"), dict) else {}
+            layer["animation"] = anim
+        # linter: every layer must have in, out on exit-able layers
+        for layer in scene["layers"]:
+            anim = layer["animation"]
+            in_stage = anim.get("in_") or anim.get("in")
+            if not in_stage:
+                anim["in_"] = {"preset": "pop-bounce", "duration": 0.5}
+            elif in_stage.get("preset") not in ALLOWED_PRESETS:
+                in_stage["preset"] = "pop-bounce"
+            t = scene.get("transition_out") if isinstance(scene.get("transition_out"), dict) else None
+            if t is None or str(t.get("type")) not in TRANSITION_TYPES:
+                t = {"type": "morph", "duration": 0.3}
+                scene["transition_out"] = t
+            t.setdefault("duration", 0.3)
     return candidate
 
-def validate_with_correction(raw: dict[str, Any], max_retries: int=1) -> tuple[ProjectSpec,list[str]]:
-    """Validate the declarative spec and allow one bounded deterministic repair attempt."""
-    candidate=copy.deepcopy(raw); corrections=[]
-    for attempt in range(max_retries+1):
-        try: return ProjectSpec.model_validate(candidate),corrections
-        except Exception:
-            if attempt>=max_retries: raise
-            candidate=_repair_spec(candidate)
-            corrections.append("Preflight normalized bounds, colors, timing, or unsupported motion values")
-    raise ValueError("Animation specification could not be repaired")
+# ---------------------------------------------------------------------------
+# Validator + linter (auto-fixes; collects problems for LLM retry)
+# ---------------------------------------------------------------------------
+def _lint_v2(spec: ProjectSpec) -> list[str]:
+    problems: list[str] = []
+    seen_layouts: list[tuple] = []
+    for scene in spec.scenes:
+        if scene.duration > MAX_SCENE_SECONDS + 0.01:
+            problems.append(f"Scene '{scene.id}' is {scene.duration:.1f}s — cap at 5s without internal events.")
+        if scene.background.type in ("color", "none") and not (scene.background.colors or []):
+            problems.append(f"Scene '{scene.id}' has a plain static background — use animated-gradient/particles/grid.")
+        if scene.camera.move in ("static", "none") and scene.duration >= 3:
+            problems.append(f"Scene '{scene.id}' is static — add push-in/shake camera motion.")
+        # layout repetition
+        sig = tuple((l.position["x"], l.position["y"]) for l in scene.layers)
+        if sig in seen_layouts:
+            problems.append(f"Scene '{scene.id}' repeats the layout of an earlier scene.")
+        seen_layouts.append(sig)
+        # safe zones (9:16 conservative; text y kept out of bottom 20%)
+        min_y = 0.38
+        if spec.meta.width < spec.meta.height:
+            for l in scene.layers:
+                if l.type == "text" and l.position["y"] < min_y:
+                    problems.append(f"Layer '{l.id}' sits in the 9:16 unsafe zone (y={l.position['y']:.2f} < {min_y}).")
+    return problems
 
+def _auto_fix_v2(spec: ProjectSpec) -> list[str]:
+    changes: list[str] = []
+    for i, scene in enumerate(spec.scenes):
+        if scene.background.type == "color" and not scene.background.colors:
+            scene.background.type = "animated-gradient"
+            scene.background.colors = STYLES[spec.meta.style]["palette"][:3]
+            changes.append(f"Scene {i+1}: replaced plain background with animated-gradient")
+        if scene.camera.move in ("static", "none") and scene.duration >= 3:
+            scene.camera.move = "push-in"; scene.camera.intensity = 0.6
+            changes.append(f"Scene {i+1}: added push-in camera")
+        if scene.duration > MAX_SCENE_SECONDS:
+            scene.duration = MAX_SCENE_SECONDS
+            changes.append(f"Scene {i+1}: capped duration at {MAX_SCENE_SECONDS}s")
+        for layer in scene.layers:
+            if layer.animation.in_ is None:
+                layer.animation.in_ = AnimStage(preset="pop-bounce", duration=0.5)
+                changes.append(f"Scene {i+1} layer '{layer.id}': added pop-bounce entrance")
+            if spec.meta.width < spec.meta.height:
+                if layer.type == "text" and layer.position["y"] < 0.38:
+                    layer.position["y"] = 0.38
+                    changes.append(f"Scene {i+1} layer '{layer.id}': moved text out of the 9:16 unsafe zone")
+    return changes
+
+def validate_with_correction(raw: dict[str, Any], max_retries: int = 2) -> tuple[ProjectSpec, list[str]]:
+    """Validate v2 spec; auto-fix common issues; returns (spec, problems)."""
+    candidate = _repair_v2(raw)
+    for _ in range(max_retries + 1):
+        spec = ProjectSpec.model_validate(candidate)
+        fixed = _auto_fix_v2(spec)
+        problems = _lint_v2(spec)
+        if not problems:
+            return spec, fixed
+        # re-dump (auto fixes) and let model_validate re-run
+        candidate = spec.model_dump(by_alias=True)
+        fixed.extend(problems)
+    raise ValueError("v2 animation plan could not be validated")
+
+# ---------------------------------------------------------------------------
+# Stage 2 retry loop — validate with LLM feedback
+# ---------------------------------------------------------------------------
 async def _chat_json(client: httpx.AsyncClient, base: str, key: str, model: str, system: str, user: str) -> dict[str, Any]:
-    response = await client.post(f"{base}/chat/completions", headers={"Authorization":f"Bearer {key}"},
-      json={"model":model,"temperature":0.45,"response_format":{"type":"json_object"},"messages":[{"role":"system","content":system},{"role":"user","content":user}]})
+    response = await client.post(f"{base}/chat/completions", headers={"Authorization": f"Bearer {key}"},
+        json={"model": model, "temperature": 0.45, "response_format": {"type": "json_object"},
+              "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]})
     response.raise_for_status()
     return json.loads(response.json()["choices"][0]["message"]["content"])
 
-def _compose_storyboard(req: GenerateRequest, brief: dict[str, Any], storyboard: dict[str, Any]) -> dict[str, Any]:
-    palette=[c for c in brief.get("palette",[]) if isinstance(c,str) and re.fullmatch(r"#[0-9a-fA-F]{6}",c)]
-    palette=(palette+["#0B1020","#7C5CFC","#B7A6FF","#29D3A5"])[:4]
-    scenes_in=storyboard.get("scenes",[])
-    if not isinstance(scenes_in,list) or not 3<=len(scenes_in)<=7: raise ValueError("Storyboard must contain between three and seven scenes")
-    raw_durations=[]
-    for item in scenes_in:
-        try: raw_durations.append(max(1.0,float(item.get("duration",req.duration/len(scenes_in)))))
-        except (TypeError,ValueError): raw_durations.append(req.duration/len(scenes_in))
-    raw_total=sum(raw_durations)
-    durations=[round(req.duration*d/raw_total,2) for d in raw_durations]
-    durations[-1]=round(req.duration-sum(durations[:-1]),2)
-    rtl=str(brief.get("language","en")).lower().startswith("fa") or _is_farsi(req.prompt)
-    symbols=["✦","↗","◈","→","✳","◉","⌁"]
-    frames=[]
-    for i,item in enumerate(scenes_in):
-        copy_text=item.get("on_screen_text",{}) if isinstance(item.get("on_screen_text"),dict) else {}
-        headline=str(copy_text.get("headline") or item.get("title") or "A clearer way forward")[:120]
-        body=str(copy_text.get("supporting_copy") or item.get("narration") or item.get("description") or "Designed to make your next step simpler.")[:180]
-        label=str(copy_text.get("eyebrow") or item.get("title") or f"CHAPTER {i+1}")[:32].upper()
-        accent=palette[1+(i%max(1,len(palette)-1))]
-        transition=str(item.get("transition","fade")).lower()
-        if transition not in ("fade","wipe","zoom","cut"): transition="fade"
-        y_title=42 if req.aspect_ratio!="9:16" else 39; y_body=59 if req.aspect_ratio!="9:16" else 52; y_icon=77 if req.aspect_ratio!="9:16" else 70
-        elements=[
-          {"id":f"s{i+1}-eyebrow","kind":"label","text":label,"x":50,"y":25,"width":76,"color":palette[2] if len(palette)>2 else accent,"font_size":15,"weight":700,"animation":"reveal","delay":.08},
-          {"id":f"s{i+1}-headline","kind":"headline","text":headline,"x":50,"y":y_title,"width":84,"color":"#F8FAFC","font_size":68 if req.aspect_ratio=="16:9" else 57,"weight":750,"animation":"rise","delay":.16,"accent":accent},
-          {"id":f"s{i+1}-support","kind":"body","text":body,"x":50,"y":y_body,"width":74,"color":"#B8C3D6","font_size":23,"weight":450,"animation":"reveal","delay":.34},
-          {"id":f"s{i+1}-motif","kind":"icon","text":symbols[i%len(symbols)],"asset_id":["icon-sparkles","icon-arrow-up-right","icon-chart-no-axes-column-increasing","icon-circle-check"][i%4],"x":50,"y":y_icon,"width":18,"color":accent,"font_size":48,"weight":600,"animation":"scale","delay":.42,"accent":accent},
-          {"id":f"s{i+1}-chapter","kind":"metric","text":f"{i+1:02d} / {len(scenes_in):02d}","x":50,"y":90 if req.aspect_ratio!="9:16" else 88,"width":42,"color":"#E8EDF7","font_size":14,"weight":650,"animation":"reveal","delay":.52},
-        ]
-        frames.append({"id":f"scene-{i+1}","title":str(item.get("title") or label.title())[:80],"duration":durations[i],"description":str(item.get("visual_purpose") or item.get("description") or "A focused beat advances the story.")[:240],"narration":str(item.get("narration") or body)[:500],"transition":transition,"background":palette[0],"background_asset":["background-mesh-violet","background-grid-fine","background-aurora-mist","background-radial-rays"][i%4],"elements":elements})
-    return {"title":str(brief.get("working_title") or storyboard.get("title") or "Motion story")[:100],"prompt":req.prompt,"language":"fa" if rtl else str(brief.get("language","en"))[:12],"aspect_ratio":req.aspect_ratio,"fps":30,"palette":palette,"scenes":frames}
+async def _llm_plan(brief: dict[str, Any], req: GenerateRequest, problems: list[str], attempt: int) -> dict[str, Any]:
+    key = os.getenv("LLM_API_KEY")
+    base = os.getenv("LLM_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+    model = os.getenv("LLM_MODEL", "gpt-4o-mini")
+    user = (f"Interpreted brief: {json.dumps(brief, ensure_ascii=False)}. "
+            f"Create a {req.duration}s v2 plan for aspect ratio {req.aspect_ratio}.")
+    if problems:
+        user += f"\n\nVALIDATOR PROBLEMS (fix these in the new plan): {json.dumps(problems, ensure_ascii=False)}"
+    async with httpx.AsyncClient(timeout=60) as client:
+        return await _chat_json(client, base, key or "", model, plan_prompt(), user)
 
-async def _llm_spec(req: GenerateRequest) -> dict[str, Any] | None:
-    key=os.getenv("LLM_API_KEY")
-    if not key: return None
-    base=os.getenv("LLM_BASE_URL","https://api.openai.com/v1").rstrip("/"); model=os.getenv("LLM_MODEL","gpt-4o-mini")
-    interpretation="""Stage 1 — interpret a motion-graphics creative brief. Return JSON only with: working_title (short project name), video_purpose, target_audience, visual_style, duration_seconds, aspect_ratio, palette (3-4 hex colors), language (ISO code, use fa for Persian), narration_style, typography_direction, transition_mood, and scene_count (3-7). Extract what the user actually asked for; do not write a storyboard or animation yet. Preserve Persian/mixed-language requirements."""
-    storyboard_prompt="""Stage 2 — create a storyboard only from the interpreted brief. Return JSON only with a title and scenes array. Each scene must contain title, duration (seconds), visual_purpose, description, transition (fade/wipe/zoom/cut only), narration, and on_screen_text with eyebrow, headline, and supporting_copy. 3-7 scenes. Each beat must advance one coherent story: hook, concrete benefit/demo, proof or differentiator, and a satisfying close/call to action where appropriate. Keep screen copy concise and native to the requested language. Treat a scene as a continuous piece of motion design, not a still-slide caption. Use the supplied library matches before inventing decorative primitives; mention up to two matching asset names in visual_purpose when useful. Compose a restrained background + texture + type hierarchy, consistent palette, readable hold, and varied motion hierarchy. Never invent asset IDs. Do not return code, JSX, or the final animation JSON. The local searchable library offers icons, shapes, backgrounds, textures, illustrations/stickers, device mockups, Lottie references, typography and pairings, text animation recipes, transitions, easing/springs, particle effects, components/templates, color palettes, and gradients. Registry API: GET /api/assets/search?q=...&category=...&tags=...&mood=...&limit=..., GET /api/assets/categories, GET /api/assets/{id}."""
-    try:
-        async with httpx.AsyncClient(timeout=45) as client:
-            brief=await _chat_json(client,base,key,model,interpretation,f"Requested runtime: {req.duration}s. Requested aspect: {req.aspect_ratio}. User brief: {req.prompt}")
-            matches=search_assets(req.prompt,limit=12)
-            categories=', '.join(f"{row['name']} ({row['count']})" for row in list_categories())
-            asset_context=json.dumps([{'id':x['id'],'name':x['name'],'category':x['category'],'tags':x['tags'][:5],'description':x['description'][:100]} for x in matches],ensure_ascii=False)
-            story=await _chat_json(client,base,key,model,storyboard_prompt,f"Interpreted brief: {json.dumps(brief,ensure_ascii=False)}. Asset categories: {categories}. Relevant library search results for the creative brief: {asset_context}. Create a coherent {req.duration}-second storyboard. Use only currently supported transitions fade, wipe, zoom, or cut.")
-        return _compose_storyboard(req,brief,story)
-    except Exception as e:
-        if isinstance(e,ValueError): raise RuntimeError("The LLM storyboard could not be composed into supported motion scenes. Try again or check the model output.") from e
-        raise RuntimeError(f"LLM generation failed during prompt interpretation or storyboard creation ({type(e).__name__}). Check LLM_API_KEY, LLM_BASE_URL, and model settings.") from e
+async def _llm_brief(req: GenerateRequest) -> dict[str, Any]:
+    key = os.getenv("LLM_API_KEY")
+    base = os.getenv("LLM_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+    model = os.getenv("LLM_MODEL", "gpt-4o-mini")
+    async with httpx.AsyncClient(timeout=45) as client:
+        return await _chat_json(client, base, key or "", model, BRIEF_PROMPT,
+                                f"User brief: {req.prompt}. Runtime {req.duration}s, aspect {req.aspect_ratio}.")
 
+async def _llm_spec_v2(req: GenerateRequest) -> tuple[dict[str, Any], list[str]]:
+    brief = await _llm_brief(req)
+    problems: list[str] = []
+    for attempt in range(3):
+        try:
+            raw = await _llm_plan(brief, req, problems, attempt)
+        except Exception as exc:
+            problems = [f"LLM output was not parseable JSON ({type(exc).__name__}); retry"]
+            continue
+        try:
+            spec, fixes = validate_with_correction(raw, max_retries=0)
+            return spec.model_dump(by_alias=True), (fixes or [])
+        except Exception as exc:
+            problems = [str(exc)[:300]]
+    raise RuntimeError("The v2 plan could not be validated after 3 attempts.")
+
+# ---------------------------------------------------------------------------
+# Local deterministic generator (v2)
+# ---------------------------------------------------------------------------
+def _kf_local_scene(idx: int, prompt_kind: str, req: GenerateRequest, style: dict) -> dict[str, Any]:
+    """Local scene builder: gradient bg, camera, stagger, in/loop/out presets."""
+    colors = style["palette"]
+    scenes_data = [
+        ("s1", 0.0, "Hook. Your next move, fast.", "animated-gradient", "push-in"),
+        ("s2", 0.0, "Live numbers. True at a glance.", "particles", "shake"),
+        ("s3", 0.0, "Try it now — no setup.", "grid", "push-in"),
+        ("s4", 0.0, "A story built to move. Start here.", "animated-gradient", "orbit"),
+    ]
+    s_id, s_start, s_title, s_bg, s_cam = scenes_data[idx % 4]
+    layers: list[dict[str, Any]] = []
+    headline = {"headline": "Hook. Your next move, fast.", "metric": "Live numbers. True at a glance.",
+                "caption": "Try it now — no setup.", "body": "A story built to move. Start here."}.get(prompt_kind, s_title)
+    layers.append({"id": f"{s_id}-h1", "type": "text", "content": s_title,
+                   "start": 0.0, "end": 4.0, "position": {"x": 0.5, "y": 0.42},
+                   "animation": {"in_": {"preset": "pop-bounce", "duration": 0.5},
+                                 "loop": {"preset": "float", "amplitude": 8},
+                                 "out": {"preset": "slide-out", "duration": 0.3}, "stagger": True},
+                   "style": {"color": colors[0], "fontSize": 96, "fontWeight": 800}})
+    if idx == 1:
+        layers.append({"id": f"{s_id}-m1", "type": "text", "content": "3×",
+                       "start": 0.3, "end": 4.0, "position": {"x": 0.5, "y": 0.6},
+                       "animation": {"in_": {"preset": "scale-punch", "duration": 0.6},
+                                     "loop": {"preset": "pulse", "amplitude": 0.05}},
+                       "style": {"color": colors[2], "fontSize": 90}})
+        layers.append({"id": f"{s_id}-t1", "type": "text", "content": "Faster. Smarter. More control.",
+                       "start": 1.0, "end": 3.5, "position": {"x": 0.5, "y": 0.73},
+                       "animation": {"in_": {"preset": "slide-in", "duration": 0.4, "delay": 0.3}},
+                       "style": {"color": colors[1], "fontSize": 36}})
+    if idx == 2:
+        layers.append({"id": f"{s_id}-s1", "type": "shape", "start": 0.4, "end": 3.8, "position": {"x": 0.5, "y": 0.58},
+                       "animation": {"in_": {"preset": "underline-draw", "duration": 0.5}}, "style": {}})
+        layers.append({"id": f"{s_id}-c1", "type": "text", "content": "CTA",
+                       "start": 0.9, "end": 3.2, "position": {"x": 0.5, "y": 0.8},
+                       "animation": {"in_": {"preset": "fade-up", "duration": 0.3}, "out": {"preset": "whip-out", "duration": 0.2}},
+                       "style": {"color": colors[2], "fontSize": 46}})
+    if idx == 3:
+        layers.append({"id": f"{s_id}-l1", "type": "text", "content": "Built by you, trusted by all.",
+                       "start": 0.2, "end": 3.8, "position": {"x": 0.5, "y": 0.65},
+                       "animation": {"in_": {"preset": "elastic-drop", "duration": 0.5},
+                                     "loop": {"preset": "breathing-scale", "amplitude": 0.01}},
+                       "style": {"color": colors[3], "fontSize": 52}})
+    return {"id": s_id, "start": 0.0, "duration": 4.5,
+            "background": {"type": s_bg, "colors": colors[:3]},
+            "camera": {"move": s_cam, "intensity": 0.55},
+            "layers": layers,
+            "transition_out": {"type": "whip-pan", "duration": 0.4}}
+
+def _local_spec_v2(req: GenerateRequest) -> dict[str, Any]:
+    style = STYLES["bold-kinetic"]
+    n_scenes = 4
+    per_scene = _bounded(req.duration / n_scenes, 4, MAX_SCENE_SECONDS, 5)
+    total = per_scene * n_scenes
+    scenes = []
+    for i in range(n_scenes):
+        scene = _kf_local_scene(i, "headline", req, style)
+        scene["duration"] = per_scene
+        scene["start"] = per_scene * i
+        scenes.append(scene)
+    return {"version": 2, "title": "Motion story", "prompt": req.prompt, "language": "en",
+            "meta": {"fps": 30, "width": ASPECT_SIZES[req.aspect_ratio][0], "height": ASPECT_SIZES[req.aspect_ratio][1],
+                     "duration": round(total, 2), "style": "bold-kinetic"},
+            "audio": {}, "scenes": scenes}
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
 async def generate_project(req: GenerateRequest) -> tuple[ProjectSpec, str]:
-    raw = await _llm_spec(req)
+    key = os.getenv("LLM_API_KEY")
     provider = "llm"
-    if raw is None:
-        raw = _local_spec(req); provider = "local"
+    if key:
+        raw, fixes = await _llm_spec_v2(req)
+    else:
+        raw, provider = _local_spec_v2(req), "local"
     try:
-        spec,_corrections = validate_with_correction(raw,max_retries=1)
-    except Exception as e:
-        if provider == "llm": raise RuntimeError("The storyboard animation specification failed preflight validation after one correction. Try again or adjust the brief.") from e
+        spec, problems = validate_with_correction(raw, max_retries=1)
+    except Exception as exc:
+        if provider == "llm":
+            raise RuntimeError("The v2 plan failed preflight validation after one correction. Try again or adjust the brief.") from exc
         raise
     return spec, provider

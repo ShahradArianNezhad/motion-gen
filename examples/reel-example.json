@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "title": "Product launch Reel",
+  "prompt": "15-second vertical product launch with a bold hook, kinetic typography, and a strong CTA",
+  "language": "en",
+  "meta": { "fps": 30, "width": 1080, "height": 1920, "duration": 16, "style": "bold-kinetic" },
+  "audio": {
+    "sfx": [
+      { "t": 0.4, "type": "whoosh" },
+      { "t": 1.2, "type": "pop" },
+      { "t": 2.6, "type": "click" },
+      { "t": 9.0, "type": "ding" }
+    ]
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "start": 0,
+      "duration": 4.5,
+      "background": { "type": "animated-gradient", "colors": ["#0B1020", "#7C5CFC"] },
+      "camera": { "move": "push-in", "intensity": 0.6 },
+      "layers": [
+        {
+          "id": "s1-headline", "type": "text",
+          "content": "This changes everything.",
+          "start": 0.1, "end": 4.5,
+          "position": { "x": 0.5, "y": 0.42 },
+          "animation": {
+            "in": { "preset": "pop-bounce", "duration": 0.5 },
+            "loop": { "preset": "float", "amplitude": 8 },
+            "stagger": true
+          },
+          "style": { "color": "#F8FAFC", "fontSize": 96, "fontWeight": 800, "fontFamily": "Manrope, sans-serif" }
+        },
+        {
+          "id": "s1-sub", "type": "text",
+          "content": "A sneak peek you asked for",
+          "start": 0.6, "end": 2.5,
+          "position": { "x": 0.5, "y": 0.62 },
+          "animation": { "in": { "preset": "fade-up", "duration": 0.4 } },
+          "style": { "color": "#B8C3D6", "fontSize": 34 }
+        }
+      ],
+      "transition_out": { "type": "whip-pan", "duration": 0.4 }
+    },
+    {
+      "id": "s2",
+      "start": 4.5,
+      "duration": 4.5,
+      "background": { "type": "particles" },
+      "camera": { "move": "shake", "intensity": 0.35 },
+      "layers": [
+        {
+          "id": "s2-metric", "type": "text",
+          "content": "3× faster",
+          "start": 0.0, "end": 4.5,
+          "position": { "x": 0.5, "y": 0.42 },
+          "animation": {
+            "in": { "preset": "scale-punch", "duration": 0.6 },
+            "loop": { "preset": "pulse", "amplitude": 0.05 }
+          },
+          "style": { "color": "#21D4A7", "fontSize": 90, "fontWeight": 900 }
+        },
+        {
+          "id": "s2-tagline", "type": "text",
+          "content": "smart, simple, yours",
+          "start": 0.7, "end": 3.5,
+          "position": { "x": 0.5, "y": 0.65 },
+          "animation": { "in": { "preset": "slide-in", "duration": 0.4, "delay": 0.3 } },
+          "style": { "color": "#F8FAFC", "fontSize": 42 }
+        }
+      ],
+      "transition_out": { "type": "morph", "duration": 0.3 }
+    },
+    {
+      "id": "s3",
+      "start": 9,
+      "duration": 7,
+      "background": { "type": "animated-gradient", "colors": ["#051020", "#E3366E", "#FF9F1C"] },
+      "camera": { "move": "static", "intensity": 0 },
+      "layers": [
+        {
+          "id": "s3-cta", "type": "text",
+          "content": "Try it now",
+          "start": 0.2, "end": 3.5,
+          "position": { "x": 0.5, "y": 0.4 },
+          "animation": {
+            "in": { "preset": "elastic-drop", "duration": 0.5 },
+            "loop": { "preset": "breathing-scale", "amplitude": 0.01 }
+          },
+          "style": { "color": "#FFF1D2", "fontSize": 84, "fontWeight": 800, "fontFamily": "Manrope, sans-serif" }
+        },
+        {
+          "id": "s3-underline", "type": "shape",
+          "start": 0.9, "end": 3.4,
+          "position": { "x": 0.5, "y": 0.56 },
+          "animation": { "in": { "preset": "underline-draw", "duration": 0.5 } }
+        },
+        {
+          "id": "s3-note", "type": "text",
+          "content": "Link in bio",
+          "start": 1.8, "end": 3.4,
+          "position": { "x": 0.5, "y": 0.72 },
+          "animation": { "in": { "preset": "fade-up", "duration": 0.3 } },
+          "style": { "color": "#E3366E", "fontSize": 26 }
+        }
+      ]
+    }
+  ]
+}
