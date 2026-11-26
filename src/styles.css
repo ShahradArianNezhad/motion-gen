@@ -6,3 +6,22 @@
 @media(max-width:900px){.workspace{grid-template-columns:54px minmax(0,1fr) 246px}.assistant-panel{display:none}.editor-main{grid-column:2}.inspector{grid-column:3}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project-grid .project-card:nth-child(3){display:none}}
 @media(max-width:680px){.home-screen{padding:0 19px}.home-nav{height:65px}.hero{margin-top:53px}.hero h1{font-size:54px}.hero-sub{font-size:12px}.prompt-card textarea{min-height:82px;font-size:12px}.prompt-footer{padding-left:11px}.generation-settings{gap:7px}.generation-settings label{gap:4px}.generation-settings select{max-width:78px}.primary-button{font-size:10px;padding:9px}.projects-section{margin-top:54px}.project-grid{grid-template-columns:1fr}.project-grid .project-card:nth-child(3){display:block}.project-art{height:155px}.home-footer{margin-top:46px}.examples{gap:6px}.example-label{width:100%;margin:0}.studio-app{min-height:500px}.studio-topbar{height:50px;padding:0 8px;gap:8px}.studio-topbar .back-home>span:not(.brand-mark){display:none}.top-divider:first-of-type{display:none}.project-title-area{min-width:0}.project-title-input{max-width:105px}.top-actions{gap:3px}.share-button{font-size:0;padding:0 8px}.share-button svg{width:15px}.export-group select{display:none}.export-button{border-radius:5px;padding:0 8px;font-size:9px}.workspace{height:calc(100vh - 50px);grid-template-columns:43px minmax(0,1fr)}.tool-rail{grid-column:1;grid-row:1}.editor-main{grid-column:2;grid-row:1;grid-template-rows:38px minmax(170px,1fr) 40px 200px}.inspector{position:fixed;right:0;top:50px;bottom:0;width:265px;z-index:4;box-shadow:-15px 0 40px #0009;transform:translateX(100%);transition:transform .2s}.studio-app:has(.element-selected) .inspector{transform:translateX(0)}.editor-toolbar{padding:0 8px}.canvas-zone{padding:7px}.timeline-head{padding:0 8px}.tracks{grid-template-columns:65px minmax(0,1fr)}.track-labels span{padding-left:4px;font-size:6px;gap:3px}.layer-name,.audio-track-label{width:67px;font-size:7px}.track-content{padding-left:5px;padding-right:5px}.scene-block{min-width:42px;padding:4px}.scene-block>small{display:none}.timeline-footer{padding:0 7px;gap:8px}.timeline-footer>span:nth-child(2){display:none}.transport{padding:0 8px;gap:7px}.transport-left{width:90px}.fit-button{display:none}.rail-button{width:41px}.rail-button span{font-size:7px}.rail-bottom{gap:7px}.preview-caption span:last-child{display:none}}
 .asset-library-link{font-size:10px;color:#b9a8e7;text-decoration:none;border:1px solid #393344;border-radius:5px;padding:7px 9px}.asset-library-link:hover{border-color:#806cb2;color:#e2d6ff}
+
+/* Editor layout: the assistant is an optional workspace column. */
+.workspace.assistant-collapsed{grid-template-columns:60px minmax(0,1fr) 270px}
+.workspace.assistant-collapsed .assistant-panel{display:none}
+.workspace.assistant-collapsed .editor-main{grid-column:2}
+.workspace.assistant-collapsed .inspector{grid-column:3}
+.share-button.active{border-color:#8b76bd;background:#241e30;color:#e3d9ff}
+.track-content{position:relative}
+.playhead{position:absolute;top:9px;bottom:0;width:1px;background:#bba5ff;box-shadow:0 0 8px #a98cff88;pointer-events:none;z-index:2}
+.no-layers{padding:15px 4px;font-size:8px;color:#787985}
+.layer-add{width:calc(100% - 8px);margin:4px;height:28px;border:1px dashed #3a3944;border-radius:5px;background:transparent;color:#a99ad2;font-size:9px;display:flex;align-items:center;justify-content:center;gap:6px}
+.layer-add:hover{border-color:#8872bb;background:#1c1923}
+.rail-button{-webkit-text-decoration:none;text-decoration:none}
+.rail-bottom button:disabled{opacity:.35}
+@media(max-width:680px){.workspace.assistant-collapsed{grid-template-columns:43px minmax(0,1fr)}
+.workspace.assistant-collapsed .tool-rail{grid-column:1;grid-row:1}
+.workspace.assistant-collapsed .editor-main{grid-column:2;grid-row:1}
+.workspace.assistant-collapsed .inspector{position:fixed;right:0;top:50px;bottom:0;width:265px;z-index:4;box-shadow:-15px 0 40px #0009;transform:translateX(100%);transition:transform .2s}
+.studio-app:has(.element-selected) .workspace.assistant-collapsed .inspector{transform:translateX(0)}}
