@@ -30,6 +30,16 @@ The Python API does not execute model-produced code. Models return structured JS
 
 Requirements: Node.js 20+ and Python 3.10+. Remotion's platform package provides FFmpeg; the renderer includes a packaged Chromium build for local rendering.
 
+The easiest way to run everything is the launcher:
+
+```bash
+./start.sh
+```
+
+It installs missing frontend and Python dependencies, starts the API on port 8000 and the studio on port 5173, and stops both with Ctrl+C. Set `WEB_PORT` to use a different frontend port (the API stays on 8000 because Vite proxies to it). An optional `.env` is picked up automatically; see step 3 below.
+
+Or set things up manually:
+
 1. Install frontend dependencies:
    ```bash
    npm install
