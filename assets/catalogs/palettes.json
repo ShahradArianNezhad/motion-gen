@@ -1,0 +1,1183 @@
+[
+  {
+    "name": "midnight-violet",
+    "colors": [
+      "#0B1020",
+      "#19142E",
+      "#7C5CFC",
+      "#B7A6FF",
+      "#F8FAFC"
+    ],
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#0B1020",
+      "text": "#F8FAFC",
+      "ratio": 18.1,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "ocean-signal",
+    "colors": [
+      "#071A2D",
+      "#168AAD",
+      "#41EAD4",
+      "#EAF8FF"
+    ],
+    "mood": "corporate",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#071A2D",
+      "text": "#EAF8FF",
+      "ratio": 16.21,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "citrus-pop",
+    "colors": [
+      "#18220B",
+      "#A3D938",
+      "#F5E85C",
+      "#FFF9DD"
+    ],
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#18220B",
+      "text": "#FFF9DD",
+      "ratio": 15.6,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "terracotta-studio",
+    "colors": [
+      "#281A18",
+      "#B45E4A",
+      "#EDAD83",
+      "#FAE8D4"
+    ],
+    "mood": "warm",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#281A18",
+      "text": "#FAE8D4",
+      "ratio": 14.03,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "soft-lavender",
+    "colors": [
+      "#F7F4FF",
+      "#D9CCFF",
+      "#9274DB",
+      "#29223D"
+    ],
+    "mood": "pastel",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#F7F4FF",
+      "text": "#29223D",
+      "ratio": 13.91,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "carbon-cobalt",
+    "colors": [
+      "#10151E",
+      "#273B5A",
+      "#3978D4",
+      "#B9D9FF"
+    ],
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#10151E",
+      "text": "#B9D9FF",
+      "ratio": 12.57,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "rosewater",
+    "colors": [
+      "#2C1924",
+      "#BC5977",
+      "#F0A7B7",
+      "#FFE7EA"
+    ],
+    "mood": "romantic",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#2C1924",
+      "text": "#FFE7EA",
+      "ratio": 14.05,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "forest-moss",
+    "colors": [
+      "#10221A",
+      "#286B4C",
+      "#91BD72",
+      "#E8F1D7"
+    ],
+    "mood": "nature",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#10221A",
+      "text": "#E8F1D7",
+      "ratio": 14.22,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "copper-night",
+    "colors": [
+      "#1B1717",
+      "#724938",
+      "#D99162",
+      "#F7DBB9"
+    ],
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#1B1717",
+      "text": "#F7DBB9",
+      "ratio": 13.36,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "signal-red",
+    "colors": [
+      "#1A1013",
+      "#D83A4B",
+      "#F89B63",
+      "#FFF2E9"
+    ],
+    "mood": "bold",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#1A1013",
+      "text": "#FFF2E9",
+      "ratio": 16.97,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "skyline",
+    "colors": [
+      "#12243A",
+      "#4079B5",
+      "#8DD5E8",
+      "#F4FBFF"
+    ],
+    "mood": "calm",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#12243A",
+      "text": "#F4FBFF",
+      "ratio": 15.0,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "candy-shop",
+    "colors": [
+      "#401E5B",
+      "#EC6FB2",
+      "#FDBD68",
+      "#FFF1C4"
+    ],
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#401E5B",
+      "text": "#FFF1C4",
+      "ratio": 11.98,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "monochrome-paper",
+    "colors": [
+      "#F5F2EB",
+      "#D2CEC3",
+      "#464641",
+      "#171816"
+    ],
+    "mood": "editorial",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#F5F2EB",
+      "text": "#171816",
+      "ratio": 15.94,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "mint-condition",
+    "colors": [
+      "#0D2B27",
+      "#2B9C83",
+      "#7FE0B5",
+      "#E2FFF4"
+    ],
+    "mood": "fresh",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#0D2B27",
+      "text": "#E2FFF4",
+      "ratio": 14.26,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "electric-lime",
+    "colors": [
+      "#11180C",
+      "#638D20",
+      "#B9EE36",
+      "#EEFFC2"
+    ],
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#11180C",
+      "text": "#EEFFC2",
+      "ratio": 17.0,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "sunset-hour",
+    "colors": [
+      "#301A36",
+      "#934C70",
+      "#F48968",
+      "#FFD18B"
+    ],
+    "mood": "cinematic",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#301A36",
+      "text": "#FFD18B",
+      "ratio": 11.11,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "blueprint",
+    "colors": [
+      "#F4F8FF",
+      "#D7E5FF",
+      "#3567B2",
+      "#132A4D"
+    ],
+    "mood": "corporate",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#F4F8FF",
+      "text": "#132A4D",
+      "ratio": 13.45,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "peach-fuzz",
+    "colors": [
+      "#FFF7F0",
+      "#F4C5AA",
+      "#D78170",
+      "#523942"
+    ],
+    "mood": "warm",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#FFF7F0",
+      "text": "#523942",
+      "ratio": 9.8,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "ultraviolet",
+    "colors": [
+      "#120D24",
+      "#4F2E93",
+      "#A87BFF",
+      "#E3CEFF"
+    ],
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#120D24",
+      "text": "#E3CEFF",
+      "ratio": 13.11,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "gold-standard",
+    "colors": [
+      "#1D1B15",
+      "#6B5934",
+      "#C9A959",
+      "#F4E4B6"
+    ],
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#1D1B15",
+      "text": "#F4E4B6",
+      "ratio": 13.62,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "arctic-glass",
+    "colors": [
+      "#0B1821",
+      "#1D677B",
+      "#72D1D1",
+      "#E5FFFF"
+    ],
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#0B1821",
+      "text": "#E5FFFF",
+      "ratio": 17.21,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "berry-soda",
+    "colors": [
+      "#2B1231",
+      "#802C72",
+      "#E75B9B",
+      "#FFC0D8"
+    ],
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#2B1231",
+      "text": "#FFC0D8",
+      "ratio": 11.17,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "sage-paper",
+    "colors": [
+      "#F2F4EB",
+      "#BCC9A9",
+      "#617454",
+      "#27352B"
+    ],
+    "mood": "nature",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#F2F4EB",
+      "text": "#27352B",
+      "ratio": 11.6,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "mono-terminal",
+    "colors": [
+      "#08120C",
+      "#193E28",
+      "#43D17C",
+      "#D5FFD7"
+    ],
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#08120C",
+      "text": "#D5FFD7",
+      "ratio": 17.34,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "coral-reef",
+    "colors": [
+      "#10282C",
+      "#167C83",
+      "#53C7B7",
+      "#FF987A"
+    ],
+    "mood": "fresh",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#10282C",
+      "text": "#FF987A",
+      "ratio": 7.36,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "ink-and-ivory",
+    "colors": [
+      "#F5F1E8",
+      "#D3C9B9",
+      "#292A2A",
+      "#090A0C"
+    ],
+    "mood": "editorial",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#F5F1E8",
+      "text": "#090A0C",
+      "ratio": 17.57,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "neon-tokyo",
+    "colors": [
+      "#080D1A",
+      "#7D3CFF",
+      "#F93DCE",
+      "#72F3FF"
+    ],
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#080D1A",
+      "text": "#72F3FF",
+      "ratio": 14.76,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "desert-modern",
+    "colors": [
+      "#33241C",
+      "#99775B",
+      "#D4AF85",
+      "#F5E6D0"
+    ],
+    "mood": "earthy",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#33241C",
+      "text": "#F5E6D0",
+      "ratio": 12.14,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "plum-cream",
+    "colors": [
+      "#29192B",
+      "#69445D",
+      "#C89DBB",
+      "#F5E8EF"
+    ],
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#29192B",
+      "text": "#F5E8EF",
+      "ratio": 13.93,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "blue-hour",
+    "colors": [
+      "#10182B",
+      "#364C83",
+      "#819EE8",
+      "#E5ECFF"
+    ],
+    "mood": "cinematic",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#10182B",
+      "text": "#E5ECFF",
+      "ratio": 14.97,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "lemonade",
+    "colors": [
+      "#FDF8E9",
+      "#F2DE74",
+      "#D79339",
+      "#40391D"
+    ],
+    "mood": "playful",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#FDF8E9",
+      "text": "#40391D",
+      "ratio": 10.86,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "evergreen",
+    "colors": [
+      "#13271E",
+      "#244E3B",
+      "#6C9B6B",
+      "#D8E2CC"
+    ],
+    "mood": "nature",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#13271E",
+      "text": "#D8E2CC",
+      "ratio": 11.72,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "punch-card",
+    "colors": [
+      "#211C23",
+      "#F25F5C",
+      "#F5B841",
+      "#F7F3E8"
+    ],
+    "mood": "retro",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#211C23",
+      "text": "#F7F3E8",
+      "ratio": 15.09,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "glacier",
+    "colors": [
+      "#EFFAFF",
+      "#C8E9F1",
+      "#559CB0",
+      "#193E51"
+    ],
+    "mood": "calm",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#EFFAFF",
+      "text": "#193E51",
+      "ratio": 10.7,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "black-cherry",
+    "colors": [
+      "#1A1016",
+      "#451B31",
+      "#92385D",
+      "#E7A9BC"
+    ],
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#1A1016",
+      "text": "#E7A9BC",
+      "ratio": 9.56,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "lavender-lime",
+    "colors": [
+      "#F6F1FF",
+      "#A48CD8",
+      "#A5C94B",
+      "#283121"
+    ],
+    "mood": "playful",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#F6F1FF",
+      "text": "#283121",
+      "ratio": 12.21,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "rose-gold",
+    "colors": [
+      "#21191B",
+      "#75505A",
+      "#D69B91",
+      "#F4D8C8"
+    ],
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#21191B",
+      "text": "#F4D8C8",
+      "ratio": 12.71,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "cobalt-pop",
+    "colors": [
+      "#0D1833",
+      "#254AC7",
+      "#FFCC47",
+      "#F6F8FF"
+    ],
+    "mood": "bold",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#0D1833",
+      "text": "#F6F8FF",
+      "ratio": 16.55,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "coffee-and-cream",
+    "colors": [
+      "#241914",
+      "#604333",
+      "#B78763",
+      "#F4E5D3"
+    ],
+    "mood": "warm",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#241914",
+      "text": "#F4E5D3",
+      "ratio": 13.88,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "digital-mint",
+    "colors": [
+      "#0C1918",
+      "#1A5145",
+      "#20D6A2",
+      "#D1FFF0"
+    ],
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#0C1918",
+      "text": "#D1FFF0",
+      "ratio": 16.5,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "soft-sky",
+    "colors": [
+      "#F1F7FF",
+      "#BDD7F4",
+      "#739CC6",
+      "#243A52"
+    ],
+    "mood": "pastel",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#F1F7FF",
+      "text": "#243A52",
+      "ratio": 10.81,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "orange-cream",
+    "colors": [
+      "#30190F",
+      "#D76530",
+      "#F3A457",
+      "#FFE5C1"
+    ],
+    "mood": "warm",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#30190F",
+      "text": "#FFE5C1",
+      "ratio": 13.55,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "royal-indigo",
+    "colors": [
+      "#16152C",
+      "#383477",
+      "#7D78D2",
+      "#D3D0FF"
+    ],
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#16152C",
+      "text": "#D3D0FF",
+      "ratio": 12.09,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "berry-lime",
+    "colors": [
+      "#271B2B",
+      "#8B426F",
+      "#C4DB4D",
+      "#F6F0DA"
+    ],
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#271B2B",
+      "text": "#F6F0DA",
+      "ratio": 14.39,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "storm-cloud",
+    "colors": [
+      "#14181F",
+      "#353D4A",
+      "#8592A2",
+      "#E1E7EF"
+    ],
+    "mood": "corporate",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#14181F",
+      "text": "#E1E7EF",
+      "ratio": 14.3,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "fuchsia-flare",
+    "colors": [
+      "#1A1020",
+      "#852A82",
+      "#EF54CA",
+      "#FFD2F4"
+    ],
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#1A1020",
+      "text": "#FFD2F4",
+      "ratio": 13.85,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "olive-editorial",
+    "colors": [
+      "#24251A",
+      "#696A3D",
+      "#A8A879",
+      "#EFEBD8"
+    ],
+    "mood": "earthy",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#24251A",
+      "text": "#EFEBD8",
+      "ratio": 12.95,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "crimson-ink",
+    "colors": [
+      "#1F1218",
+      "#742B3E",
+      "#C15058",
+      "#F5E5D7"
+    ],
+    "mood": "bold",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#1F1218",
+      "text": "#F5E5D7",
+      "ratio": 14.74,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "sea-glass",
+    "colors": [
+      "#F0FAF8",
+      "#A6DAD0",
+      "#4B968F",
+      "#164C4A"
+    ],
+    "mood": "calm",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#F0FAF8",
+      "text": "#164C4A",
+      "ratio": 9.11,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "mono-luxe",
+    "colors": [
+      "#111111",
+      "#44423F",
+      "#B0AAA0",
+      "#F2EFE9"
+    ],
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#111111",
+      "text": "#F2EFE9",
+      "ratio": 16.45,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "pop-art",
+    "colors": [
+      "#191323",
+      "#F25353",
+      "#F8D948",
+      "#4AC9C0"
+    ],
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#191323",
+      "text": "#4AC9C0",
+      "ratio": 8.98,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "orchid-night",
+    "colors": [
+      "#191024",
+      "#59377A",
+      "#BA78D2",
+      "#F2D7FC"
+    ],
+    "mood": "cinematic",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#191024",
+      "text": "#F2D7FC",
+      "ratio": 13.94,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "copper-sage",
+    "colors": [
+      "#26221B",
+      "#9E704D",
+      "#9EAD83",
+      "#F1E5CF"
+    ],
+    "mood": "earthy",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#26221B",
+      "text": "#F1E5CF",
+      "ratio": 12.7,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "glow-cyan",
+    "colors": [
+      "#08151D",
+      "#14536A",
+      "#34DDF0",
+      "#E0FCFF"
+    ],
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#08151D",
+      "text": "#E0FCFF",
+      "ratio": 17.21,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "soft-coral",
+    "colors": [
+      "#FFF6F1",
+      "#F4C3B4",
+      "#E98376",
+      "#533A3E"
+    ],
+    "mood": "pastel",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#FFF6F1",
+      "text": "#533A3E",
+      "ratio": 9.65,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "deep-teal",
+    "colors": [
+      "#0B2022",
+      "#124E50",
+      "#28A6A0",
+      "#C7F1E9"
+    ],
+    "mood": "corporate",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#0B2022",
+      "text": "#C7F1E9",
+      "ratio": 13.82,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "studio-neutral",
+    "colors": [
+      "#FAF8F4",
+      "#E7E1D7",
+      "#A29A8E",
+      "#252525"
+    ],
+    "mood": "editorial",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#FAF8F4",
+      "text": "#252525",
+      "ratio": 14.45,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "festival",
+    "colors": [
+      "#26143F",
+      "#794BC1",
+      "#FA5C99",
+      "#FFC857"
+    ],
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true,
+    "contrastPair": {
+      "background": "#26143F",
+      "text": "#FFC857",
+      "ratio": 10.88,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  },
+  {
+    "name": "minimal-ice",
+    "colors": [
+      "#FFFFFF",
+      "#E8EDF2",
+      "#74869A",
+      "#233344"
+    ],
+    "mood": "minimal",
+    "lightSuitable": true,
+    "darkSuitable": false,
+    "contrastPair": {
+      "background": "#FFFFFF",
+      "text": "#233344",
+      "ratio": 12.9,
+      "wcagAA": true,
+      "largeTextAA": true,
+      "note": "Use this pair for normal text only when wcagAA is true; verify overlay opacity and font weight in final composition."
+    }
+  }
+]

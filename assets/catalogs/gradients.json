@@ -1,0 +1,1418 @@
+[
+  {
+    "name": "midnight-violet-gradient",
+    "colors": [
+      "#19142E",
+      "#B7A6FF",
+      "#F8FAFC"
+    ],
+    "css": "linear-gradient(135deg, #19142E 0%, #B7A6FF 58%, #F8FAFC 100%)",
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "ocean-signal-gradient",
+    "colors": [
+      "#168AAD",
+      "#41EAD4",
+      "#EAF8FF"
+    ],
+    "css": "linear-gradient(135deg, #168AAD 0%, #41EAD4 58%, #EAF8FF 100%)",
+    "mood": "corporate",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "citrus-pop-gradient",
+    "colors": [
+      "#A3D938",
+      "#F5E85C",
+      "#FFF9DD"
+    ],
+    "css": "linear-gradient(135deg, #A3D938 0%, #F5E85C 58%, #FFF9DD 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "terracotta-studio-gradient",
+    "colors": [
+      "#B45E4A",
+      "#EDAD83",
+      "#FAE8D4"
+    ],
+    "css": "linear-gradient(135deg, #B45E4A 0%, #EDAD83 58%, #FAE8D4 100%)",
+    "mood": "warm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "soft-lavender-gradient",
+    "colors": [
+      "#D9CCFF",
+      "#9274DB",
+      "#29223D"
+    ],
+    "css": "linear-gradient(135deg, #D9CCFF 0%, #9274DB 58%, #29223D 100%)",
+    "mood": "pastel",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "carbon-cobalt-gradient",
+    "colors": [
+      "#273B5A",
+      "#3978D4",
+      "#B9D9FF"
+    ],
+    "css": "linear-gradient(135deg, #273B5A 0%, #3978D4 58%, #B9D9FF 100%)",
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "rosewater-gradient",
+    "colors": [
+      "#BC5977",
+      "#F0A7B7",
+      "#FFE7EA"
+    ],
+    "css": "linear-gradient(135deg, #BC5977 0%, #F0A7B7 58%, #FFE7EA 100%)",
+    "mood": "romantic",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "forest-moss-gradient",
+    "colors": [
+      "#286B4C",
+      "#91BD72",
+      "#E8F1D7"
+    ],
+    "css": "linear-gradient(135deg, #286B4C 0%, #91BD72 58%, #E8F1D7 100%)",
+    "mood": "nature",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "copper-night-gradient",
+    "colors": [
+      "#724938",
+      "#D99162",
+      "#F7DBB9"
+    ],
+    "css": "linear-gradient(135deg, #724938 0%, #D99162 58%, #F7DBB9 100%)",
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "signal-red-gradient",
+    "colors": [
+      "#D83A4B",
+      "#F89B63",
+      "#FFF2E9"
+    ],
+    "css": "linear-gradient(135deg, #D83A4B 0%, #F89B63 58%, #FFF2E9 100%)",
+    "mood": "bold",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "skyline-gradient",
+    "colors": [
+      "#4079B5",
+      "#8DD5E8",
+      "#F4FBFF"
+    ],
+    "css": "linear-gradient(135deg, #4079B5 0%, #8DD5E8 58%, #F4FBFF 100%)",
+    "mood": "calm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "candy-shop-gradient",
+    "colors": [
+      "#EC6FB2",
+      "#FDBD68",
+      "#FFF1C4"
+    ],
+    "css": "linear-gradient(135deg, #EC6FB2 0%, #FDBD68 58%, #FFF1C4 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "monochrome-paper-gradient",
+    "colors": [
+      "#D2CEC3",
+      "#464641",
+      "#171816"
+    ],
+    "css": "linear-gradient(135deg, #D2CEC3 0%, #464641 58%, #171816 100%)",
+    "mood": "editorial",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "mint-condition-gradient",
+    "colors": [
+      "#2B9C83",
+      "#7FE0B5",
+      "#E2FFF4"
+    ],
+    "css": "linear-gradient(135deg, #2B9C83 0%, #7FE0B5 58%, #E2FFF4 100%)",
+    "mood": "fresh",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "electric-lime-gradient",
+    "colors": [
+      "#638D20",
+      "#B9EE36",
+      "#EEFFC2"
+    ],
+    "css": "linear-gradient(135deg, #638D20 0%, #B9EE36 58%, #EEFFC2 100%)",
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "sunset-hour-gradient",
+    "colors": [
+      "#934C70",
+      "#F48968",
+      "#FFD18B"
+    ],
+    "css": "linear-gradient(135deg, #934C70 0%, #F48968 58%, #FFD18B 100%)",
+    "mood": "cinematic",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "blueprint-gradient",
+    "colors": [
+      "#D7E5FF",
+      "#3567B2",
+      "#132A4D"
+    ],
+    "css": "linear-gradient(135deg, #D7E5FF 0%, #3567B2 58%, #132A4D 100%)",
+    "mood": "corporate",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "peach-fuzz-gradient",
+    "colors": [
+      "#F4C5AA",
+      "#D78170",
+      "#523942"
+    ],
+    "css": "linear-gradient(135deg, #F4C5AA 0%, #D78170 58%, #523942 100%)",
+    "mood": "warm",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "ultraviolet-gradient",
+    "colors": [
+      "#4F2E93",
+      "#A87BFF",
+      "#E3CEFF"
+    ],
+    "css": "linear-gradient(135deg, #4F2E93 0%, #A87BFF 58%, #E3CEFF 100%)",
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "gold-standard-gradient",
+    "colors": [
+      "#6B5934",
+      "#C9A959",
+      "#F4E4B6"
+    ],
+    "css": "linear-gradient(135deg, #6B5934 0%, #C9A959 58%, #F4E4B6 100%)",
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "arctic-glass-gradient",
+    "colors": [
+      "#1D677B",
+      "#72D1D1",
+      "#E5FFFF"
+    ],
+    "css": "linear-gradient(135deg, #1D677B 0%, #72D1D1 58%, #E5FFFF 100%)",
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "berry-soda-gradient",
+    "colors": [
+      "#802C72",
+      "#E75B9B",
+      "#FFC0D8"
+    ],
+    "css": "linear-gradient(135deg, #802C72 0%, #E75B9B 58%, #FFC0D8 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "sage-paper-gradient",
+    "colors": [
+      "#BCC9A9",
+      "#617454",
+      "#27352B"
+    ],
+    "css": "linear-gradient(135deg, #BCC9A9 0%, #617454 58%, #27352B 100%)",
+    "mood": "nature",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "mono-terminal-gradient",
+    "colors": [
+      "#193E28",
+      "#43D17C",
+      "#D5FFD7"
+    ],
+    "css": "linear-gradient(135deg, #193E28 0%, #43D17C 58%, #D5FFD7 100%)",
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "coral-reef-gradient",
+    "colors": [
+      "#167C83",
+      "#53C7B7",
+      "#FF987A"
+    ],
+    "css": "linear-gradient(135deg, #167C83 0%, #53C7B7 58%, #FF987A 100%)",
+    "mood": "fresh",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "ink-and-ivory-gradient",
+    "colors": [
+      "#D3C9B9",
+      "#292A2A",
+      "#090A0C"
+    ],
+    "css": "linear-gradient(135deg, #D3C9B9 0%, #292A2A 58%, #090A0C 100%)",
+    "mood": "editorial",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "neon-tokyo-gradient",
+    "colors": [
+      "#7D3CFF",
+      "#F93DCE",
+      "#72F3FF"
+    ],
+    "css": "linear-gradient(135deg, #7D3CFF 0%, #F93DCE 58%, #72F3FF 100%)",
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "desert-modern-gradient",
+    "colors": [
+      "#99775B",
+      "#D4AF85",
+      "#F5E6D0"
+    ],
+    "css": "linear-gradient(135deg, #99775B 0%, #D4AF85 58%, #F5E6D0 100%)",
+    "mood": "earthy",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "plum-cream-gradient",
+    "colors": [
+      "#69445D",
+      "#C89DBB",
+      "#F5E8EF"
+    ],
+    "css": "linear-gradient(135deg, #69445D 0%, #C89DBB 58%, #F5E8EF 100%)",
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "blue-hour-gradient",
+    "colors": [
+      "#364C83",
+      "#819EE8",
+      "#E5ECFF"
+    ],
+    "css": "linear-gradient(135deg, #364C83 0%, #819EE8 58%, #E5ECFF 100%)",
+    "mood": "cinematic",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "lemonade-gradient",
+    "colors": [
+      "#F2DE74",
+      "#D79339",
+      "#40391D"
+    ],
+    "css": "linear-gradient(135deg, #F2DE74 0%, #D79339 58%, #40391D 100%)",
+    "mood": "playful",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "evergreen-gradient",
+    "colors": [
+      "#244E3B",
+      "#6C9B6B",
+      "#D8E2CC"
+    ],
+    "css": "linear-gradient(135deg, #244E3B 0%, #6C9B6B 58%, #D8E2CC 100%)",
+    "mood": "nature",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "punch-card-gradient",
+    "colors": [
+      "#F25F5C",
+      "#F5B841",
+      "#F7F3E8"
+    ],
+    "css": "linear-gradient(135deg, #F25F5C 0%, #F5B841 58%, #F7F3E8 100%)",
+    "mood": "retro",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "glacier-gradient",
+    "colors": [
+      "#C8E9F1",
+      "#559CB0",
+      "#193E51"
+    ],
+    "css": "linear-gradient(135deg, #C8E9F1 0%, #559CB0 58%, #193E51 100%)",
+    "mood": "calm",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "black-cherry-gradient",
+    "colors": [
+      "#451B31",
+      "#92385D",
+      "#E7A9BC"
+    ],
+    "css": "linear-gradient(135deg, #451B31 0%, #92385D 58%, #E7A9BC 100%)",
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "lavender-lime-gradient",
+    "colors": [
+      "#A48CD8",
+      "#A5C94B",
+      "#283121"
+    ],
+    "css": "linear-gradient(135deg, #A48CD8 0%, #A5C94B 58%, #283121 100%)",
+    "mood": "playful",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "rose-gold-gradient",
+    "colors": [
+      "#75505A",
+      "#D69B91",
+      "#F4D8C8"
+    ],
+    "css": "linear-gradient(135deg, #75505A 0%, #D69B91 58%, #F4D8C8 100%)",
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "cobalt-pop-gradient",
+    "colors": [
+      "#254AC7",
+      "#FFCC47",
+      "#F6F8FF"
+    ],
+    "css": "linear-gradient(135deg, #254AC7 0%, #FFCC47 58%, #F6F8FF 100%)",
+    "mood": "bold",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "coffee-and-cream-gradient",
+    "colors": [
+      "#604333",
+      "#B78763",
+      "#F4E5D3"
+    ],
+    "css": "linear-gradient(135deg, #604333 0%, #B78763 58%, #F4E5D3 100%)",
+    "mood": "warm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "digital-mint-gradient",
+    "colors": [
+      "#1A5145",
+      "#20D6A2",
+      "#D1FFF0"
+    ],
+    "css": "linear-gradient(135deg, #1A5145 0%, #20D6A2 58%, #D1FFF0 100%)",
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "soft-sky-gradient",
+    "colors": [
+      "#BDD7F4",
+      "#739CC6",
+      "#243A52"
+    ],
+    "css": "linear-gradient(135deg, #BDD7F4 0%, #739CC6 58%, #243A52 100%)",
+    "mood": "pastel",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "orange-cream-gradient",
+    "colors": [
+      "#D76530",
+      "#F3A457",
+      "#FFE5C1"
+    ],
+    "css": "linear-gradient(135deg, #D76530 0%, #F3A457 58%, #FFE5C1 100%)",
+    "mood": "warm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "royal-indigo-gradient",
+    "colors": [
+      "#383477",
+      "#7D78D2",
+      "#D3D0FF"
+    ],
+    "css": "linear-gradient(135deg, #383477 0%, #7D78D2 58%, #D3D0FF 100%)",
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "berry-lime-gradient",
+    "colors": [
+      "#8B426F",
+      "#C4DB4D",
+      "#F6F0DA"
+    ],
+    "css": "linear-gradient(135deg, #8B426F 0%, #C4DB4D 58%, #F6F0DA 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "storm-cloud-gradient",
+    "colors": [
+      "#353D4A",
+      "#8592A2",
+      "#E1E7EF"
+    ],
+    "css": "linear-gradient(135deg, #353D4A 0%, #8592A2 58%, #E1E7EF 100%)",
+    "mood": "corporate",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "fuchsia-flare-gradient",
+    "colors": [
+      "#852A82",
+      "#EF54CA",
+      "#FFD2F4"
+    ],
+    "css": "linear-gradient(135deg, #852A82 0%, #EF54CA 58%, #FFD2F4 100%)",
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "olive-editorial-gradient",
+    "colors": [
+      "#696A3D",
+      "#A8A879",
+      "#EFEBD8"
+    ],
+    "css": "linear-gradient(135deg, #696A3D 0%, #A8A879 58%, #EFEBD8 100%)",
+    "mood": "earthy",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "crimson-ink-gradient",
+    "colors": [
+      "#742B3E",
+      "#C15058",
+      "#F5E5D7"
+    ],
+    "css": "linear-gradient(135deg, #742B3E 0%, #C15058 58%, #F5E5D7 100%)",
+    "mood": "bold",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "sea-glass-gradient",
+    "colors": [
+      "#A6DAD0",
+      "#4B968F",
+      "#164C4A"
+    ],
+    "css": "linear-gradient(135deg, #A6DAD0 0%, #4B968F 58%, #164C4A 100%)",
+    "mood": "calm",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "mono-luxe-gradient",
+    "colors": [
+      "#44423F",
+      "#B0AAA0",
+      "#F2EFE9"
+    ],
+    "css": "linear-gradient(135deg, #44423F 0%, #B0AAA0 58%, #F2EFE9 100%)",
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "pop-art-gradient",
+    "colors": [
+      "#F25353",
+      "#F8D948",
+      "#4AC9C0"
+    ],
+    "css": "linear-gradient(135deg, #F25353 0%, #F8D948 58%, #4AC9C0 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "orchid-night-gradient",
+    "colors": [
+      "#59377A",
+      "#BA78D2",
+      "#F2D7FC"
+    ],
+    "css": "linear-gradient(135deg, #59377A 0%, #BA78D2 58%, #F2D7FC 100%)",
+    "mood": "cinematic",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "copper-sage-gradient",
+    "colors": [
+      "#9E704D",
+      "#9EAD83",
+      "#F1E5CF"
+    ],
+    "css": "linear-gradient(135deg, #9E704D 0%, #9EAD83 58%, #F1E5CF 100%)",
+    "mood": "earthy",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "glow-cyan-gradient",
+    "colors": [
+      "#14536A",
+      "#34DDF0",
+      "#E0FCFF"
+    ],
+    "css": "linear-gradient(135deg, #14536A 0%, #34DDF0 58%, #E0FCFF 100%)",
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "soft-coral-gradient",
+    "colors": [
+      "#F4C3B4",
+      "#E98376",
+      "#533A3E"
+    ],
+    "css": "linear-gradient(135deg, #F4C3B4 0%, #E98376 58%, #533A3E 100%)",
+    "mood": "pastel",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "deep-teal-gradient",
+    "colors": [
+      "#124E50",
+      "#28A6A0",
+      "#C7F1E9"
+    ],
+    "css": "linear-gradient(135deg, #124E50 0%, #28A6A0 58%, #C7F1E9 100%)",
+    "mood": "corporate",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "studio-neutral-gradient",
+    "colors": [
+      "#E7E1D7",
+      "#A29A8E",
+      "#252525"
+    ],
+    "css": "linear-gradient(135deg, #E7E1D7 0%, #A29A8E 58%, #252525 100%)",
+    "mood": "editorial",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "festival-gradient",
+    "colors": [
+      "#794BC1",
+      "#FA5C99",
+      "#FFC857"
+    ],
+    "css": "linear-gradient(135deg, #794BC1 0%, #FA5C99 58%, #FFC857 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "minimal-ice-gradient",
+    "colors": [
+      "#E8EDF2",
+      "#74869A",
+      "#233344"
+    ],
+    "css": "linear-gradient(135deg, #E8EDF2 0%, #74869A 58%, #233344 100%)",
+    "mood": "minimal",
+    "lightSuitable": true,
+    "darkSuitable": false
+  },
+  {
+    "name": "midnight-violet-radial",
+    "colors": [
+      "#19142E",
+      "#B7A6FF",
+      "#0B1020"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #B7A6FF 0%, #19142E 42%, #0B1020 100%)",
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "ocean-signal-radial",
+    "colors": [
+      "#168AAD",
+      "#41EAD4",
+      "#071A2D"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #41EAD4 0%, #168AAD 42%, #071A2D 100%)",
+    "mood": "corporate",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "citrus-pop-radial",
+    "colors": [
+      "#A3D938",
+      "#F5E85C",
+      "#18220B"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #F5E85C 0%, #A3D938 42%, #18220B 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "terracotta-studio-radial",
+    "colors": [
+      "#B45E4A",
+      "#EDAD83",
+      "#281A18"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #EDAD83 0%, #B45E4A 42%, #281A18 100%)",
+    "mood": "warm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "soft-lavender-radial",
+    "colors": [
+      "#D9CCFF",
+      "#9274DB",
+      "#F7F4FF"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #9274DB 0%, #D9CCFF 42%, #F7F4FF 100%)",
+    "mood": "pastel",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "carbon-cobalt-radial",
+    "colors": [
+      "#273B5A",
+      "#3978D4",
+      "#10151E"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #3978D4 0%, #273B5A 42%, #10151E 100%)",
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "rosewater-radial",
+    "colors": [
+      "#BC5977",
+      "#F0A7B7",
+      "#2C1924"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #F0A7B7 0%, #BC5977 42%, #2C1924 100%)",
+    "mood": "romantic",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "forest-moss-radial",
+    "colors": [
+      "#286B4C",
+      "#91BD72",
+      "#10221A"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #91BD72 0%, #286B4C 42%, #10221A 100%)",
+    "mood": "nature",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "copper-night-radial",
+    "colors": [
+      "#724938",
+      "#D99162",
+      "#1B1717"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #D99162 0%, #724938 42%, #1B1717 100%)",
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "signal-red-radial",
+    "colors": [
+      "#D83A4B",
+      "#F89B63",
+      "#1A1013"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #F89B63 0%, #D83A4B 42%, #1A1013 100%)",
+    "mood": "bold",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "skyline-radial",
+    "colors": [
+      "#4079B5",
+      "#8DD5E8",
+      "#12243A"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #8DD5E8 0%, #4079B5 42%, #12243A 100%)",
+    "mood": "calm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "candy-shop-radial",
+    "colors": [
+      "#EC6FB2",
+      "#FDBD68",
+      "#401E5B"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #FDBD68 0%, #EC6FB2 42%, #401E5B 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "monochrome-paper-radial",
+    "colors": [
+      "#D2CEC3",
+      "#464641",
+      "#F5F2EB"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #464641 0%, #D2CEC3 42%, #F5F2EB 100%)",
+    "mood": "editorial",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "mint-condition-radial",
+    "colors": [
+      "#2B9C83",
+      "#7FE0B5",
+      "#0D2B27"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #7FE0B5 0%, #2B9C83 42%, #0D2B27 100%)",
+    "mood": "fresh",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "electric-lime-radial",
+    "colors": [
+      "#638D20",
+      "#B9EE36",
+      "#11180C"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #B9EE36 0%, #638D20 42%, #11180C 100%)",
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "sunset-hour-radial",
+    "colors": [
+      "#934C70",
+      "#F48968",
+      "#301A36"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #F48968 0%, #934C70 42%, #301A36 100%)",
+    "mood": "cinematic",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "blueprint-radial",
+    "colors": [
+      "#D7E5FF",
+      "#3567B2",
+      "#F4F8FF"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #3567B2 0%, #D7E5FF 42%, #F4F8FF 100%)",
+    "mood": "corporate",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "peach-fuzz-radial",
+    "colors": [
+      "#F4C5AA",
+      "#D78170",
+      "#FFF7F0"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #D78170 0%, #F4C5AA 42%, #FFF7F0 100%)",
+    "mood": "warm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "ultraviolet-radial",
+    "colors": [
+      "#4F2E93",
+      "#A87BFF",
+      "#120D24"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #A87BFF 0%, #4F2E93 42%, #120D24 100%)",
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "gold-standard-radial",
+    "colors": [
+      "#6B5934",
+      "#C9A959",
+      "#1D1B15"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #C9A959 0%, #6B5934 42%, #1D1B15 100%)",
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "arctic-glass-radial",
+    "colors": [
+      "#1D677B",
+      "#72D1D1",
+      "#0B1821"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #72D1D1 0%, #1D677B 42%, #0B1821 100%)",
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "berry-soda-radial",
+    "colors": [
+      "#802C72",
+      "#E75B9B",
+      "#2B1231"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #E75B9B 0%, #802C72 42%, #2B1231 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "sage-paper-radial",
+    "colors": [
+      "#BCC9A9",
+      "#617454",
+      "#F2F4EB"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #617454 0%, #BCC9A9 42%, #F2F4EB 100%)",
+    "mood": "nature",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "mono-terminal-radial",
+    "colors": [
+      "#193E28",
+      "#43D17C",
+      "#08120C"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #43D17C 0%, #193E28 42%, #08120C 100%)",
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "coral-reef-radial",
+    "colors": [
+      "#167C83",
+      "#53C7B7",
+      "#10282C"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #53C7B7 0%, #167C83 42%, #10282C 100%)",
+    "mood": "fresh",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "ink-and-ivory-radial",
+    "colors": [
+      "#D3C9B9",
+      "#292A2A",
+      "#F5F1E8"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #292A2A 0%, #D3C9B9 42%, #F5F1E8 100%)",
+    "mood": "editorial",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "neon-tokyo-radial",
+    "colors": [
+      "#7D3CFF",
+      "#F93DCE",
+      "#080D1A"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #F93DCE 0%, #7D3CFF 42%, #080D1A 100%)",
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "desert-modern-radial",
+    "colors": [
+      "#99775B",
+      "#D4AF85",
+      "#33241C"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #D4AF85 0%, #99775B 42%, #33241C 100%)",
+    "mood": "earthy",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "plum-cream-radial",
+    "colors": [
+      "#69445D",
+      "#C89DBB",
+      "#29192B"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #C89DBB 0%, #69445D 42%, #29192B 100%)",
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "blue-hour-radial",
+    "colors": [
+      "#364C83",
+      "#819EE8",
+      "#10182B"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #819EE8 0%, #364C83 42%, #10182B 100%)",
+    "mood": "cinematic",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "lemonade-radial",
+    "colors": [
+      "#F2DE74",
+      "#D79339",
+      "#FDF8E9"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #D79339 0%, #F2DE74 42%, #FDF8E9 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "evergreen-radial",
+    "colors": [
+      "#244E3B",
+      "#6C9B6B",
+      "#13271E"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #6C9B6B 0%, #244E3B 42%, #13271E 100%)",
+    "mood": "nature",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "punch-card-radial",
+    "colors": [
+      "#F25F5C",
+      "#F5B841",
+      "#211C23"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #F5B841 0%, #F25F5C 42%, #211C23 100%)",
+    "mood": "retro",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "glacier-radial",
+    "colors": [
+      "#C8E9F1",
+      "#559CB0",
+      "#EFFAFF"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #559CB0 0%, #C8E9F1 42%, #EFFAFF 100%)",
+    "mood": "calm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "black-cherry-radial",
+    "colors": [
+      "#451B31",
+      "#92385D",
+      "#1A1016"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #92385D 0%, #451B31 42%, #1A1016 100%)",
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "lavender-lime-radial",
+    "colors": [
+      "#A48CD8",
+      "#A5C94B",
+      "#F6F1FF"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #A5C94B 0%, #A48CD8 42%, #F6F1FF 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "rose-gold-radial",
+    "colors": [
+      "#75505A",
+      "#D69B91",
+      "#21191B"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #D69B91 0%, #75505A 42%, #21191B 100%)",
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "cobalt-pop-radial",
+    "colors": [
+      "#254AC7",
+      "#FFCC47",
+      "#0D1833"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #FFCC47 0%, #254AC7 42%, #0D1833 100%)",
+    "mood": "bold",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "coffee-and-cream-radial",
+    "colors": [
+      "#604333",
+      "#B78763",
+      "#241914"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #B78763 0%, #604333 42%, #241914 100%)",
+    "mood": "warm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "digital-mint-radial",
+    "colors": [
+      "#1A5145",
+      "#20D6A2",
+      "#0C1918"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #20D6A2 0%, #1A5145 42%, #0C1918 100%)",
+    "mood": "technology",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "soft-sky-radial",
+    "colors": [
+      "#BDD7F4",
+      "#739CC6",
+      "#F1F7FF"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #739CC6 0%, #BDD7F4 42%, #F1F7FF 100%)",
+    "mood": "pastel",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "orange-cream-radial",
+    "colors": [
+      "#D76530",
+      "#F3A457",
+      "#30190F"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #F3A457 0%, #D76530 42%, #30190F 100%)",
+    "mood": "warm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "royal-indigo-radial",
+    "colors": [
+      "#383477",
+      "#7D78D2",
+      "#16152C"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #7D78D2 0%, #383477 42%, #16152C 100%)",
+    "mood": "premium",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "berry-lime-radial",
+    "colors": [
+      "#8B426F",
+      "#C4DB4D",
+      "#271B2B"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #C4DB4D 0%, #8B426F 42%, #271B2B 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "storm-cloud-radial",
+    "colors": [
+      "#353D4A",
+      "#8592A2",
+      "#14181F"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #8592A2 0%, #353D4A 42%, #14181F 100%)",
+    "mood": "corporate",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "fuchsia-flare-radial",
+    "colors": [
+      "#852A82",
+      "#EF54CA",
+      "#1A1020"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #EF54CA 0%, #852A82 42%, #1A1020 100%)",
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "olive-editorial-radial",
+    "colors": [
+      "#696A3D",
+      "#A8A879",
+      "#24251A"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #A8A879 0%, #696A3D 42%, #24251A 100%)",
+    "mood": "earthy",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "crimson-ink-radial",
+    "colors": [
+      "#742B3E",
+      "#C15058",
+      "#1F1218"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #C15058 0%, #742B3E 42%, #1F1218 100%)",
+    "mood": "bold",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "sea-glass-radial",
+    "colors": [
+      "#A6DAD0",
+      "#4B968F",
+      "#F0FAF8"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #4B968F 0%, #A6DAD0 42%, #F0FAF8 100%)",
+    "mood": "calm",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "mono-luxe-radial",
+    "colors": [
+      "#44423F",
+      "#B0AAA0",
+      "#111111"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #B0AAA0 0%, #44423F 42%, #111111 100%)",
+    "mood": "dark luxury",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "pop-art-radial",
+    "colors": [
+      "#F25353",
+      "#F8D948",
+      "#191323"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #F8D948 0%, #F25353 42%, #191323 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "orchid-night-radial",
+    "colors": [
+      "#59377A",
+      "#BA78D2",
+      "#191024"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #BA78D2 0%, #59377A 42%, #191024 100%)",
+    "mood": "cinematic",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "copper-sage-radial",
+    "colors": [
+      "#9E704D",
+      "#9EAD83",
+      "#26221B"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #9EAD83 0%, #9E704D 42%, #26221B 100%)",
+    "mood": "earthy",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "glow-cyan-radial",
+    "colors": [
+      "#14536A",
+      "#34DDF0",
+      "#08151D"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #34DDF0 0%, #14536A 42%, #08151D 100%)",
+    "mood": "neon",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "soft-coral-radial",
+    "colors": [
+      "#F4C3B4",
+      "#E98376",
+      "#FFF6F1"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #E98376 0%, #F4C3B4 42%, #FFF6F1 100%)",
+    "mood": "pastel",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "deep-teal-radial",
+    "colors": [
+      "#124E50",
+      "#28A6A0",
+      "#0B2022"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #28A6A0 0%, #124E50 42%, #0B2022 100%)",
+    "mood": "corporate",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "studio-neutral-radial",
+    "colors": [
+      "#E7E1D7",
+      "#A29A8E",
+      "#FAF8F4"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #A29A8E 0%, #E7E1D7 42%, #FAF8F4 100%)",
+    "mood": "editorial",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "festival-radial",
+    "colors": [
+      "#794BC1",
+      "#FA5C99",
+      "#26143F"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #FA5C99 0%, #794BC1 42%, #26143F 100%)",
+    "mood": "playful",
+    "lightSuitable": false,
+    "darkSuitable": true
+  },
+  {
+    "name": "minimal-ice-radial",
+    "colors": [
+      "#E8EDF2",
+      "#74869A",
+      "#FFFFFF"
+    ],
+    "css": "radial-gradient(ellipse at 25% 20%, #74869A 0%, #E8EDF2 42%, #FFFFFF 100%)",
+    "mood": "minimal",
+    "lightSuitable": false,
+    "darkSuitable": true
+  }
+]

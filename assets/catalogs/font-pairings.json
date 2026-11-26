@@ -1,0 +1,77 @@
+[
+  {
+    "display": "DM Sans",
+    "body": "DM Serif Display",
+    "guidance": "Modern product + editorial accent"
+  },
+  {
+    "display": "Manrope",
+    "body": "Fraunces",
+    "guidance": "Polished product + expressive editorial"
+  },
+  {
+    "display": "Inter",
+    "body": "Playfair Display",
+    "guidance": "Clean interface + high-contrast titles"
+  },
+  {
+    "display": "Space Grotesk",
+    "body": "Space Mono",
+    "guidance": "Technology + precise data"
+  },
+  {
+    "display": "Outfit",
+    "body": "DM Serif Display",
+    "guidance": "Friendly launch + refined quote"
+  },
+  {
+    "display": "Plus Jakarta Sans",
+    "body": "Lora",
+    "guidance": "Warm SaaS + readable long copy"
+  },
+  {
+    "display": "Roboto Condensed",
+    "body": "Roboto",
+    "guidance": "Dense information + neutral body"
+  },
+  {
+    "display": "Oswald",
+    "body": "Inter",
+    "guidance": "Punchy title + clean supporting text"
+  },
+  {
+    "display": "Sora",
+    "body": "IBM Plex Mono",
+    "guidance": "Futuristic title + technical labels"
+  },
+  {
+    "display": "Montserrat",
+    "body": "Merriweather",
+    "guidance": "Campaign display + literary detail"
+  },
+  {
+    "display": "Archivo",
+    "body": "Source Serif 4",
+    "guidance": "Editorial hierarchy"
+  },
+  {
+    "display": "Nunito Sans",
+    "body": "Fraunces",
+    "guidance": "Approachable brand + premium accent"
+  },
+  {
+    "display": "Bebas Neue",
+    "body": "DM Sans",
+    "guidance": "Sports / event typography"
+  },
+  {
+    "display": "Quicksand",
+    "body": "Lato",
+    "guidance": "Rounded social content"
+  },
+  {
+    "display": "Vazirmatn",
+    "body": "DM Sans",
+    "guidance": "Persian-first RTL + Latin UI"
+  }
+]
