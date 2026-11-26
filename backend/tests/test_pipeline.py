@@ -1,7 +1,8 @@
 import os, unittest
+from unittest.mock import AsyncMock, patch
 from fastapi.testclient import TestClient
 from backend.app.main import app
-from backend.app.generation import generate_project, validate_with_correction, _local_spec_v2, _lint_v2
+from backend.app.generation import generate_project, validate_with_correction, _local_spec_v2, _lint_v2, plan_prompt
 from backend.app.models import GenerateRequest, ProjectSpec
 from backend.app.styles import STYLE_IDS, ALLOWED_PRESETS
 
@@ -45,6 +46,43 @@ class GenerationTests(unittest.IsolatedAsyncioTestCase):
         self.assertIn('bold-kinetic', STYLE_IDS)
         self.assertIn('pop-bounce', ALLOWED_PRESETS)
         self.assertIn('underline-draw', ALLOWED_PRESETS)
+
+    async def test_llm_plan_schema_fields_and_preset_vocabulary_validate(self):
+        # Mirrors the plan schema rather than relying on the local generator's
+        # already-complete ProjectSpec payload.
+        raw = {
+            'meta': {'fps': 30, 'width': 1080, 'height': 1920, 'duration': 4, 'style': 'bold-kinetic'},
+            'audio': {},
+            'scenes': [{
+                'id': 'scene-1', 'duration': 4,
+                'background': {'type': 'animated-gradient', 'colors': ['#0B1020']},
+                'camera': {'move': 'push-in', 'intensity': 0.5},
+                'layers': [{
+                    'id': 'layer-1', 'type': 'text', 'content': 'Hello world',
+                    'start': 0, 'end': 4, 'position': {'x': 0.5, 'y': 0.5},
+                    'animation': {'in': 'whip-in', 'loop': {'preset': 'leaf-drift'},
+                                  'out': {'preset': 'circle-draw-on'}},
+                }],
+            }],
+        }
+        spec, _ = validate_with_correction(raw, max_retries=0, prompt_fallback='Create a kinetic promo',
+                                           aspect_ratio='9:16')
+        self.assertEqual(spec.title, 'Motion story')
+        self.assertEqual(spec.prompt, 'Create a kinetic promo')
+        self.assertEqual((spec.meta.width, spec.meta.height), (1080, 1920))
+        layer = spec.scenes[0].layers[0]
+        self.assertEqual(layer.animation.in_.preset, 'whip-in')
+        self.assertEqual(layer.animation.loop.preset, 'leaf-drift')
+        self.assertEqual(layer.animation.out.preset, 'circle-draw-on')
+        self.assertIn('"title"', plan_prompt())
+        self.assertIn('"prompt"', plan_prompt())
+
+    async def test_llm_provider_failure_falls_back_to_local(self):
+        os.environ['LLM_API_KEY'] = 'test-key'
+        with patch('backend.app.generation._llm_spec_v2', new=AsyncMock(side_effect=RuntimeError('provider unavailable'))):
+            spec, provider = await generate_project(GenerateRequest(prompt='Create a kinetic promo', duration=12))
+        self.assertEqual(provider, 'local')
+        self.assertEqual(spec.version, 2)
 
 class ApiTests(unittest.TestCase):
     def setUp(self):

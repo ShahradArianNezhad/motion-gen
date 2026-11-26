@@ -48,7 +48,7 @@ Persian/mixed-language requirements. Be concise and numeric-safe (duration 5–6
 # ---------------------------------------------------------------------------
 def plan_prompt() -> str:
     return (f"Stage 2 — write a full version-2 animation plan as JSON only, using ONLY these animation presets (never invent others): {json.dumps(ALLOWED_PRESETS)}.\n"
-            'Schema: {"meta": {"fps": int, "width": int, "height": int, "duration": float, "style": one of ['
+            'Schema: {"version": 2, "title": string, "prompt": string, "language": BCP47 tag, "meta": {"fps": int, "width": int, "height": int, "duration": float, "style": one of ['
             + ", ".join(f'"{s}"' for s in STYLE_IDS) + ']}, "audio": {"voiceover": str, "music": str, "sfx": [{"t": num, "type": "whoosh"|"pop"|"click"|"ding"|"impact"}...]},\n'
             '"scenes": [{"id", "start", "duration" (0.5–' + str(MAX_SCENE_SECONDS) + '), "background": {"type": "animated-gradient"|"color"|"grid"|"particles"|"image-kenburns", "colors": [hex...]}, "camera": {"move": "static"|"push-in"|"pan-left"|"shake"|"orbit", "intensity": 0–1},\n'
             '"layers": [{"id", "type": "text"|"image"|"shape"|"icon"|"lottie"|"video"|"chart"|"caption", "content", "start", "end",\n'
@@ -64,21 +64,76 @@ def plan_prompt() -> str:
             "7) Write short punchy text (≤7 words per line), for the ear.\n"
             "8) Give each scene visual_purpose (it has NO elements key — visuals come from layers).\n")
 
+ALLOWED_LAYER_TYPES = {"text", "image", "shape", "icon", "lottie", "video", "chart", "caption"}
+
+def _normalize_stage(stage: Any, default_preset: str) -> dict[str, Any] | None:
+    """Normalize an animation stage (in/loop/out) from any LLM shape.
+
+    Accepts dicts, bare preset strings, or None. Clamps numeric fields to the
+    AnimStage bounds and falls back to ``default_preset`` for unknown presets.
+    Returns None when the stage is absent (only valid for loop/out).
+    """
+    if stage is None:
+        return None
+    if isinstance(stage, str):
+        stage = {"preset": stage}
+    if not isinstance(stage, dict):
+        return None
+    preset = stage.get("preset")
+    if preset not in ALLOWED_PRESETS:
+        preset = default_preset
+    normalized: dict[str, Any] = {"preset": preset}
+    for key, low, high in (("duration", 0, 5), ("delay", 0, 5), ("amplitude", 0, 100), ("speed", 0, 100)):
+        if stage.get(key) is not None:
+            normalized[key] = _bounded(stage.get(key), low, high, 0.5 if key == "duration" else 0)
+    # Preserve any extra renderer params the model allows through.
+    for key, value in stage.items():
+        if key not in normalized and key != "preset":
+            normalized[key] = value
+    return normalized
+
 # ---------------------------------------------------------------------------
 # Auto-repair pass (deterministic preflight)
 # ---------------------------------------------------------------------------
-def _repair_v2(raw: dict[str, Any]) -> dict[str, Any]:
-    candidate = copy.deepcopy(raw)
+def _repair_v2(raw: dict[str, Any], aspect_ratio: str | None = None,
+               prompt_fallback: str | None = None, title_fallback: str | None = None) -> dict[str, Any]:
+    candidate = copy.deepcopy(raw) if isinstance(raw, dict) else {}
+    # Required top-level fields (ProjectSpec has no defaults for these).
+    candidate["version"] = 2
+    if not str(candidate.get("title") or "").strip():
+        candidate["title"] = title_fallback or "Motion story"
+    if not str(candidate.get("prompt") or "").strip():
+        candidate["prompt"] = prompt_fallback or str(candidate.get("title") or "Motion story")
+    if not isinstance(candidate.get("language"), str) or not candidate["language"].strip():
+        candidate["language"] = "en"
+    if not isinstance(candidate.get("audio"), dict):
+        candidate["audio"] = {}
     meta = candidate.get("meta") if isinstance(candidate.get("meta"), dict) else {}
     style = meta.get("style") if isinstance(meta.get("style"), str) else "bold-kinetic"
     meta.setdefault("fps", 30); meta["fps"] = int(_bounded(meta.get("fps"), 24, 60, 30))
     meta.setdefault("duration", 0.0); meta["duration"] = _bounded(meta.get("duration"), 0, 600, 0.0)
-    w, h = ASPECT_SIZES.get(str(meta.get("aspect_ratio") or "16:9"), (1920, 1080))
-    meta["width"] = meta.get("width") or w; meta["height"] = meta.get("height") or h
+    if aspect_ratio:
+        requested_aspect = aspect_ratio
+    else:
+        requested_aspect = str(meta.get("aspect_ratio") or "")
+        if requested_aspect not in ASPECT_SIZES:
+            try:
+                old_width, old_height = int(meta.get("width", 1920)), int(meta.get("height", 1080))
+                requested_aspect = "9:16" if old_height > old_width else "1:1" if old_width == old_height else "16:9"
+            except (TypeError, ValueError):
+                requested_aspect = "16:9"
+    if requested_aspect not in ASPECT_SIZES:
+        requested_aspect = "16:9"
+    w, h = ASPECT_SIZES[requested_aspect]
+    # The requested aspect ratio wins over whatever the LLM guessed.
+    meta["width"] = w; meta["height"] = h
+    meta["aspect_ratio"] = requested_aspect
     meta["style"] = style if style in STYLE_IDS else "bold-kinetic"
     candidate["meta"] = meta
     scenes = candidate.get("scenes") if isinstance(candidate.get("scenes"), list) else []
     candidate["scenes"] = scenes[:20]
+    if not candidate["scenes"]:
+        candidate["scenes"] = [{"id": "scene-1", "duration": 4, "layers": []}]
     start = 0.0
     for i, scene in enumerate(candidate["scenes"]):
         if not isinstance(scene, dict): scene = {}; candidate["scenes"][i] = scene
@@ -86,16 +141,25 @@ def _repair_v2(raw: dict[str, Any]) -> dict[str, Any]:
         scene["duration"] = _bounded(scene.get("duration"), 0.5, MAX_SCENE_SECONDS, 3)
         scene["start"] = start; start += scene["duration"]
         bg = scene.get("background") if isinstance(scene.get("background"), dict) else {}
-        scene["background"] = {"type": str(bg.get("type") or "animated-gradient"),
-                               "colors": [c for c in (bg.get("colors") or []) if isinstance(c, str)][:3]}
+        bg_colors = [c for c in (bg.get("colors") or []) if isinstance(c, str)][:3]
+        if not bg_colors:
+            bg_colors = STYLES[meta["style"]]["palette"][:3]
+        scene["background"] = {"type": str(bg.get("type") or "animated-gradient"), "colors": bg_colors}
         cam = scene.get("camera") if isinstance(scene.get("camera"), dict) else {}
         scene["camera"] = {"move": str(cam.get("move") or "push-in"), "intensity": _bounded(cam.get("intensity"), 0, 1, 0.6)}
+        # Accept "elements" as an alias for "layers" (a common LLM slip).
+        if not isinstance(scene.get("layers"), list) and isinstance(scene.get("elements"), list):
+            scene["layers"] = scene["elements"]
         layers = scene.get("layers") if isinstance(scene.get("layers"), list) else []
         scene["layers"] = layers[:40]
+        if not scene["layers"]:
+            scene["layers"] = [{"id": f"{scene['id']}-layer-1", "type": "text", "content": "Motion story",
+                                "start": 0, "end": scene["duration"], "position": {"x": 0.5, "y": 0.42}}]
         for li, layer in enumerate(scene["layers"]):
             if not isinstance(layer, dict): layer = {}; scene["layers"][li] = layer
             layer["id"] = str(layer.get("id") or f"{scene['id']}-layer-{li+1}")
-            layer["type"] = str(layer.get("type") or "text")
+            layer_type = str(layer.get("type") or "text")
+            layer["type"] = layer_type if layer_type in ALLOWED_LAYER_TYPES else "text"
             layer["content"] = str(layer.get("content") or "")[:200]
             layer["start"] = _bounded(layer.get("start", 0), 0, scene["duration"], 0.0)
             layer["end"] = _bounded(layer.get("end", scene["duration"]), layer["start"], scene["duration"], scene["duration"])
@@ -103,19 +167,27 @@ def _repair_v2(raw: dict[str, Any]) -> dict[str, Any]:
             layer["position"] = {"x": _bounded(pos.get("x", 0.5), 0, 1, 0.5), "y": _bounded(pos.get("y", 0.5), 0, 1, 0.5)}
             anim = layer.get("animation") if isinstance(layer.get("animation"), dict) else {}
             layer["animation"] = anim
-        # linter: every layer must have in, out on exit-able layers
+        # Every layer must have an entrance; loop/out presets are validated too.
         for layer in scene["layers"]:
             anim = layer["animation"]
             in_stage = anim.get("in_") or anim.get("in")
-            if not in_stage:
-                anim["in_"] = {"preset": "pop-bounce", "duration": 0.5}
-            elif in_stage.get("preset") not in ALLOWED_PRESETS:
-                in_stage["preset"] = "pop-bounce"
-            t = scene.get("transition_out") if isinstance(scene.get("transition_out"), dict) else None
-            if t is None or str(t.get("type")) not in TRANSITION_TYPES:
-                t = {"type": "morph", "duration": 0.3}
-                scene["transition_out"] = t
-            t.setdefault("duration", 0.3)
+            anim["in_"] = _normalize_stage(in_stage, "pop-bounce") or {"preset": "pop-bounce", "duration": 0.5}
+            anim.pop("in", None)
+            loop_stage = _normalize_stage(anim.get("loop"), "float")
+            if loop_stage is not None:
+                anim["loop"] = loop_stage
+            else:
+                anim.pop("loop", None)
+            out_stage = _normalize_stage(anim.get("out"), "slide-out")
+            if out_stage is not None:
+                anim["out"] = out_stage
+            else:
+                anim.pop("out", None)
+        t = scene.get("transition_out") if isinstance(scene.get("transition_out"), dict) else None
+        if t is None or str(t.get("type")) not in TRANSITION_TYPES:
+            t = {"type": "morph", "duration": 0.3}
+            scene["transition_out"] = t
+        t.setdefault("duration", 0.3)
     return candidate
 
 # ---------------------------------------------------------------------------
@@ -146,6 +218,7 @@ def _lint_v2(spec: ProjectSpec) -> list[str]:
 
 def _auto_fix_v2(spec: ProjectSpec) -> list[str]:
     changes: list[str] = []
+    seen_layouts: list[tuple] = []
     for i, scene in enumerate(spec.scenes):
         if scene.background.type == "color" and not scene.background.colors:
             scene.background.type = "animated-gradient"
@@ -165,21 +238,48 @@ def _auto_fix_v2(spec: ProjectSpec) -> list[str]:
                 if layer.type == "text" and layer.position["y"] < 0.38:
                     layer.position["y"] = 0.38
                     changes.append(f"Scene {i+1} layer '{layer.id}': moved text out of the 9:16 unsafe zone")
+        # Vary repeated layouts so the linter cannot loop forever on them.
+        sig = tuple((l.position["x"], l.position["y"]) for l in scene.layers)
+        if sig in seen_layouts:
+            original = [(l.position["x"], l.position["y"]) for l in scene.layers]
+            # Try deterministic small offsets until the whole signature is unique.
+            for attempt in range(1, 31):
+                for layer, (x, y) in zip(scene.layers, original):
+                    layer.position["x"] = 0.1 + ((x - 0.1 + attempt * 0.037) % 0.8)
+                    layer.position["y"] = 0.2 + ((y - 0.2 + attempt * 0.029) % 0.65)
+                sig = tuple((l.position["x"], l.position["y"]) for l in scene.layers)
+                if sig not in seen_layouts:
+                    break
+            changes.append(f"Scene {i+1}: varied repeated layout")
+        seen_layouts.append(sig)
     return changes
 
-def validate_with_correction(raw: dict[str, Any], max_retries: int = 2) -> tuple[ProjectSpec, list[str]]:
-    """Validate v2 spec; auto-fix common issues; returns (spec, problems)."""
-    candidate = _repair_v2(raw)
+def validate_with_correction(raw: dict[str, Any], max_retries: int = 2,
+                             aspect_ratio: str | None = None,
+                             prompt_fallback: str | None = None,
+                             title_fallback: str | None = None) -> tuple[ProjectSpec, list[str]]:
+    """Validate v2 spec; auto-fix common issues; returns (spec, problems).
+
+    Raises ValueError carrying the lint problems (or the Pydantic error text)
+    so the LLM retry loop can feed concrete feedback back to the model.
+    """
+    candidate = _repair_v2(raw, aspect_ratio=aspect_ratio,
+                           prompt_fallback=prompt_fallback, title_fallback=title_fallback)
+    last_problems: list[str] = []
     for _ in range(max_retries + 1):
-        spec = ProjectSpec.model_validate(candidate)
+        try:
+            spec = ProjectSpec.model_validate(candidate)
+        except Exception as exc:
+            raise ValueError(f"v2 animation plan failed schema validation: {exc}") from exc
         fixed = _auto_fix_v2(spec)
         problems = _lint_v2(spec)
         if not problems:
             return spec, fixed
+        last_problems = problems
         # re-dump (auto fixes) and let model_validate re-run
         candidate = spec.model_dump(by_alias=True)
         fixed.extend(problems)
-    raise ValueError("v2 animation plan could not be validated")
+    raise ValueError(f"v2 animation plan could not be validated: {'; '.join(last_problems)}")
 
 # ---------------------------------------------------------------------------
 # Stage 2 retry loop — validate with LLM feedback
@@ -220,11 +320,15 @@ async def _llm_spec_v2(req: GenerateRequest) -> tuple[dict[str, Any], list[str]]
             problems = [f"LLM output was not parseable JSON ({type(exc).__name__}); retry"]
             continue
         try:
-            spec, fixes = validate_with_correction(raw, max_retries=0)
+            spec, fixes = validate_with_correction(raw, max_retries=0,
+                                                   aspect_ratio=req.aspect_ratio,
+                                                   prompt_fallback=req.prompt,
+                                                   title_fallback=str(brief.get("working_title") or "Motion story"))
             return spec.model_dump(by_alias=True), (fixes or [])
         except Exception as exc:
-            problems = [str(exc)[:300]]
-    raise RuntimeError("The v2 plan could not be validated after 3 attempts.")
+            # Feed the concrete validator problems back so the model can self-correct.
+            problems = [str(exc)[:2000]]
+    raise RuntimeError(f"The v2 plan could not be validated after 3 attempts. Last problems: {'; '.join(problems)[:2000]}")
 
 # ---------------------------------------------------------------------------
 # Local deterministic generator (v2)
@@ -300,13 +404,19 @@ async def generate_project(req: GenerateRequest) -> tuple[ProjectSpec, str]:
     key = os.getenv("LLM_API_KEY")
     provider = "llm"
     if key:
-        raw, fixes = await _llm_spec_v2(req)
+        try:
+            raw, _fixes = await _llm_spec_v2(req)
+        except Exception:
+            # Keep the generation flow usable when the provider is unavailable
+            # or returns an unusable plan; the deterministic generator is offline-safe.
+            raw, provider = _local_spec_v2(req), "local"
     else:
         raw, provider = _local_spec_v2(req), "local"
     try:
-        spec, problems = validate_with_correction(raw, max_retries=1)
+        spec, _problems = validate_with_correction(raw, max_retries=1, aspect_ratio=req.aspect_ratio,
+                                                   prompt_fallback=req.prompt)
     except Exception as exc:
         if provider == "llm":
-            raise RuntimeError("The v2 plan failed preflight validation after one correction. Try again or adjust the brief.") from exc
+            raise RuntimeError(f"The v2 plan failed preflight validation after one correction. Try again or adjust the brief. Details: {exc}") from exc
         raise
     return spec, provider

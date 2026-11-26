@@ -8,11 +8,12 @@ LayerType = Literal["text", "image", "shape", "icon", "lottie", "video", "chart"
 AnimPreset = Literal[
     # Entrances
     "pop-bounce", "slide-in", "scale-from-zero", "fade-up", "mask-reveal", "rotate-in",
-    "flip-3d", "blur-to-sharp", "glitch-in", "typewriter", "elastic-drop",
+    "flip-3d", "blur-to-sharp", "glitch-in", "typewriter", "elastic-drop", "whip-in", "color-sweep",
     # Loop / ambient
-    "float", "pulse", "wiggle", "slow-rotate", "shimmer", "parallax-drift", "breathing-scale",
+    "float", "pulse", "wiggle", "slow-rotate", "shimmer", "parallax-drift", "breathing-scale", "leaf-drift",
     # Emphasis
     "shake", "highlight-sweep", "underline-draw", "color-flash", "scale-punch", "draw-on",
+    "circle-draw-on", "arrow-draw-on",
     # Exits
     "slide-out", "scale-down", "fade", "mask-wipe-out", "shatter", "whip-out",
 ]
@@ -117,6 +118,7 @@ class Meta(BaseModel):
     height: int = 1080
     duration: float = Field(default=0, ge=0, le=600)
     style: str = "bold-kinetic"
+    aspect_ratio: str = "16:9"
     model_config = {"extra": "allow"}
 
 class ProjectSpec(BaseModel):
