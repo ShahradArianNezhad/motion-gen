@@ -1,0 +1,147 @@
+{
+  "title": "Social quote reel",
+  "prompt": "Asset library render sample: Social quote reel",
+  "language": "en",
+  "aspect_ratio": "9:16",
+  "fps": 24,
+  "width": 1080,
+  "height": 1920,
+  "palette": [
+    "#29162E",
+    "#9A5596",
+    "#F2A7C4",
+    "#FFF0F6"
+  ],
+  "scenes": [
+    {
+      "id": "social-quote-reel-scene-1",
+      "title": "Social quote reel \u00b7 beat 1",
+      "duration": 1.5,
+      "description": "Social quote reel composition sample.",
+      "narration": "",
+      "transition": "fade",
+      "background": "#29162E",
+      "background_asset": "background-grid-fine",
+      "elements": [
+        {
+          "id": "social-quote-reel-0-label",
+          "kind": "label",
+          "text": "SOCIAL QUOTE REEL",
+          "x": 50,
+          "y": 23,
+          "width": 82,
+          "color": "#F2A7C4",
+          "font_size": 14,
+          "weight": 500,
+          "animation": "reveal",
+          "delay": 0.1
+        },
+        {
+          "id": "social-quote-reel-0-title",
+          "kind": "headline",
+          "text": "Make room to grow.",
+          "x": 50,
+          "y": 39,
+          "width": 82,
+          "color": "#F9FAFC",
+          "font_size": 56,
+          "weight": 750,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "social-quote-reel-0-copy",
+          "kind": "body",
+          "text": "Small steps. Big change.",
+          "x": 50,
+          "y": 52,
+          "width": 82,
+          "color": "#FFF0F6",
+          "font_size": 24,
+          "weight": 500,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "social-quote-reel-0-icon",
+          "kind": "icon",
+          "text": "\u2726",
+          "x": 50,
+          "y": 69,
+          "width": 18,
+          "color": "#F2A7C4",
+          "font_size": 44,
+          "weight": 500,
+          "animation": "scale",
+          "delay": 0.1,
+          "asset_id": "icon-sparkles"
+        }
+      ]
+    },
+    {
+      "id": "social-quote-reel-scene-2",
+      "title": "Social quote reel \u00b7 beat 2",
+      "duration": 1.5,
+      "description": "Social quote reel composition sample.",
+      "narration": "",
+      "transition": "wipe",
+      "background": "#29162E",
+      "background_asset": "background-dots-small",
+      "elements": [
+        {
+          "id": "social-quote-reel-1-label",
+          "kind": "label",
+          "text": "SOCIAL QUOTE REEL",
+          "x": 50,
+          "y": 23,
+          "width": 82,
+          "color": "#F2A7C4",
+          "font_size": 14,
+          "weight": 500,
+          "animation": "reveal",
+          "delay": 0.1
+        },
+        {
+          "id": "social-quote-reel-1-title",
+          "kind": "headline",
+          "text": "STAY CURIOUS",
+          "x": 50,
+          "y": 39,
+          "width": 82,
+          "color": "#F9FAFC",
+          "font_size": 56,
+          "weight": 750,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "social-quote-reel-1-copy",
+          "kind": "body",
+          "text": "Made to move with you.",
+          "x": 50,
+          "y": 52,
+          "width": 82,
+          "color": "#FFF0F6",
+          "font_size": 24,
+          "weight": 500,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "social-quote-reel-1-icon",
+          "kind": "icon",
+          "text": "\u2726",
+          "x": 50,
+          "y": 69,
+          "width": 18,
+          "color": "#F2A7C4",
+          "font_size": 44,
+          "weight": 500,
+          "animation": "scale",
+          "delay": 0.1,
+          "asset_id": "icon-sparkles"
+        }
+      ]
+    }
+  ]
+}

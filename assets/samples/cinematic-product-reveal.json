@@ -1,0 +1,147 @@
+{
+  "title": "Cinematic product reveal",
+  "prompt": "Asset library render sample: Cinematic product reveal",
+  "language": "en",
+  "aspect_ratio": "16:9",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "palette": [
+    "#1B1717",
+    "#724938",
+    "#D99162",
+    "#F7DBB9"
+  ],
+  "scenes": [
+    {
+      "id": "cinematic-product-reveal-scene-1",
+      "title": "Cinematic product reveal \u00b7 beat 1",
+      "duration": 1.5,
+      "description": "Cinematic product reveal composition sample.",
+      "narration": "",
+      "transition": "fade",
+      "background": "#1B1717",
+      "background_asset": "background-grid-fine",
+      "elements": [
+        {
+          "id": "cinematic-product-reveal-0-label",
+          "kind": "label",
+          "text": "CINEMATIC PRODUCT REVEAL",
+          "x": 50,
+          "y": 23,
+          "width": 82,
+          "color": "#D99162",
+          "font_size": 14,
+          "weight": 500,
+          "animation": "reveal",
+          "delay": 0.1
+        },
+        {
+          "id": "cinematic-product-reveal-0-title",
+          "kind": "headline",
+          "text": "Designed for the details.",
+          "x": 50,
+          "y": 43,
+          "width": 82,
+          "color": "#F9FAFC",
+          "font_size": 64,
+          "weight": 750,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "cinematic-product-reveal-0-copy",
+          "kind": "body",
+          "text": "A quieter kind of confidence.",
+          "x": 50,
+          "y": 60,
+          "width": 82,
+          "color": "#F7DBB9",
+          "font_size": 24,
+          "weight": 500,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "cinematic-product-reveal-0-icon",
+          "kind": "icon",
+          "text": "\u2726",
+          "x": 50,
+          "y": 77,
+          "width": 18,
+          "color": "#D99162",
+          "font_size": 44,
+          "weight": 500,
+          "animation": "scale",
+          "delay": 0.1,
+          "asset_id": "icon-sparkles"
+        }
+      ]
+    },
+    {
+      "id": "cinematic-product-reveal-scene-2",
+      "title": "Cinematic product reveal \u00b7 beat 2",
+      "duration": 1.5,
+      "description": "Cinematic product reveal composition sample.",
+      "narration": "",
+      "transition": "wipe",
+      "background": "#1B1717",
+      "background_asset": "background-dots-small",
+      "elements": [
+        {
+          "id": "cinematic-product-reveal-1-label",
+          "kind": "label",
+          "text": "CINEMATIC PRODUCT REVEAL",
+          "x": 50,
+          "y": 23,
+          "width": 82,
+          "color": "#D99162",
+          "font_size": 14,
+          "weight": 500,
+          "animation": "reveal",
+          "delay": 0.1
+        },
+        {
+          "id": "cinematic-product-reveal-1-title",
+          "kind": "headline",
+          "text": "NEW COLLECTION",
+          "x": 50,
+          "y": 43,
+          "width": 82,
+          "color": "#F9FAFC",
+          "font_size": 64,
+          "weight": 750,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "cinematic-product-reveal-1-copy",
+          "kind": "body",
+          "text": "Made to move with you.",
+          "x": 50,
+          "y": 60,
+          "width": 82,
+          "color": "#F7DBB9",
+          "font_size": 24,
+          "weight": 500,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "cinematic-product-reveal-1-icon",
+          "kind": "icon",
+          "text": "\u2726",
+          "x": 50,
+          "y": 77,
+          "width": 18,
+          "color": "#D99162",
+          "font_size": 44,
+          "weight": 500,
+          "animation": "scale",
+          "delay": 0.1,
+          "asset_id": "icon-sparkles"
+        }
+      ]
+    }
+  ]
+}

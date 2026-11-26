@@ -58,6 +58,14 @@ Requirements: Node.js 20+ and Python 3.10+. Remotion's platform package provides
    ```
    Open the Vite URL (normally `http://localhost:5173`). Vite proxies `/api` and `/exports` to FastAPI.
 
+## Asset library
+
+Browse the searchable catalog at `/assets` while the API and Vite studio are running. The gallery previews vector artwork, emoji stickers, palette swatches, fonts, motion recipes, and generated renders. The API exposes `GET /api/assets/categories`, `GET /api/assets/search?q=...&category=...&tags=...&mood=...&limit=...&offset=...`, and `GET /api/assets/{id}`. The same deterministic `search_assets`, `get_asset`, and `list_categories` helpers are available to backend generation code. See [`docs/asset-design-guide.md`](docs/asset-design-guide.md), [`docs/asset-audit.md`](docs/asset-audit.md), and [`assets/LICENSES.md`](assets/LICENSES.md).
+
+Stock search is optional and server-side only: `GET /api/stock/search?q=...&provider=pexels|pixabay|unsplash&media_type=photo|video`. Pexels/Pixabay support photos and videos; Unsplash supports photos. Configure provider keys in the backend environment from `backend/.env.example`. Provider terms and required attribution apply to returned media; keys are never sent to the browser.
+
+Rebuild the generated library with `python scripts/generate_asset_library.py` (fetches pinned, permissively licensed package sources if not cached); verify all registry paths/licenses with `python scripts/validate_assets.py`. Five Remotion-rendered sample MP4s are under `assets/samples/`.
+
 ## Environment variables
 
 | Variable | Purpose | Default |
@@ -65,6 +73,9 @@ Requirements: Node.js 20+ and Python 3.10+. Remotion's platform package provides
 | `LLM_API_KEY` | Optional provider key used only by FastAPI | unset (local generator) |
 | `LLM_BASE_URL` | OpenAI-compatible API base URL | `https://api.openai.com/v1` |
 | `LLM_MODEL` | Chat-completions model | `gpt-4o-mini` |
+| `PEXELS_API_KEY` | Optional Pexels photo/video search key (backend only) | unset |
+| `PIXABAY_API_KEY` | Optional Pixabay photo/video search key (backend only) | unset |
+| `UNSPLASH_ACCESS_KEY` | Optional Unsplash photo search key (backend only) | unset |
 | `MOTION_DATA_DIR` | Local JSON projects and export artifacts | `./data` |
 
 ## Tests and export

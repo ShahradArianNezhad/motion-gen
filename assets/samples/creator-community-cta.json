@@ -1,0 +1,147 @@
+{
+  "title": "Creator community CTA",
+  "prompt": "Asset library render sample: Creator community CTA",
+  "language": "en",
+  "aspect_ratio": "1:1",
+  "fps": 24,
+  "width": 1080,
+  "height": 1080,
+  "palette": [
+    "#401E5B",
+    "#EC6FB2",
+    "#FDBD68",
+    "#FFF1C4"
+  ],
+  "scenes": [
+    {
+      "id": "creator-community-cta-scene-1",
+      "title": "Creator community CTA \u00b7 beat 1",
+      "duration": 1.5,
+      "description": "Creator community CTA composition sample.",
+      "narration": "",
+      "transition": "fade",
+      "background": "#401E5B",
+      "background_asset": "background-grid-fine",
+      "elements": [
+        {
+          "id": "creator-community-cta-0-label",
+          "kind": "label",
+          "text": "CREATOR COMMUNITY CTA",
+          "x": 50,
+          "y": 23,
+          "width": 82,
+          "color": "#FDBD68",
+          "font_size": 14,
+          "weight": 500,
+          "animation": "reveal",
+          "delay": 0.1
+        },
+        {
+          "id": "creator-community-cta-0-title",
+          "kind": "headline",
+          "text": "Thanks for being here.",
+          "x": 50,
+          "y": 43,
+          "width": 82,
+          "color": "#F9FAFC",
+          "font_size": 56,
+          "weight": 750,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "creator-community-cta-0-copy",
+          "kind": "body",
+          "text": "The best part is what comes next.",
+          "x": 50,
+          "y": 60,
+          "width": 82,
+          "color": "#FFF1C4",
+          "font_size": 24,
+          "weight": 500,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "creator-community-cta-0-icon",
+          "kind": "icon",
+          "text": "\u2726",
+          "x": 50,
+          "y": 77,
+          "width": 18,
+          "color": "#FDBD68",
+          "font_size": 44,
+          "weight": 500,
+          "animation": "scale",
+          "delay": 0.1,
+          "asset_id": "icon-heart"
+        }
+      ]
+    },
+    {
+      "id": "creator-community-cta-scene-2",
+      "title": "Creator community CTA \u00b7 beat 2",
+      "duration": 1.5,
+      "description": "Creator community CTA composition sample.",
+      "narration": "",
+      "transition": "wipe",
+      "background": "#401E5B",
+      "background_asset": "background-dots-small",
+      "elements": [
+        {
+          "id": "creator-community-cta-1-label",
+          "kind": "label",
+          "text": "CREATOR COMMUNITY CTA",
+          "x": 50,
+          "y": 23,
+          "width": 82,
+          "color": "#FDBD68",
+          "font_size": 14,
+          "weight": 500,
+          "animation": "reveal",
+          "delay": 0.1
+        },
+        {
+          "id": "creator-community-cta-1-title",
+          "kind": "headline",
+          "text": "10K COMMUNITY",
+          "x": 50,
+          "y": 43,
+          "width": 82,
+          "color": "#F9FAFC",
+          "font_size": 56,
+          "weight": 750,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "creator-community-cta-1-copy",
+          "kind": "body",
+          "text": "Made to move with you.",
+          "x": 50,
+          "y": 60,
+          "width": 82,
+          "color": "#FFF1C4",
+          "font_size": 24,
+          "weight": 500,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "creator-community-cta-1-icon",
+          "kind": "icon",
+          "text": "\u2726",
+          "x": 50,
+          "y": 77,
+          "width": 18,
+          "color": "#FDBD68",
+          "font_size": 44,
+          "weight": 500,
+          "animation": "scale",
+          "delay": 0.1,
+          "asset_id": "icon-heart"
+        }
+      ]
+    }
+  ]
+}
