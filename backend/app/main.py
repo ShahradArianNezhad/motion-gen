@@ -116,31 +116,38 @@ def edit_project(req: EditRequest):
     path=_project_path(req.project_id)
     if not path.exists(): raise HTTPException(404,"Project not found")
     data=json.loads(path.read_text()); spec=data["spec"]; text=req.command.lower()
-    elements=[(scene,el) for scene in spec["scenes"] for el in scene["elements"]]
-    selected=next(((s,e) for s,e in elements if e["id"]==req.selected_element_id), None)
+    layers=[(scene,layer) for scene in spec["scenes"] for layer in scene.get("layers",[])]
+    selected=next(((s,l) for s,l in layers if l["id"]==req.selected_element_id), None)
     if any(word in text for word in ("dark", "darker", "تیره")):
-        for scene in spec["scenes"]: scene["background"]="#070B16"
+        for scene in spec["scenes"]: scene["background"]={"type":"color","colors":["#0B1020","#05070d"]}
         change="Darkened all scene backgrounds"
     elif any(word in text for word in ("slow", "slower", "آهسته")):
         total=sum(scene["duration"] for scene in spec["scenes"])
-        factor=min(1.12,120/total)
+        factor=min(1.12,120/max(1,total))
         for scene in spec["scenes"]: scene["duration"]=round(scene["duration"]*factor,2)
         change=f"Slowed the rhythm by extending scene timing {round((factor-1)*100)}%"
     elif any(word in text for word in ("dramatic", "bold", "دراماتیک")):
-        targets=[selected] if selected else [next(((s,e) for s,e in elements if e["kind"]=="headline"),None)]
+        targets=[selected] if selected else [next((p for p in layers if p[1]["type"]=="text"),None)]
         for pair in targets:
-            if pair: pair[1]["font_size"]=min(160,int(pair[1]["font_size"]*1.16)); pair[1]["weight"]=800
-        change="Emphasized the selected headline"
+            if pair:
+                layer=pair[1]
+                layer["style"]["fontSize"]=min(160,int((layer["style"].get("fontSize") or 36)*1.16))
+                layer["style"]["fontWeight"]=800
+                if layer.get("animation",{}).get("in_"): layer["animation"]["in_"]["preset"]="pop-bounce"
+        change="Emphasized the selected text layer"
     elif any(word in text for word in ("minimal", "minimalist", "مینیمال")):
-        for scene in spec["scenes"]: scene["elements"]=[e for e in scene["elements"] if e["kind"] in ("headline","body","label")]
-        change="Simplified each scene to its essential type"
+        for scene in spec["scenes"]: scene["layers"]=[l for l in scene.get("layers",[]) if l["type"] in ("text","caption")]
+        change="Simplified each scene to its essential text"
     elif any(word in text for word in ("purple", "violet", "بنفش")):
         for scene in spec["scenes"]:
-            for el in scene["elements"]:
-                if el.get("accent") or el["kind"] in ("icon","label"): el["color"]="#9A7BFF"
+            scene["background"]["colors"]=["#7C5CFC","#05070d"]
+            for layer in scene.get("layers",[]):
+                if layer["type"] in ("text","caption"): layer["style"]["color"]="#9A7BFF"
         change="Shifted accent colors to violet"
     elif selected and any(word in text for word in ("bigger", "larger", "بزرگ")):
-        selected[1]["font_size"]=min(160,selected[1]["font_size"]+12); change=f"Increased {selected[1]['kind']} size"
+        sel=selected[1]
+        sel["style"]["fontSize"]=min(160,(sel["style"].get("fontSize") or 36)+12)
+        change=f"Increased {sel['type']} size"
     else:
         raise HTTPException(422,"Try: make it darker, make the title more dramatic, slow down, or make it more minimal.")
     validated=ProjectSpec.model_validate(spec)

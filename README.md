@@ -1,6 +1,6 @@
 # Motion Studio
 
-AI-assisted motion graphics editor that turns a creative brief into an editable, validated storyboard and a Remotion-rendered video. The repository began as an empty scaffold; the implementation plan is in [`IMPLEMENTATION_PLAN.md`](./IMPLEMENTATION_PLAN.md).
+AI-assisted motion graphics editor that turns a creative brief into an editable, validated **timeline plan** and a Remotion-rendered video. The schema is version 2: **scenes + layers + keyframes** (per-layer `start/end`, `animation.in/loop/out` presets, camera moves, animated backgrounds, transitions). The repository began as an empty scaffold; the implementation plan is in [`IMPLEMENTATION_PLAN.md`](./IMPLEMENTATION_PLAN.md).
 
 ## Phase 1 features
 
@@ -8,7 +8,7 @@ AI-assisted motion graphics editor that turns a creative brief into an editable,
 - A Pydantic-validated, declarative project format with scene timing, palette, transitions, narration script fields, elements, positions, typography, and supported motion presets. Bounded preflight repairs common clipping/color/timing issues once before validation. Generated code is never executed.
 - Browser studio with a multi-scene preview, scene timeline, play/scrub controls, editable scene and layer properties, text/color/position/size/animation controls, add/delete/duplicate scene, undo/redo, and autosave.
 - Context-aware assistant edits for focused commands such as darken the background, emphasize the title, slow pacing, simplify the design, and recolor accents. Edits preserve unrelated project content.
-- Reusable animated Remotion/SVG composition, local DM Sans, Manrope, and Vazirmatn fonts, plus MP4, WebM, and GIF export jobs with visible progress and downloadable results.
+- Reusable animated composition — spring/easing presets from `renderer/src/animations.ts`, style tokens from `renderer/src/styles.ts`, transitions from `renderer/src/transitions.ts` — plus local DM Sans, Manrope, and Vazirmatn fonts, MP4/WebM/GIF exports, and an example Reel composition in [`examples/reel-example.json`](./examples/reel-example.json) (render: `npm run render examples/reel-example.json exports/reel-test.mp4 mp4`).
 - Local JSON project persistence and export artifact storage in `data/` (git-ignored).
 - Persian (Farsi) prompt detection, RTL UI text handling, Persian copy in the local storyboard provider, and bundled Vazirmatn rendering font.
 
