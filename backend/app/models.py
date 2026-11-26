@@ -19,6 +19,7 @@ class Element(BaseModel):
     animation: AnimationKind = "rise"
     delay: float = Field(default=0, ge=0, le=20)
     accent: str | None = None
+    asset_id: str | None = Field(default=None, max_length=160)
 
     @field_validator("color", "accent")
     @classmethod
@@ -41,6 +42,7 @@ class Scene(BaseModel):
     narration: str = ""
     transition: Transition = "fade"
     background: str = "#0B1020"
+    background_asset: str | None = Field(default=None, max_length=160)
     elements: list[Element] = Field(min_length=1, max_length=12)
 
     @field_validator("background")
