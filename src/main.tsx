@@ -10,7 +10,7 @@ import type {Layer,ProjectSpec}from './types';
 import './styles.css';
 
 const samplePrompts=['A sleek product launch for an AI note-taking app, midnight blue and electric violet, 18 seconds, landscape','یک ویدیوی تبلیغاتی ۲۰ ثانیه‌ای برای نرم‌افزار مدیریت موجودی، با طراحی مدرن و روایت فارسی','A joyful 15-second launch animation for a sustainable skincare brand, warm colors, vertical'];
-const PRESET_OPTS=['pop-bounce','slide-in','scale-from-zero','fade-up','mask-reveal','rotate-in','flip-3d','elastic-drop','glitch-in','typewriter','whip-in','color-sweep','float','pulse','wiggle','slow-rotate','shimmer','parallax-drift','breathing-scale','shake','scale-punch','draw-on','underline-draw','slide-out','fade','whip-out'];
+const PRESET_OPTS=['pop-bounce','slide-in','scale-from-zero','fade-up','mask-reveal','rotate-in','flip-3d','blur-to-sharp','elastic-drop','glitch-in','typewriter','whip-in','color-sweep','float','pulse','wiggle','slow-rotate','shimmer','parallax-drift','breathing-scale','leaf-drift','shake','highlight-sweep','color-flash','scale-punch','draw-on','circle-draw-on','arrow-draw-on','underline-draw','slide-out','scale-down','fade','mask-wipe-out','shatter','whip-out'];
 
 function App(){
   const{spec,projectId,setProject,setSpec,selectedScene,setScene,selectedLayer,select,addLayer,setLayer,undo,redo,history,future}=useStudio();

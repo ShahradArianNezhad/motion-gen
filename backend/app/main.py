@@ -88,7 +88,10 @@ def list_projects():
         try:
             payload=json.loads(file.read_text())
             spec=payload["spec"]
-            rows.append({"id":payload["id"],"title":spec["title"],"updated_at":payload["updated_at"],"duration":sum(s["duration"] for s in spec["scenes"]),"aspect_ratio":spec["aspect_ratio"],"scene_count":len(spec["scenes"])})
+            meta=spec.get("meta",{})
+            width,height=meta.get("width",1920),meta.get("height",1080)
+            aspect_ratio=meta.get("aspect_ratio") or ("9:16" if height > width else "1:1" if width == height else "16:9")
+            rows.append({"id":payload["id"],"title":spec["title"],"updated_at":payload["updated_at"],"duration":sum(s["duration"] for s in spec["scenes"]),"aspect_ratio":aspect_ratio,"scene_count":len(spec["scenes"])})
         except Exception: continue
     return sorted(rows,key=lambda x:x["updated_at"],reverse=True)
 
