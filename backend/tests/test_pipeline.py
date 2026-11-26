@@ -15,6 +15,8 @@ class GenerationTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(len(spec.scenes), 4)
         self.assertAlmostEqual(spec.duration, 20, places=1)
         self.assertTrue(all(scene.elements for scene in spec.scenes))
+        self.assertTrue(all(scene.background_asset for scene in spec.scenes))
+        self.assertTrue(all(next(e for e in scene.elements if e.kind=='icon').asset_id for scene in spec.scenes))
 
     async def test_bounded_preflight_repair_fixes_clipping_and_unsupported_motion(self):
         raw=_local_spec(GenerateRequest(prompt='inventory management',duration=20,aspect_ratio='16:9'))
@@ -65,5 +67,17 @@ class ApiTests(unittest.TestCase):
     def test_bad_prompt_and_bad_export_format_are_clear(self):
         self.assertEqual(self.client.post('/api/generate',json={'prompt':'short'}).status_code,422)
         self.assertEqual(self.client.post('/api/projects/no-such-project/export?format=avi').status_code,422)
+
+    def test_asset_registry_search_detail_and_categories(self):
+        categories=self.client.get('/api/assets/categories').json()
+        counts={row['name']:row['count'] for row in categories}
+        self.assertGreaterEqual(counts['icons'],500)
+        self.assertGreaterEqual(counts['shapes'],50)
+        response=self.client.get('/api/assets/search?q=rocket&category=icons&limit=5')
+        self.assertEqual(response.status_code,200)
+        self.assertTrue(any(row['id']=='icon-rocket' for row in response.json()['assets']))
+        detail=self.client.get('/api/assets/icon-rocket').json()
+        self.assertEqual(detail['url'],'/asset-files/icons/rocket.svg')
+        self.assertEqual(self.client.get('/asset-files/icons/rocket.svg').status_code,200)
 
 if __name__=='__main__': unittest.main()

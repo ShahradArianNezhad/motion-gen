@@ -1,0 +1,3716 @@
+[
+  {
+    "id": "text-animation-typewriter",
+    "name": "Typewriter",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "typewriter",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Typewriter motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-letter-stagger",
+    "name": "Letter Stagger",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "letter",
+      "stagger",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Letter Stagger motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-word-stagger",
+    "name": "Word Stagger",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "word",
+      "stagger",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Word Stagger motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-line-stagger",
+    "name": "Line Stagger",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "line",
+      "stagger",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Line Stagger motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-blur-in",
+    "name": "Blur In",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "blur",
+      "in",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Blur In motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-slide-mask-up",
+    "name": "Slide Mask Up",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "slide",
+      "mask",
+      "up",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Slide Mask Up motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-slide-mask-left",
+    "name": "Slide Mask Left",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "slide",
+      "mask",
+      "left",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Slide Mask Left motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-scale-pop",
+    "name": "Scale Pop",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "scale",
+      "pop",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Scale Pop motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-glitch-in",
+    "name": "Glitch In",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "glitch",
+      "in",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Glitch In motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-wave-text",
+    "name": "Wave Text",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "wave",
+      "text",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Wave Text motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-scramble-reveal",
+    "name": "Scramble Reveal",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "scramble",
+      "reveal",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Scramble Reveal motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-highlight-sweep",
+    "name": "Highlight Sweep",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "highlight",
+      "sweep",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Highlight Sweep motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-counter-roll",
+    "name": "Counter Roll",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "counter",
+      "roll",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Counter Roll motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-gradient-shimmer",
+    "name": "Gradient Shimmer",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "gradient",
+      "shimmer",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Gradient Shimmer motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-tracking-reveal",
+    "name": "Tracking Reveal",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "tracking",
+      "reveal",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Tracking Reveal motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-split-character",
+    "name": "Split Character",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "split",
+      "character",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Split Character motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-elastic-pop",
+    "name": "Elastic Pop",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "elastic",
+      "pop",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Elastic Pop motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-soft-fade",
+    "name": "Soft Fade",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "soft",
+      "fade",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Soft Fade motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-rise-and-settle",
+    "name": "Rise And Settle",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "rise",
+      "and",
+      "settle",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Rise And Settle motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-flip-in",
+    "name": "Flip In",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "flip",
+      "in",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Flip In motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-rotate-type",
+    "name": "Rotate Type",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "rotate",
+      "type",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Rotate Type motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-bounce-in",
+    "name": "Bounce In",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "bounce",
+      "in",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Bounce In motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-underline-draw",
+    "name": "Underline Draw",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "underline",
+      "draw",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Underline Draw motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-wipe-reveal",
+    "name": "Wipe Reveal",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "wipe",
+      "reveal",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Wipe Reveal motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-focus-pull",
+    "name": "Focus Pull",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "focus",
+      "pull",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Focus Pull motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-color-wash",
+    "name": "Color Wash",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "color",
+      "wash",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Color Wash motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-kinetic-stack",
+    "name": "Kinetic Stack",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "kinetic",
+      "stack",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Kinetic Stack motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-drop-in",
+    "name": "Drop In",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "drop",
+      "in",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Drop In motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-spring-word",
+    "name": "Spring Word",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "spring",
+      "word",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Spring Word motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-shimmer-sweep",
+    "name": "Shimmer Sweep",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "shimmer",
+      "sweep",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Shimmer Sweep motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-outline-to-fill",
+    "name": "Outline To Fill",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "outline",
+      "to",
+      "fill",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Outline To Fill motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "text-animation-pixel-dissolve",
+    "name": "Pixel Dissolve",
+    "category": "text-animation",
+    "subcategory": "text-presets",
+    "tags": [
+      "pixel",
+      "dissolve",
+      "text-animation"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Pixel Dissolve motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-fade",
+    "name": "Fade",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "fade",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Fade motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-crossfade",
+    "name": "Crossfade",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "crossfade",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Crossfade motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-wipe-left",
+    "name": "Wipe Left",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "wipe",
+      "left",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Wipe Left motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-wipe-right",
+    "name": "Wipe Right",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "wipe",
+      "right",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Wipe Right motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-wipe-up",
+    "name": "Wipe Up",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "wipe",
+      "up",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Wipe Up motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-wipe-down",
+    "name": "Wipe Down",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "wipe",
+      "down",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Wipe Down motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-slide-left",
+    "name": "Slide Left",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "slide",
+      "left",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Slide Left motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-slide-right",
+    "name": "Slide Right",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "slide",
+      "right",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Slide Right motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-slide-up",
+    "name": "Slide Up",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "slide",
+      "up",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Slide Up motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-slide-down",
+    "name": "Slide Down",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "slide",
+      "down",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Slide Down motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-push-left",
+    "name": "Push Left",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "push",
+      "left",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Push Left motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-push-right",
+    "name": "Push Right",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "push",
+      "right",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Push Right motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-zoom-in",
+    "name": "Zoom In",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "zoom",
+      "in",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Zoom In motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-zoom-out",
+    "name": "Zoom Out",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "zoom",
+      "out",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Zoom Out motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-whip-pan-left",
+    "name": "Whip Pan Left",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "whip",
+      "pan",
+      "left",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Whip Pan Left motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-whip-pan-right",
+    "name": "Whip Pan Right",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "whip",
+      "pan",
+      "right",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Whip Pan Right motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-glitch-cut",
+    "name": "Glitch Cut",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "glitch",
+      "cut",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Glitch Cut motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-circle-reveal",
+    "name": "Circle Reveal",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "circle",
+      "reveal",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Circle Reveal motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-iris-close",
+    "name": "Iris Close",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "iris",
+      "close",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Iris Close motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-shape-mask",
+    "name": "Shape Mask",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "shape",
+      "mask",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Shape Mask motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-split-open",
+    "name": "Split Open",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "split",
+      "open",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Split Open motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-split-close",
+    "name": "Split Close",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "split",
+      "close",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Split Close motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-flip-horizontal",
+    "name": "Flip Horizontal",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "flip",
+      "horizontal",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Flip Horizontal motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-flip-vertical",
+    "name": "Flip Vertical",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "flip",
+      "vertical",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Flip Vertical motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-liquid-morph",
+    "name": "Liquid Morph",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "liquid",
+      "morph",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Liquid Morph motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-blur-dissolve",
+    "name": "Blur Dissolve",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "blur",
+      "dissolve",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Blur Dissolve motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-light-leak",
+    "name": "Light Leak",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "light",
+      "leak",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Light Leak motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-diagonal-wipe",
+    "name": "Diagonal Wipe",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "diagonal",
+      "wipe",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Diagonal Wipe motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-match-cut",
+    "name": "Match Cut",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "match",
+      "cut",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Match Cut motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "transition-radial-burst",
+    "name": "Radial Burst",
+    "category": "transition",
+    "subcategory": "transitions",
+    "tags": [
+      "radial",
+      "burst",
+      "transition"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Radial Burst motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 0.55,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-linear",
+    "name": "Linear",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "linear",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Constant speed; UI indicators and process data.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-smooth",
+    "name": "Smooth",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "smooth",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Even acceleration and deceleration; default content movement.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-snappy",
+    "name": "Snappy",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "snappy",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Fast response with a short settle; UI and punchy titles.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-bouncy",
+    "name": "Bouncy",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "bouncy",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Overshoot then settle; playful stickers and reactions.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-cinematic",
+    "name": "Cinematic",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "cinematic",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Slow ease-in and long graceful settle; brand films.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-elastic",
+    "name": "Elastic",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "elastic",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Overshoot with spring-back; expressive emphasis only.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-ease-in",
+    "name": "Ease In",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "ease",
+      "in",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Accelerate toward the end; exits and outgoing wipes.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-ease-out",
+    "name": "Ease Out",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "ease",
+      "out",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Fast start, soft landing; entrances.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-ease-in-out",
+    "name": "Ease In Out",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "ease",
+      "in",
+      "out",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Balanced speed; transitions and position changes.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-anticipate",
+    "name": "Anticipate",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "anticipate",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Small backward wind-up before forward motion.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-overshoot",
+    "name": "Overshoot",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "overshoot",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Go slightly beyond target then settle.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-spring-soft",
+    "name": "Spring Soft",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "spring",
+      "soft",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Low stiffness and high damping; gentle material feel.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-spring-medium",
+    "name": "Spring Medium",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "spring",
+      "medium",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Balanced physical spring; general-purpose UI.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-spring-stiff",
+    "name": "Spring Stiff",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "spring",
+      "stiff",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "High stiffness; crisp buttons and counters.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-spring-bouncy",
+    "name": "Spring Bouncy",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "spring",
+      "bouncy",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Low damping spring; playful reactions.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-exponential",
+    "name": "Exponential",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "exponential",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Strong acceleration; dramatic scale or camera move.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-sine",
+    "name": "Sine",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "sine",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Subtle smooth oscillation; ambient loops.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-circ-out",
+    "name": "Circ Out",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "circ",
+      "out",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Decisive entrance with smooth finish.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-back-out",
+    "name": "Back Out",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "back",
+      "out",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Confident overshoot; badges and callouts.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "easing-quart-out",
+    "name": "Quart Out",
+    "category": "easing",
+    "subcategory": "easing-springs",
+    "tags": [
+      "quart",
+      "out",
+      "easing"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Fast but controlled; titles and charts.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-confetti-burst",
+    "name": "Confetti Burst",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "confetti",
+      "burst",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Confetti Burst motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-sparkle-drift",
+    "name": "Sparkle Drift",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "sparkle",
+      "drift",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Sparkle Drift motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-radial-burst",
+    "name": "Radial Burst",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "radial",
+      "burst",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Radial Burst motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-soft-bokeh",
+    "name": "Soft Bokeh",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "soft",
+      "bokeh",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Soft Bokeh motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-falling-snow",
+    "name": "Falling Snow",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "falling",
+      "snow",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Falling Snow motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-rising-bubbles",
+    "name": "Rising Bubbles",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "rising",
+      "bubbles",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Rising Bubbles motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-floating-geometric",
+    "name": "Floating Geometric",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "floating",
+      "geometric",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Floating Geometric motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-speed-lines",
+    "name": "Speed Lines",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "speed",
+      "lines",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Speed Lines motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-dust-motes",
+    "name": "Dust Motes",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "dust",
+      "motes",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Dust Motes motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-firefly-drift",
+    "name": "Firefly Drift",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "firefly",
+      "drift",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Firefly Drift motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-heart-float",
+    "name": "Heart Float",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "heart",
+      "float",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Heart Float motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-ribbon-streamers",
+    "name": "Ribbon Streamers",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "ribbon",
+      "streamers",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Ribbon Streamers motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-star-trail",
+    "name": "Star Trail",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "star",
+      "trail",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Star Trail motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-ambient-orbits",
+    "name": "Ambient Orbits",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "ambient",
+      "orbits",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Ambient Orbits motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-paper-shower",
+    "name": "Paper Shower",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "paper",
+      "shower",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Paper Shower motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-particle-dissolve",
+    "name": "Particle Dissolve",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "particle",
+      "dissolve",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Particle Dissolve motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-glow-pulse",
+    "name": "Glow Pulse",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "glow",
+      "pulse",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Glow Pulse motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "particle-effect-smoke-wisp",
+    "name": "Smoke Wisp",
+    "category": "particle-effect",
+    "subcategory": "particle-effects",
+    "tags": [
+      "smoke",
+      "wisp",
+      "particle-effect"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Smoke Wisp motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-lower-third-clean",
+    "name": "Lower Third Clean",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "lower",
+      "third",
+      "clean",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Lower Third Clean motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-lower-third-editorial",
+    "name": "Lower Third Editorial",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "lower",
+      "third",
+      "editorial",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Lower Third Editorial motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-lower-third-tech",
+    "name": "Lower Third Tech",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "lower",
+      "third",
+      "tech",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Lower Third Tech motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-title-card-cinematic",
+    "name": "Title Card Cinematic",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "title",
+      "card",
+      "cinematic",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Title Card Cinematic motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-title-card-bold",
+    "name": "Title Card Bold",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "title",
+      "card",
+      "bold",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Title Card Bold motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-intro-brand-mark",
+    "name": "Intro Brand Mark",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "intro",
+      "brand",
+      "mark",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Intro Brand Mark motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-outro-call-to-action",
+    "name": "Outro Call To Action",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "outro",
+      "call",
+      "to",
+      "action",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Outro Call To Action motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-quote-card-minimal",
+    "name": "Quote Card Minimal",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "quote",
+      "card",
+      "minimal",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Quote Card Minimal motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-quote-card-social",
+    "name": "Quote Card Social",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "quote",
+      "card",
+      "social",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Quote Card Social motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-callout-pill",
+    "name": "Callout Pill",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "callout",
+      "pill",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Callout Pill motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-callout-arrow",
+    "name": "Callout Arrow",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "callout",
+      "arrow",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Callout Arrow motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-stat-kpi-single",
+    "name": "Stat Kpi Single",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "stat",
+      "kpi",
+      "single",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Stat Kpi Single motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-stat-kpi-trio",
+    "name": "Stat Kpi Trio",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "stat",
+      "kpi",
+      "trio",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Stat Kpi Trio motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-progress-bar-linear",
+    "name": "Progress Bar Linear",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "progress",
+      "bar",
+      "linear",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Progress Bar Linear motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-progress-ring",
+    "name": "Progress Ring",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "progress",
+      "ring",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Progress Ring motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-animated-bar-chart",
+    "name": "Animated Bar Chart",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "animated",
+      "bar",
+      "chart",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Animated Bar Chart motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-animated-line-chart",
+    "name": "Animated Line Chart",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "animated",
+      "line",
+      "chart",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Animated Line Chart motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-animated-donut-chart",
+    "name": "Animated Donut Chart",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "animated",
+      "donut",
+      "chart",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Animated Donut Chart motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-rolling-counter",
+    "name": "Rolling Counter",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "rolling",
+      "counter",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Rolling Counter motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-timeline-milestones",
+    "name": "Timeline Milestones",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "timeline",
+      "milestones",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Timeline Milestones motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-logo-reveal-orbit",
+    "name": "Logo Reveal Orbit",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "logo",
+      "reveal",
+      "orbit",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Logo Reveal Orbit motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-logo-reveal-mask",
+    "name": "Logo Reveal Mask",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "logo",
+      "reveal",
+      "mask",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Logo Reveal Mask motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-subscribe-button",
+    "name": "Subscribe Button",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "subscribe",
+      "button",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Subscribe Button motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-cta-button-primary",
+    "name": "Cta Button Primary",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "cta",
+      "button",
+      "primary",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Cta Button Primary motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-social-frame-16x9",
+    "name": "Social Frame 16X9",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "social",
+      "frame",
+      "16x9",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Social Frame 16X9 motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-social-frame-9x16",
+    "name": "Social Frame 9X16",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "social",
+      "frame",
+      "9x16",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Social Frame 9X16 motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-social-frame-square",
+    "name": "Social Frame Square",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "social",
+      "frame",
+      "square",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Social Frame Square motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-social-frame-4x5",
+    "name": "Social Frame 4X5",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "social",
+      "frame",
+      "4x5",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Social Frame 4X5 motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-product-hero",
+    "name": "Product Hero",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "product",
+      "hero",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Product Hero motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-feature-comparison",
+    "name": "Feature Comparison",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "feature",
+      "comparison",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Feature Comparison motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-testimonial-card",
+    "name": "Testimonial Card",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "testimonial",
+      "card",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "Testimonial Card motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  },
+  {
+    "id": "template-app-store-frame",
+    "name": "App Store Frame",
+    "category": "template",
+    "subcategory": "components",
+    "tags": [
+      "app",
+      "store",
+      "frame",
+      "template"
+    ],
+    "mood": [
+      "versatile"
+    ],
+    "style": [
+      "motion-design"
+    ],
+    "description": "App Store Frame motion preset for clean, readable visual storytelling; tune onset, duration, distance, and stagger to match the scene.",
+    "durationSeconds": 1.2,
+    "parameters": {
+      "duration": 0.55,
+      "delay": 0,
+      "stagger": 0.045,
+      "distance": 32,
+      "intensity": 0.7
+    },
+    "license": "CC0-1.0",
+    "source": "Original motion-design recipe by Motion Studio"
+  }
+]

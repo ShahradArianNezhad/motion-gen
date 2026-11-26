@@ -1,0 +1,622 @@
+[
+  {
+    "family": "DM Sans",
+    "role": "clean sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/dm-sans",
+    "file": "assets/fonts/dm-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/dm-sans-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Manrope",
+    "role": "bold sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/manrope",
+    "file": "assets/fonts/manrope-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/manrope-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Vazirmatn",
+    "role": "clean sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/vazirmatn",
+    "file": "assets/fonts/vazirmatn-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/vazirmatn-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Inter",
+    "role": "clean sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/inter",
+    "file": "assets/fonts/inter-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/inter-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Roboto",
+    "role": "clean sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/roboto",
+    "file": "assets/fonts/roboto-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/roboto-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Open Sans",
+    "role": "clean sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/open-sans",
+    "file": "assets/fonts/open-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/open-sans-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Lato",
+    "role": "clean sans",
+    "weights": [
+      400
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource/lato",
+    "file": "assets/fonts/lato-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/lato-OFL.txt",
+    "variable": false,
+    "availability": "Bundled Latin WOFF2; regular weight 400."
+  },
+  {
+    "family": "Montserrat",
+    "role": "bold sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/montserrat",
+    "file": "assets/fonts/montserrat-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/montserrat-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Poppins",
+    "role": "rounded",
+    "weights": [
+      400
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource/poppins",
+    "file": "assets/fonts/poppins-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/poppins-OFL.txt",
+    "variable": false,
+    "availability": "Bundled Latin WOFF2; regular weight 400."
+  },
+  {
+    "family": "Plus Jakarta Sans",
+    "role": "clean sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/plus-jakarta-sans",
+    "file": "assets/fonts/plus-jakarta-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/plus-jakarta-sans-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Outfit",
+    "role": "display",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/outfit",
+    "file": "assets/fonts/outfit-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/outfit-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Space Grotesk",
+    "role": "display",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/space-grotesk",
+    "file": "assets/fonts/space-grotesk-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/space-grotesk-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Sora",
+    "role": "display",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/sora",
+    "file": "assets/fonts/sora-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/sora-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Urbanist",
+    "role": "rounded",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/urbanist",
+    "file": "assets/fonts/urbanist-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/urbanist-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Work Sans",
+    "role": "clean sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/work-sans",
+    "file": "assets/fonts/work-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/work-sans-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Nunito Sans",
+    "role": "rounded",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/nunito-sans",
+    "file": "assets/fonts/nunito-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/nunito-sans-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Source Sans 3",
+    "role": "clean sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/source-sans-3",
+    "file": "assets/fonts/source-sans-3-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/source-sans-3-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Archivo",
+    "role": "bold sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/archivo",
+    "file": "assets/fonts/archivo-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/archivo-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "IBM Plex Sans",
+    "role": "clean sans",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/ibm-plex-sans",
+    "file": "assets/fonts/ibm-plex-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/ibm-plex-sans-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Roboto Condensed",
+    "role": "condensed",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/roboto-condensed",
+    "file": "assets/fonts/roboto-condensed-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/roboto-condensed-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Oswald",
+    "role": "condensed",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/oswald",
+    "file": "assets/fonts/oswald-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/oswald-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Barlow Condensed",
+    "role": "condensed",
+    "weights": [
+      400
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource/barlow-condensed",
+    "file": "assets/fonts/barlow-condensed-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/barlow-condensed-OFL.txt",
+    "variable": false,
+    "availability": "Bundled Latin WOFF2; regular weight 400."
+  },
+  {
+    "family": "Bebas Neue",
+    "role": "condensed",
+    "weights": [
+      400
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource/bebas-neue",
+    "file": "assets/fonts/bebas-neue-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/bebas-neue-OFL.txt",
+    "variable": false,
+    "availability": "Bundled Latin WOFF2; regular weight 400."
+  },
+  {
+    "family": "Anton",
+    "role": "condensed",
+    "weights": [
+      400
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource/anton",
+    "file": "assets/fonts/anton-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/anton-OFL.txt",
+    "variable": false,
+    "availability": "Bundled Latin WOFF2; regular weight 400."
+  },
+  {
+    "family": "Playfair Display",
+    "role": "serif display",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/playfair-display",
+    "file": "assets/fonts/playfair-display-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/playfair-display-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "DM Serif Display",
+    "role": "serif display",
+    "weights": [
+      400
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource/dm-serif-display",
+    "file": "assets/fonts/dm-serif-display-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/dm-serif-display-OFL.txt",
+    "variable": false,
+    "availability": "Bundled Latin WOFF2; regular weight 400."
+  },
+  {
+    "family": "Fraunces",
+    "role": "serif display",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/fraunces",
+    "file": "assets/fonts/fraunces-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/fraunces-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Lora",
+    "role": "serif",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/lora",
+    "file": "assets/fonts/lora-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/lora-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Libre Baskerville",
+    "role": "serif",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/libre-baskerville",
+    "file": "assets/fonts/libre-baskerville-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/libre-baskerville-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Cormorant Garamond",
+    "role": "serif",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/cormorant-garamond",
+    "file": "assets/fonts/cormorant-garamond-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/cormorant-garamond-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Source Serif 4",
+    "role": "serif",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/source-serif-4",
+    "file": "assets/fonts/source-serif-4-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/source-serif-4-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Merriweather",
+    "role": "serif",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/merriweather",
+    "file": "assets/fonts/merriweather-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/merriweather-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Roboto Mono",
+    "role": "mono",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/roboto-mono",
+    "file": "assets/fonts/roboto-mono-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/roboto-mono-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "IBM Plex Mono",
+    "role": "mono",
+    "weights": [
+      400
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource/ibm-plex-mono",
+    "file": "assets/fonts/ibm-plex-mono-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/ibm-plex-mono-OFL.txt",
+    "variable": false,
+    "availability": "Bundled Latin WOFF2; regular weight 400."
+  },
+  {
+    "family": "Space Mono",
+    "role": "mono",
+    "weights": [
+      400
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource/space-mono",
+    "file": "assets/fonts/space-mono-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/space-mono-OFL.txt",
+    "variable": false,
+    "availability": "Bundled Latin WOFF2; regular weight 400."
+  },
+  {
+    "family": "JetBrains Mono",
+    "role": "mono",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/jetbrains-mono",
+    "file": "assets/fonts/jetbrains-mono-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/jetbrains-mono-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Fira Code",
+    "role": "mono",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/fira-code",
+    "file": "assets/fonts/fira-code-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/fira-code-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Caveat",
+    "role": "handwriting",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/caveat",
+    "file": "assets/fonts/caveat-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/caveat-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Pacifico",
+    "role": "script",
+    "weights": [
+      400
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource/pacifico",
+    "file": "assets/fonts/pacifico-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/pacifico-OFL.txt",
+    "variable": false,
+    "availability": "Bundled Latin WOFF2; regular weight 400."
+  },
+  {
+    "family": "Dancing Script",
+    "role": "script",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/dancing-script",
+    "file": "assets/fonts/dancing-script-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/dancing-script-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Caveat Brush",
+    "role": "handwriting",
+    "weights": [
+      400
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource/caveat-brush",
+    "file": "assets/fonts/caveat-brush-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/caveat-brush-OFL.txt",
+    "variable": false,
+    "availability": "Bundled Latin WOFF2; regular weight 400."
+  },
+  {
+    "family": "Nunito",
+    "role": "rounded",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/nunito",
+    "file": "assets/fonts/nunito-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/nunito-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Quicksand",
+    "role": "rounded",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/quicksand",
+    "file": "assets/fonts/quicksand-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/quicksand-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Comfortaa",
+    "role": "rounded",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/comfortaa",
+    "file": "assets/fonts/comfortaa-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/comfortaa-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  },
+  {
+    "family": "Fredoka",
+    "role": "rounded",
+    "weights": [
+      100,
+      900
+    ],
+    "license": "OFL-1.1",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/fredoka",
+    "file": "assets/fonts/fredoka-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/fredoka-OFL.txt",
+    "variable": true,
+    "availability": "Bundled Latin WOFF2; variable weights 100–900."
+  }
+]

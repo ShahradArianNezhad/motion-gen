@@ -2,13 +2,15 @@ from __future__ import annotations
 import json, os, subprocess, threading, uuid
 from datetime import datetime, timezone
 from pathlib import Path
-from fastapi import FastAPI, HTTPException, BackgroundTasks
+from fastapi import FastAPI, HTTPException, BackgroundTasks, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from .models import GenerateRequest, ProjectSpec, EditRequest
 from .generation import generate_project
+from .asset_registry import search_assets, get_asset, list_categories
+import httpx
 
 ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(ROOT / ".env")
@@ -18,6 +20,7 @@ PROJECTS.mkdir(parents=True, exist_ok=True); EXPORTS.mkdir(parents=True, exist_o
 app = FastAPI(title="Motion Graphics Studio API", version="0.1.0")
 app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"], allow_methods=["*"], allow_headers=["*"])
 app.mount("/exports", StaticFiles(directory=EXPORTS), name="exports")
+app.mount("/asset-files", StaticFiles(directory=ROOT / "assets"), name="asset-files")
 JOBS: dict[str, dict] = {}
 LOCK = threading.Lock()
 
@@ -27,6 +30,45 @@ class SaveProject(BaseModel):
 
 @app.get("/api/health")
 def health(): return {"status":"ok", "renderer":"remotion", "llm_configured":bool(os.getenv("LLM_API_KEY"))}
+
+@app.get("/api/assets/categories")
+def asset_categories(): return list_categories()
+
+@app.get("/api/assets/search")
+def asset_search(q: str = "", category: str | None = None, tags: str = "", mood: str | None = None, limit: int = Query(30, ge=1, le=100), offset: int = Query(0, ge=0)):
+    selected=[tag.strip() for tag in tags.split(",") if tag.strip()]
+    return {"assets":search_assets(q, category, selected, mood, limit, offset), "total":len(search_assets(q, category, selected, mood, 2000))}
+
+@app.get("/api/assets/{asset_id}")
+def asset_detail(asset_id: str):
+    item=get_asset(asset_id)
+    if not item: raise HTTPException(404,"Asset not found")
+    item=dict(item); item["url"]="/asset-files/"+item["path"].removeprefix("assets/")
+    return item
+
+@app.get("/api/stock/search")
+async def stock_search(q: str = Query(..., min_length=2, max_length=160), media_type: str = "photo", provider: str = "pexels", per_page: int = Query(12, ge=1, le=30)):
+    """Search stock providers with server-side keys; provider terms/license remain provider governed."""
+    if media_type not in ("photo", "video"): raise HTTPException(422,"media_type must be photo or video")
+    async with httpx.AsyncClient(timeout=20) as client:
+        if provider == "pexels":
+            key=os.getenv("PEXELS_API_KEY")
+            if not key: raise HTTPException(503,"Set PEXELS_API_KEY on the backend to enable Pexels search")
+            endpoint="https://api.pexels.com/v1/search" if media_type=="photo" else "https://api.pexels.com/videos/search"
+            response=await client.get(endpoint,headers={"Authorization":key},params={"query":q,"per_page":per_page})
+        elif provider == "pixabay":
+            key=os.getenv("PIXABAY_API_KEY")
+            if not key: raise HTTPException(503,"Set PIXABAY_API_KEY on the backend to enable Pixabay search")
+            endpoint="https://pixabay.com/api/" if media_type=="photo" else "https://pixabay.com/api/videos/"
+            response=await client.get(endpoint,params={"key":key,"q":q,"per_page":per_page,"safesearch":"true"})
+        elif provider == "unsplash" and media_type == "photo":
+            key=os.getenv("UNSPLASH_ACCESS_KEY")
+            if not key: raise HTTPException(503,"Set UNSPLASH_ACCESS_KEY on the backend to enable Unsplash photo search")
+            response=await client.get("https://api.unsplash.com/search/photos",headers={"Authorization":f"Client-ID {key}"},params={"query":q,"per_page":per_page})
+        else: raise HTTPException(422,"Provider/media combination is not supported")
+        if response.status_code >= 400: raise HTTPException(response.status_code,f"{provider.title()} search failed")
+        data=response.json()
+    return {"provider":provider,"media_type":media_type,"attribution_required":provider in ("pexels","unsplash"),"results":data.get("photos",data.get("videos",data.get("hits",data.get("results",[]))))}
 
 @app.post("/api/generate")
 async def generate(request: GenerateRequest):

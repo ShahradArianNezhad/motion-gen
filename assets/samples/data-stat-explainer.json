@@ -1,0 +1,147 @@
+{
+  "title": "Data stat explainer",
+  "prompt": "Asset library render sample: Data stat explainer",
+  "language": "en",
+  "aspect_ratio": "16:9",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "palette": [
+    "#F4F8FF",
+    "#D7E5FF",
+    "#3567B2",
+    "#132A4D"
+  ],
+  "scenes": [
+    {
+      "id": "data-stat-explainer-scene-1",
+      "title": "Data stat explainer \u00b7 beat 1",
+      "duration": 1.5,
+      "description": "Data stat explainer composition sample.",
+      "narration": "",
+      "transition": "fade",
+      "background": "#F4F8FF",
+      "background_asset": "background-grid-fine",
+      "elements": [
+        {
+          "id": "data-stat-explainer-0-label",
+          "kind": "label",
+          "text": "DATA STAT EXPLAINER",
+          "x": 50,
+          "y": 23,
+          "width": 82,
+          "color": "#3567B2",
+          "font_size": 14,
+          "weight": 500,
+          "animation": "reveal",
+          "delay": 0.1
+        },
+        {
+          "id": "data-stat-explainer-0-title",
+          "kind": "headline",
+          "text": "Progress, made visible.",
+          "x": 50,
+          "y": 43,
+          "width": 82,
+          "color": "#F9FAFC",
+          "font_size": 64,
+          "weight": 750,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "data-stat-explainer-0-copy",
+          "kind": "body",
+          "text": "A clearer view of the numbers.",
+          "x": 50,
+          "y": 60,
+          "width": 82,
+          "color": "#132A4D",
+          "font_size": 24,
+          "weight": 500,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "data-stat-explainer-0-icon",
+          "kind": "icon",
+          "text": "\u2726",
+          "x": 50,
+          "y": 77,
+          "width": 18,
+          "color": "#3567B2",
+          "font_size": 44,
+          "weight": 500,
+          "animation": "scale",
+          "delay": 0.1,
+          "asset_id": "icon-chart-no-axes-column-increasing"
+        }
+      ]
+    },
+    {
+      "id": "data-stat-explainer-scene-2",
+      "title": "Data stat explainer \u00b7 beat 2",
+      "duration": 1.5,
+      "description": "Data stat explainer composition sample.",
+      "narration": "",
+      "transition": "wipe",
+      "background": "#F4F8FF",
+      "background_asset": "background-dots-small",
+      "elements": [
+        {
+          "id": "data-stat-explainer-1-label",
+          "kind": "label",
+          "text": "DATA STAT EXPLAINER",
+          "x": 50,
+          "y": 23,
+          "width": 82,
+          "color": "#3567B2",
+          "font_size": 14,
+          "weight": 500,
+          "animation": "reveal",
+          "delay": 0.1
+        },
+        {
+          "id": "data-stat-explainer-1-title",
+          "kind": "headline",
+          "text": "+38% THIS QUARTER",
+          "x": 50,
+          "y": 43,
+          "width": 82,
+          "color": "#132A4D",
+          "font_size": 64,
+          "weight": 750,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "data-stat-explainer-1-copy",
+          "kind": "body",
+          "text": "Made to move with you.",
+          "x": 50,
+          "y": 60,
+          "width": 82,
+          "color": "#F4F8FF",
+          "font_size": 24,
+          "weight": 500,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "data-stat-explainer-1-icon",
+          "kind": "icon",
+          "text": "\u2726",
+          "x": 50,
+          "y": 77,
+          "width": 18,
+          "color": "#3567B2",
+          "font_size": 44,
+          "weight": 500,
+          "animation": "scale",
+          "delay": 0.1,
+          "asset_id": "icon-chart-no-axes-column-increasing"
+        }
+      ]
+    }
+  ]
+}

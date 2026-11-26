@@ -1,0 +1,532 @@
+[
+  {
+    "slug": "dm-sans",
+    "package": "@fontsource-variable/dm-sans",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/dm-sans",
+    "file": "assets/fonts/dm-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/dm-sans-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "manrope",
+    "package": "@fontsource-variable/manrope",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/manrope",
+    "file": "assets/fonts/manrope-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/manrope-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "vazirmatn",
+    "package": "@fontsource-variable/vazirmatn",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/vazirmatn",
+    "file": "assets/fonts/vazirmatn-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/vazirmatn-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "inter",
+    "package": "@fontsource-variable/inter",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/inter",
+    "file": "assets/fonts/inter-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/inter-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "roboto",
+    "package": "@fontsource-variable/roboto",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/roboto",
+    "file": "assets/fonts/roboto-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/roboto-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "open-sans",
+    "package": "@fontsource-variable/open-sans",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/open-sans",
+    "file": "assets/fonts/open-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/open-sans-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "lato",
+    "package": "@fontsource/lato",
+    "source": "https://www.npmjs.com/package/@fontsource/lato",
+    "file": "assets/fonts/lato-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/lato-OFL.txt",
+    "variable": false,
+    "weights": [
+      400
+    ]
+  },
+  {
+    "slug": "montserrat",
+    "package": "@fontsource-variable/montserrat",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/montserrat",
+    "file": "assets/fonts/montserrat-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/montserrat-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "poppins",
+    "package": "@fontsource/poppins",
+    "source": "https://www.npmjs.com/package/@fontsource/poppins",
+    "file": "assets/fonts/poppins-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/poppins-OFL.txt",
+    "variable": false,
+    "weights": [
+      400
+    ]
+  },
+  {
+    "slug": "plus-jakarta-sans",
+    "package": "@fontsource-variable/plus-jakarta-sans",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/plus-jakarta-sans",
+    "file": "assets/fonts/plus-jakarta-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/plus-jakarta-sans-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "outfit",
+    "package": "@fontsource-variable/outfit",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/outfit",
+    "file": "assets/fonts/outfit-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/outfit-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "space-grotesk",
+    "package": "@fontsource-variable/space-grotesk",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/space-grotesk",
+    "file": "assets/fonts/space-grotesk-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/space-grotesk-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "sora",
+    "package": "@fontsource-variable/sora",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/sora",
+    "file": "assets/fonts/sora-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/sora-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "urbanist",
+    "package": "@fontsource-variable/urbanist",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/urbanist",
+    "file": "assets/fonts/urbanist-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/urbanist-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "work-sans",
+    "package": "@fontsource-variable/work-sans",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/work-sans",
+    "file": "assets/fonts/work-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/work-sans-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "nunito-sans",
+    "package": "@fontsource-variable/nunito-sans",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/nunito-sans",
+    "file": "assets/fonts/nunito-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/nunito-sans-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "source-sans-3",
+    "package": "@fontsource-variable/source-sans-3",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/source-sans-3",
+    "file": "assets/fonts/source-sans-3-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/source-sans-3-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "archivo",
+    "package": "@fontsource-variable/archivo",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/archivo",
+    "file": "assets/fonts/archivo-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/archivo-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "ibm-plex-sans",
+    "package": "@fontsource-variable/ibm-plex-sans",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/ibm-plex-sans",
+    "file": "assets/fonts/ibm-plex-sans-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/ibm-plex-sans-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "roboto-condensed",
+    "package": "@fontsource-variable/roboto-condensed",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/roboto-condensed",
+    "file": "assets/fonts/roboto-condensed-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/roboto-condensed-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "oswald",
+    "package": "@fontsource-variable/oswald",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/oswald",
+    "file": "assets/fonts/oswald-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/oswald-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "barlow-condensed",
+    "package": "@fontsource/barlow-condensed",
+    "source": "https://www.npmjs.com/package/@fontsource/barlow-condensed",
+    "file": "assets/fonts/barlow-condensed-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/barlow-condensed-OFL.txt",
+    "variable": false,
+    "weights": [
+      400
+    ]
+  },
+  {
+    "slug": "bebas-neue",
+    "package": "@fontsource/bebas-neue",
+    "source": "https://www.npmjs.com/package/@fontsource/bebas-neue",
+    "file": "assets/fonts/bebas-neue-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/bebas-neue-OFL.txt",
+    "variable": false,
+    "weights": [
+      400
+    ]
+  },
+  {
+    "slug": "anton",
+    "package": "@fontsource/anton",
+    "source": "https://www.npmjs.com/package/@fontsource/anton",
+    "file": "assets/fonts/anton-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/anton-OFL.txt",
+    "variable": false,
+    "weights": [
+      400
+    ]
+  },
+  {
+    "slug": "playfair-display",
+    "package": "@fontsource-variable/playfair-display",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/playfair-display",
+    "file": "assets/fonts/playfair-display-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/playfair-display-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "dm-serif-display",
+    "package": "@fontsource/dm-serif-display",
+    "source": "https://www.npmjs.com/package/@fontsource/dm-serif-display",
+    "file": "assets/fonts/dm-serif-display-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/dm-serif-display-OFL.txt",
+    "variable": false,
+    "weights": [
+      400
+    ]
+  },
+  {
+    "slug": "fraunces",
+    "package": "@fontsource-variable/fraunces",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/fraunces",
+    "file": "assets/fonts/fraunces-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/fraunces-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "lora",
+    "package": "@fontsource-variable/lora",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/lora",
+    "file": "assets/fonts/lora-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/lora-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "libre-baskerville",
+    "package": "@fontsource-variable/libre-baskerville",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/libre-baskerville",
+    "file": "assets/fonts/libre-baskerville-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/libre-baskerville-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "cormorant-garamond",
+    "package": "@fontsource-variable/cormorant-garamond",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/cormorant-garamond",
+    "file": "assets/fonts/cormorant-garamond-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/cormorant-garamond-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "source-serif-4",
+    "package": "@fontsource-variable/source-serif-4",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/source-serif-4",
+    "file": "assets/fonts/source-serif-4-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/source-serif-4-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "merriweather",
+    "package": "@fontsource-variable/merriweather",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/merriweather",
+    "file": "assets/fonts/merriweather-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/merriweather-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "roboto-mono",
+    "package": "@fontsource-variable/roboto-mono",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/roboto-mono",
+    "file": "assets/fonts/roboto-mono-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/roboto-mono-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "ibm-plex-mono",
+    "package": "@fontsource/ibm-plex-mono",
+    "source": "https://www.npmjs.com/package/@fontsource/ibm-plex-mono",
+    "file": "assets/fonts/ibm-plex-mono-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/ibm-plex-mono-OFL.txt",
+    "variable": false,
+    "weights": [
+      400
+    ]
+  },
+  {
+    "slug": "space-mono",
+    "package": "@fontsource/space-mono",
+    "source": "https://www.npmjs.com/package/@fontsource/space-mono",
+    "file": "assets/fonts/space-mono-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/space-mono-OFL.txt",
+    "variable": false,
+    "weights": [
+      400
+    ]
+  },
+  {
+    "slug": "jetbrains-mono",
+    "package": "@fontsource-variable/jetbrains-mono",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/jetbrains-mono",
+    "file": "assets/fonts/jetbrains-mono-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/jetbrains-mono-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "fira-code",
+    "package": "@fontsource-variable/fira-code",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/fira-code",
+    "file": "assets/fonts/fira-code-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/fira-code-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "caveat",
+    "package": "@fontsource-variable/caveat",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/caveat",
+    "file": "assets/fonts/caveat-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/caveat-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "pacifico",
+    "package": "@fontsource/pacifico",
+    "source": "https://www.npmjs.com/package/@fontsource/pacifico",
+    "file": "assets/fonts/pacifico-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/pacifico-OFL.txt",
+    "variable": false,
+    "weights": [
+      400
+    ]
+  },
+  {
+    "slug": "dancing-script",
+    "package": "@fontsource-variable/dancing-script",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/dancing-script",
+    "file": "assets/fonts/dancing-script-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/dancing-script-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "caveat-brush",
+    "package": "@fontsource/caveat-brush",
+    "source": "https://www.npmjs.com/package/@fontsource/caveat-brush",
+    "file": "assets/fonts/caveat-brush-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/caveat-brush-OFL.txt",
+    "variable": false,
+    "weights": [
+      400
+    ]
+  },
+  {
+    "slug": "nunito",
+    "package": "@fontsource-variable/nunito",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/nunito",
+    "file": "assets/fonts/nunito-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/nunito-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "quicksand",
+    "package": "@fontsource-variable/quicksand",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/quicksand",
+    "file": "assets/fonts/quicksand-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/quicksand-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "comfortaa",
+    "package": "@fontsource-variable/comfortaa",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/comfortaa",
+    "file": "assets/fonts/comfortaa-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/comfortaa-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  },
+  {
+    "slug": "fredoka",
+    "package": "@fontsource-variable/fredoka",
+    "source": "https://www.npmjs.com/package/@fontsource-variable/fredoka",
+    "file": "assets/fonts/fredoka-latin.woff2",
+    "licenseFile": "assets/fonts/licenses/fredoka-OFL.txt",
+    "variable": true,
+    "weights": [
+      100,
+      900
+    ]
+  }
+]

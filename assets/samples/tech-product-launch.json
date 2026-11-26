@@ -1,0 +1,147 @@
+{
+  "title": "Tech product launch",
+  "prompt": "Asset library render sample: Tech product launch",
+  "language": "en",
+  "aspect_ratio": "16:9",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "palette": [
+    "#08131F",
+    "#1C9BC2",
+    "#60E6D0",
+    "#F2FAFF"
+  ],
+  "scenes": [
+    {
+      "id": "tech-product-launch-scene-1",
+      "title": "Tech product launch \u00b7 beat 1",
+      "duration": 1.5,
+      "description": "Tech product launch composition sample.",
+      "narration": "",
+      "transition": "fade",
+      "background": "#08131F",
+      "background_asset": "background-grid-fine",
+      "elements": [
+        {
+          "id": "tech-product-launch-0-label",
+          "kind": "label",
+          "text": "TECH PRODUCT LAUNCH",
+          "x": 50,
+          "y": 23,
+          "width": 82,
+          "color": "#60E6D0",
+          "font_size": 14,
+          "weight": 500,
+          "animation": "reveal",
+          "delay": 0.1
+        },
+        {
+          "id": "tech-product-launch-0-title",
+          "kind": "headline",
+          "text": "The next wave of work.",
+          "x": 50,
+          "y": 43,
+          "width": 82,
+          "color": "#F9FAFC",
+          "font_size": 64,
+          "weight": 750,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "tech-product-launch-0-copy",
+          "kind": "body",
+          "text": "Ideas into motion.",
+          "x": 50,
+          "y": 60,
+          "width": 82,
+          "color": "#F2FAFF",
+          "font_size": 24,
+          "weight": 500,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "tech-product-launch-0-icon",
+          "kind": "icon",
+          "text": "\u2726",
+          "x": 50,
+          "y": 77,
+          "width": 18,
+          "color": "#60E6D0",
+          "font_size": 44,
+          "weight": 500,
+          "animation": "scale",
+          "delay": 0.1,
+          "asset_id": "icon-rocket"
+        }
+      ]
+    },
+    {
+      "id": "tech-product-launch-scene-2",
+      "title": "Tech product launch \u00b7 beat 2",
+      "duration": 1.5,
+      "description": "Tech product launch composition sample.",
+      "narration": "",
+      "transition": "wipe",
+      "background": "#08131F",
+      "background_asset": "background-dots-small",
+      "elements": [
+        {
+          "id": "tech-product-launch-1-label",
+          "kind": "label",
+          "text": "TECH PRODUCT LAUNCH",
+          "x": 50,
+          "y": 23,
+          "width": 82,
+          "color": "#60E6D0",
+          "font_size": 14,
+          "weight": 500,
+          "animation": "reveal",
+          "delay": 0.1
+        },
+        {
+          "id": "tech-product-launch-1-title",
+          "kind": "headline",
+          "text": "01 / READY",
+          "x": 50,
+          "y": 43,
+          "width": 82,
+          "color": "#F9FAFC",
+          "font_size": 64,
+          "weight": 750,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "tech-product-launch-1-copy",
+          "kind": "body",
+          "text": "Made to move with you.",
+          "x": 50,
+          "y": 60,
+          "width": 82,
+          "color": "#F2FAFF",
+          "font_size": 24,
+          "weight": 500,
+          "animation": "rise",
+          "delay": 0.1
+        },
+        {
+          "id": "tech-product-launch-1-icon",
+          "kind": "icon",
+          "text": "\u2726",
+          "x": 50,
+          "y": 77,
+          "width": 18,
+          "color": "#60E6D0",
+          "font_size": 44,
+          "weight": 500,
+          "animation": "scale",
+          "delay": 0.1,
+          "asset_id": "icon-rocket"
+        }
+      ]
+    }
+  ]
+}
